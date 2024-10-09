@@ -1,0 +1,195 @@
+body,
+.storage-one__bottom-text,
+.about-one__points-list li p,
+.about-one__experience-text,
+.blog-one__meta li a,
+.feature-one__tab-btn span,
+.storage-one__carousel.owl-theme .owl-nav .owl-next,
+.storage-one__carousel.owl-theme .owl-nav .owl-prev,
+.services-one__text,
+.feature-one__btn {
+    color: #95A49F;
+}
+
+body,
+.storage-one,
+
+.services-one::before,
+.about-one__experience,
+.feature-one,
+.services-one, 
+body.boxed-wrapper .page-wrapper {
+    background-color: var(--lockdown-black);
+}
+
+
+
+.stricky-header.main-menu,
+.pricing-one__single,
+
+.services-one,
+.testimonial-one__single {
+    background: var(--lockdown-black);
+}
+
+.services-one__content,
+.feature-one__icon,
+.blog-one__content,
+.feature-one__tab-btn,
+.process-one,
+.testimonial-one__single {
+    background-color: #1a1b19;
+}
+
+.storage-one__carousel.owl-theme .owl-nav .owl-next,
+.storage-one__carousel.owl-theme .owl-nav .owl-prev,
+.feature-one__single {
+    border-color: #1a1b19;
+}
+
+.about-one__points li .icon span,
+.section-title__tagline {
+    color: var(--lockdown-primary);
+}
+
+
+
+.section-title__tagline::before {
+    background-color: var(--lockdown-primary);
+}
+
+
+.services-one__title a,
+
+.section-title__title,
+.testimonial-one__client-info h3,
+.blog-one__title a,
+.process-one__process-list li h3 a,
+.project-one__single:hover .project-one__title a,
+.main-menu .main-menu__list>li>a, 
+.stricky-header .main-menu__list>li>a
+.section-title__title,
+.about-one__points li P,
+.progress-one__progress-title,
+.feature-one__title a,
+.project-one__title a,
+.how-it-work__title a,
+.testimonial-one__client-name,
+.news-one__title a {
+    color: var(--lockdown-white);
+}
+
+
+.thm-btn:after {
+    background: var(--lockdown-white);
+}
+
+.thm-btn:hover {
+    color: var(--lockdown-black);
+}
+
+
+.feature-one__title a:hover {
+    color: var(--lockdown-primary);
+}
+
+.feature-one__btn:hover {
+    color: var(--lockdown-primary);
+}
+
+
+.progress-one__single .bar {
+    background-color: rgba(var(--lockdown-white-rgb), .10);
+}
+
+
+.appointment-one__inner {
+    background-color: #14473C;
+}
+
+.appointment-one__input-box input[type="text"],
+.appointment-one__input-box input[type="email"],
+.appointment-one__input-box textarea {
+    color: var(--lockdown-white);
+    border: 1px solid rgba(var(--lockdown-white-rgb), .10);
+    background: var(--lockdown-base);
+}
+
+.appointment-one__showing-sort .bootstrap-select>.dropdown-toggle {
+    color: var(--lockdown-white) !important;
+    border: 1px solid rgba(var(--lockdown-white-rgb), .10);
+    background: var(--lockdown-base);
+}
+
+.appointment-one__showing-sort .bootstrap-select>.dropdown-toggle:before {
+    color: var(--lockdown-white);
+}
+
+.appointment-one__shape-1 img,
+.appointment-one__shape-2 img {
+    filter: invert(1);
+    opacity: .5;
+}
+
+.project-one__carousel.owl-theme .owl-nav .owl-prev,
+.project-one__carousel.owl-theme .owl-nav .owl-next,
+.testimonial-one__carousel.owl-theme .owl-nav .owl-prev,
+.testimonial-one__carousel.owl-theme .owl-nav .owl-next {
+    border: 1px solid rgba(var(--lockdown-white-rgb), .10);
+}
+
+.project-one__bottom::before {
+    background-color: rgba(var(--lockdown-white-rgb), .10);
+}
+
+.project-one__content {
+    background-color: var(--lockdown-black);
+}
+
+.how-it-work__icon-shape {
+    background-color: rgba(var(--lockdown-white-rgb), 0.05);
+}
+
+.how-it-work__title a:hover {
+    color: var(--lockdown-primary);
+}
+
+.testimonial-one__shape {
+    filter: invert(1);
+    opacity: .2;
+}
+
+.pricing-one__single::before {
+    border: 20px solid rgba(var(--lockdown-white-rgb), .10);
+}
+
+.pricing-one__points li .icon span,
+.pricing-one__points li p {
+    color: var(--lockdown-white);
+}
+
+.pricing-one__btn {
+    border: 1px solid rgba(var(--lockdown-white-rgb), .10);
+    background: var(--lockdown-black);
+    color: var(--lockdown-white);
+}
+
+.news-one__btn {
+    border: 1px solid rgba(var(--lockdown-white-rgb), .10);
+}
+
+.news-one__date {
+    color: #95A49F;
+}
+
+.news-one__title a:hover {
+    color: var(--lockdown-primary);
+}
+
+.brand-one__inner {
+    border-top: 1px solid rgba(var(--lockdown-white-rgb), .10);
+}
+
+
+
+/*  */

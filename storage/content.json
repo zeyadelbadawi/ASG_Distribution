@@ -1,0 +1,350 @@
+{
+  "about": {
+    "title": "Why Choose ASG Distribution?",
+    "text": "We provide partnership built on reliability, excellence, and unwavering commitment to your success...",
+    "points": [
+      "Top-notch products",
+      "Expert Guidance",
+      "Proven Track Record",
+      "Dependable partner",
+      "End-to-End Solutions",
+      "Reliability"
+    ],
+    "buttonText": "Discover More",
+    "image": "/assets/images/resources/admin-ajax.jpg",
+    "text2": "At ASG Distribution, we prioritize your goals and work tirelessly to exceed your expectations, making us the ideal choice for businesses seeking quality, efficiency, and a partner they can depend on."
+  },
+  "features": {
+    "title": "Guarding your digital fortress is our responsibility",
+    "tabs": [
+      {
+        "name": "Residential",
+        "features": [
+          {
+            "iconClass": "icon-ip-camera",
+            "title": "HP"
+          },
+          {
+            "iconClass": "icon-vision",
+            "title": "IP"
+          },
+          {
+            "iconClass": "fas fa-wifi",
+            "title": "Wifi"
+          },
+          {
+            "iconClass": "fas fa-ethernet",
+            "title": "Cabling"
+          },
+          {
+            "iconClass": "fas fa-tv",
+            "title": "Monitors"
+          },
+          {
+            "iconClass": "fab fa-intercom",
+            "title": "Intercom"
+          },
+          {
+            "iconClass": "icon-waterproof",
+            "title": "Routers"
+          },
+          {
+            "iconClass": "icon-backup-power",
+            "title": "Switches"
+          },
+          {
+            "iconClass": "icon-sunglass",
+            "title": "Access Points"
+          },
+          {
+            "iconClass": "fab fa-ups",
+            "title": "UPS"
+          },
+          {
+            "iconClass": "icon-waterproof",
+            "title": "Sliding Gate Motor"
+          },
+          {
+            "iconClass": "icon-backup-power",
+            "title": "Swing Gate Motor"
+          }
+        ]
+      },
+      {
+        "name": "Commercial",
+        "features": [
+          {
+            "iconClass": "icon-ip-camera",
+            "title": "IP Camera"
+          },
+          {
+            "iconClass": "icon-vision",
+            "title": "Cable & Connectors"
+          },
+          {
+            "iconClass": "icon-data-guard",
+            "title": "Enterprise Intercomm"
+          },
+          {
+            "iconClass": "icon-motion",
+            "title": "Enterprise Router"
+          },
+          {
+            "iconClass": "icon-sunglass",
+            "title": "Cloud Manage Switches"
+          },
+          {
+            "iconClass": "icon-okitok",
+            "title": "Manage Access Points"
+          },
+          {
+            "iconClass": "icon-waterproof",
+            "title": "Full High Turn Style"
+          },
+          {
+            "iconClass": "icon-backup-power",
+            "title": "Managed Switches"
+          },
+          {
+            "iconClass": "icon-sunglass",
+            "title": "Barrier Gates"
+          },
+          {
+            "iconClass": "icon-okitok",
+            "title": "Bollards"
+          },
+          {
+            "iconClass": "icon-waterproof",
+            "title": "Access Control"
+          },
+          {
+            "iconClass": "icon-backup-power",
+            "title": "Parking Solutions"
+          }
+        ]
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "clientName": "Technology Valley",
+      "text": "We extend a heartfelt gratitude to ASG Distribution for consistently offering the best prices and fastest fulfillment in the market. Your unwavering commitment to excellence and customer satisfaction sets a benchmark in the industry. It's a pleasure partnering with a company that values efficiency and quality above all else. Thank you for being a reliable and trusted ally!",
+      "imagePath": "/assets/images/testimonial/testimonial-1-1.png",
+      "rating": 5
+    },
+    {
+      "clientName": "Trade House",
+      "text": "We express sincere appreciation to ASG Distribution for consistently providing the best prices and maintaining continuous trading opportunities in the market. Your dedication to delivering value and fostering enduring relationships is truly commendable. It is a privilege to collaborate with a company that prioritizes customer satisfaction and reliability above all else. Thank you for being a trusted partner that upholds high standards of service and excellence. Looking forward to further prosperous ventures together!",
+      "imagePath": "/assets/images/testimonial/testimonial-1-2.png",
+      "rating": 5
+    },
+    {
+      "clientName": "Compusat",
+      "text": "Compusat extends its sincere gratitude to ASG Distribution for their exceptional service and fast fulfillment of products. Their efficiency and dedication have played a pivotal role in meeting our business needs promptly, allowing us to serve our customers better. Thank you for your outstanding support and seamless service.",
+      "imagePath": "/assets/images/testimonial/testimonial-1-3.png",
+      "rating": 5
+    },
+    {
+      "clientName": "Eagle Eye",
+      "text": "Eagle Eye company is immensely grateful to ASG Distribution for their unparalleled service in ensuring fast product fulfillment and for consistently offering the best prices in the market. Their commitment to efficiency and affordability has significantly contributed to our business success, allowing us to meet our customer demands effectively. ASG Distribution's dedication to excellence and competitive pricing makes them a standout distributor in the industry.",
+      "imagePath": "/assets/images/testimonial/testimonial-1-4.png",
+      "rating": 5
+    },
+    {
+      "clientName": "Egypt Laptop",
+      "text": "Egypt Laptop company sincerely appreciates ASG Distribution for their swift product fulfillment and unwavering commitment to continuous trading. Thank you for your exceptional support and for being a trusted distributor that we can rely on for our operational needs.",
+      "imagePath": "/assets/images/testimonial/testimonial-1-5.png",
+      "rating": 5
+    },
+    {
+      "clientName": "Egypt Security",
+      "text": "Egypt Security company extends heartfelt appreciation to ASG Distribution for their product fulfillment and consistent trading services. Their efficiency in meeting our demands promptly has been instrumental in maintaining our operational effectiveness. Thank you for your exceptional support and dedication to our success.",
+      "imagePath": "/assets/images/testimonial/testimonial-1-6.png",
+      "rating": "1"
+    }
+  ],
+  "gallery": {
+    "title": "Strategically located throughout Egypt, ensuring widespread coverage and support",
+    "tagline": "Our Success Partners",
+    "items": [
+      {
+        "title": "Client 1",
+        "imagePath": "/assets/images/project/project-1-1.jpg",
+        "link": "project-details"
+      },
+      {
+        "title": "Client 2",
+        "imagePath": "/assets/images/project/project-1-2.jpg",
+        "link": "project-details"
+      },
+      {
+        "title": "Client 4",
+        "imagePath": "/assets/images/project/project-1-4.jpg",
+        "link": "project-details"
+      }
+    ]
+  },
+  "storage": {
+    "title": "Our success is intertwined with our valued partners",
+    "tagline": "Our Success Partners",
+    "bottomText": "Ensuring your digital protection in a secure environment.",
+    "items": [
+      {
+        "title": "Dahua",
+        "imagePath": "/assets/images/storage/1.png",
+        "link": "partners/dahua",
+        "description": "A specialized military unit tasked with gathering information"
+      },
+      {
+        "title": "Ruiji Reyee",
+        "imagePath": "/assets/images/storage/5.png",
+        "link": "partners/ruijiereyee",
+        "description": "A specialized military unit tasked with gathering information"
+      },
+      {
+        "title": "Imou",
+        "imagePath": "/assets/images/storage/3.png",
+        "link": "partners/imou",
+        "description": "A specialized military unit tasked with gathering information"
+      },
+      {
+        "title": "Kstar",
+        "imagePath": "/assets/images/storage/4.png",
+        "link": "partners/kstar",
+        "description": "A specialized military unit tasked with gathering information"
+      },
+      {
+        "title": "Unitech",
+        "imagePath": "/assets/images/storage/6.png",
+        "link": "partners/unitech",
+        "description": "A specialized military unit tasked with gathering information"
+      },
+      {
+        "title": "Centurion",
+        "imagePath": "/assets/images/storage/2.png",
+        "link": "partners/centurion",
+        "description": "A specialized military unit tasked with gathering information"
+      },
+      {
+        "title": "FAAC",
+        "imagePath": "/assets/images/storage/7.png",
+        "link": "partners/faac",
+        "description": "A specialized military unit tasked with gathering information"
+      },
+      {
+        "title": "Magnetic",
+        "imagePath": "/assets/images/storage/8.png",
+        "link": "partners/magnetic",
+        "description": "A specialized military unit tasked with gathering information"
+      }
+    ]
+  },
+  "services": {
+    "title": "Keeping You One Step Ahead",
+    "tagline": "Our Solutions",
+    "items": [
+      {
+        "title": "Security System",
+        "imagePath": "/assets/images/services/a.webp",
+        "iconPath": "assets/images/resources/camera-cctv.svg",
+        "link": "/services-details?tab=1",
+        "description": "Provide peace of mind through advanced protection and surveillance measures"
+      },
+      {
+        "title": "Networking",
+        "imagePath": "/assets/images/services/b.webp",
+        "iconPath": "assets/images/resources/sitemap.svg",
+        "link": "/services-details?tab=2",
+        "description": "Enables seamless communication and collaboration by connecting devices and systems"
+      },
+      {
+        "title": "Physical Security",
+        "imagePath": "/assets/images/services/c.webp",
+        "iconPath": "/assets/images/resources/key.svg",
+        "link": "/services-details?tab=3",
+        "description": "Enhance communication through technologies like video conferencing and display systems"
+      },
+      {
+        "title": "Audio Visual Solutions",
+        "imagePath": "/assets/images/services/d.webp",
+        "iconPath": "/assets/images/resources/waveform.svg",
+        "link": "/services-details?tab=4",
+        "description": "Streamline processes by automating tasks and workflows for increased efficiency"
+      },
+      {
+        "title": "Automations",
+        "imagePath": "/assets/images/services/e.webp",
+        "iconPath": "/assets/images/resources/cloud-gear-automation.svg",
+        "link": "/services-details?tab=5",
+        "description": "Optimize parking management through technologies like sensors and smart parking systems"
+      },
+      {
+        "title": "Parking Solutions",
+        "imagePath": "/assets/images/services/6.webp",
+        "iconPath": "/assets/images/resources/parking-circle.svg",
+        "link": "/services-details?tab=6",
+        "description": "A specialized military unit tasked with gathering information"
+      }
+    ]
+  },
+  "banner": {
+    "slides": [
+      {
+        "backgroundImage": "assets/images/backgrounds/slider-img-1-1.webp",
+        "backgroundImageTwo": "assets/images/backgrounds/slider-img-1-1.webp",
+        "shape1": "assets/images/shapes/main-slider-shape-1.png",
+        "shape2": "assets/images/shapes/main-slider-shape-2.png",
+        "shape3": "assets/images/shapes/main-slider-shape-3.png",
+        "shape4": "assets/images/shapes/main-slider-shape-4.png",
+        "subTitle": "ASG Distribution",
+        "title": "Where <span class='icon-camera'></span> Value <br/> Meets Excellence",
+        "text": "Partnering with ASG Distribution means gaining access to <br/> not only top-notch products but also a dedicated team ready to <br/> support you to achieve your goals.",
+        "buttonLink": "about",
+        "buttonText": "Learn More",
+        "phoneNumber": "010 50638800"
+      },
+      {
+        "backgroundImage": "assets/images/backgrounds/slider-1-2.jpg",
+        "backgroundImageTwo": "assets/images/backgrounds/slider-img-1-1.png",
+        "shape1": "assets/images/shapes/main-slider-shape-1.png",
+        "shape2": "assets/images/shapes/main-slider-shape-2.png",
+        "shape3": "assets/images/shapes/main-slider-shape-3.png",
+        "shape4": "assets/images/shapes/main-slider-shape-4.png",
+        "subTitle": "ASG Distribution",
+        "title": "Providing <span class='icon-camera'></span> the <br/> best services",
+        "text": "From sourcing top-quality products to seamless logistics management and <br/> timely deliveries, we ensure a smooth and efficient process from start to finish.",
+        "buttonLink": "about",
+        "buttonText": "Learn More",
+        "phoneNumber": "010 50638800"
+      }
+    ]
+  },
+  "blogs": [
+    {
+      "image": "assets/images/news/blog-1-1.jpg",
+      "author": "admin",
+      "date": "October 19, 2022",
+      "title": "A security solution that brings peace of mind",
+      "link": "blog-details"
+    },
+    {
+      "image": "assets/images/news/blog-1-2.jpg",
+      "author": "admin",
+      "date": "October 19, 2022",
+      "title": "Provides robust defense mechanisms to",
+      "link": "blog-details"
+    },
+    {
+      "image": "assets/images/news/blog-1-3.jpg",
+      "author": "admin",
+      "date": "October 19, 2022",
+      "title": "Builds a strong fortress around your",
+      "link": "blog-details"
+    }
+  ],
+  "processImages": {
+    "img1": "assets/images/resources/process-one-img-1.jpg",
+    "img2": "assets/images/resources/process-one-img-2.jpg",
+    "img3": "assets/images/resources/process-one-img-3.jpg"
+  }
+}

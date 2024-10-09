@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1",
+    "date": "1/12/2001",
+    "title": "Ziad Elbadawi",
+    "description": "Ziad Gehad Mohamed Elbadawi",
+    "description2": "//////////////////////////////////////////////",
+    "category": "software enginner",
+    "comments": "20",
+    "reviews": [
+      "ragl gad3",
+      "mo7trammm"
+    ],
+    "imageUrl": "/assets/images/blog/WhatsApp Image 2024-09-02 at 1.25.05 AM.jpeg",
+    "multiImageUrls": [
+      "/assets/images/blog/absen-banner-website.jpg",
+      "/assets/images/blog/317e227e-8e58-4c53-ba1d-c6b3ccddc924-scaled-1.jpeg",
+      "/assets/images/blog/biggest_oil_and_gas_companies (1).jpg",
+      "/assets/images/blog/retail.png",
+      "/assets/images/blog/qnet.jpg",
+      "/assets/images/blog/skiData.jpg"
+    ]
+  },
+  {
+    "id": "ekwlfm",
+    "date": "flkgmklf",
+    "title": "klfsmklf",
+    "description": "mdfklmkld",
+    "description2": "vfklmklfmklfmklfm",
+    "category": "kfvlmkfmklf",
+    "comments": "fklmfklmkldf",
+    "reviews": [
+      "klfmfgk ",
+      "dfklmdfgmk",
+      ""
+    ],
+    "imageUrl": "/assets/images/blog/1.png",
+    "multiImageUrls": [
+      "/assets/images/blog/317e227e-8e58-4c53-ba1d-c6b3ccddc924-scaled-1.jpeg",
+      "/assets/images/blog/biggest_oil_and_gas_companies (1).jpg"
+    ]
+  }
+]

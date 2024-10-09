@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Dahua",
+    "description": "Innovative security solutions provider enhancing safety with advanced technology",
+    "imageurl": "1.png",
+    "link": "partners/dahua"
+
+  },
+  {
+    "title": "Ruijie Reyee",
+    "description": "Leading networking solutions for seamless connectivity and efficiency.",
+    "imageurl": "2.png",
+    "link": "partners/ruijiereyee"
+
+  },
+  {
+    "title": "Imou",
+    "description": " Smart security solutions for modern surveillance and peace of mind",
+    "imageurl": "3.png",
+    "link": "partners/imou"
+
+  },
+  {
+    "title": "Kstar",
+    "description": "Powering reliability and performance with cutting-edge energy solutions.",
+    "imageurl": "4.png",
+    "link": "partners/kstar"
+
+  },
+  {
+    "title": "Unitech",
+    "description": " Reliable Uninterruptible Power Supply solutions for continuous performance.",
+    "imageurl": "5.png",
+    "link": "partners/unitech"
+
+  },
+  {
+    "title": "Centurion",
+    "description": "Innovative access control and automation systems for enhanced security",
+    "imageurl": "6.png",
+    "link": "partners/centurion"
+
+  },
+  {
+    "title": "FAAC",
+    "description": "Leading the way in gate automation and access control solutions.",
+    "imageurl": "7.png",
+    "link": "partners/faac"
+
+  },
+  {
+    "title": "Magnetic",
+    "description": " Cutting-edge solutions for secure access control and automation systems",
+    "imageurl": "8.png",
+    "link": "partners/magnetic"
+
+  }
+]

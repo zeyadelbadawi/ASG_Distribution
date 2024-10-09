@@ -1,0 +1,107 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/updateContent/AdminPage.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+.AdminPage_adminContainer__Sj7AJ {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.AdminPage_adminHeader__xTfaN {
+    text-align: center;
+    margin-bottom: 30px; /* Increased space below the header */
+    color: #f76709;
+    font-size: 2.5rem; /* Larger font size for emphasis */
+}
+
+.AdminPage_adminTabs__WKI7O {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.AdminPage_adminTab__LW_T1 {
+    padding: 15px 30px; /* More padding for a button-like feel */
+    margin: 0 5px;
+    border: none;
+    background: #f1f1f1;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+    font-size: 1.1rem; /* Increased font size */
+}
+
+.AdminPage_adminTab__LW_T1:hover {
+    background: #e2e2e2;
+}
+
+.AdminPage_adminActive__2Osfj {
+    background: #f76709;
+    color: white;
+}
+
+.AdminPage_adminTabContent__NJtmr {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 30px; /* Increased padding for better spacing */
+    background: #fff;
+    margin: 20px 0; /* Added margin above and below the content */
+}
+
+.AdminPage_label__6G99U {
+    display: block; /* Make labels block elements for better spacing */
+    margin-bottom: 10px; /* Space between label and input */
+    font-weight: bold; /* Emphasize labels */
+}
+
+.AdminPage_inputText__lnLgD,
+.AdminPage_inputFile__02eos,
+.AdminPage_textArea__13mkn {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Increased padding for inputs */
+    margin-bottom: 20px; /* Space below inputs */
+    border: 1px solid #ccc; /* Standard border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Increased font size */
+}
+
+/* Specific input styles for better clarity */
+.AdminPage_inputFile__02eos {
+    padding: 0; /* Remove padding for file inputs */
+}
+
+.AdminPage_adminSaveButton__W1VmM {
+    background: #f76709;
+    color: white;
+    padding: 12px 25px; /* Increased padding for buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    font-size: 1.2rem; /* Larger font size for buttons */
+    transition: background 0.3s;
+}
+
+.AdminPage_adminSaveButton__W1VmM:hover {
+    background: #e65c08; /* Darker shade of your primary color */
+}
+
+.AdminPage_button__mkikg {
+    background: #f76709;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.AdminPage_button__mkikg:hover {
+    background: #e65c08; /* Darker shade of the primary color */
+}
+

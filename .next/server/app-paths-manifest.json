@@ -1,0 +1,12 @@
+{
+  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/getContent/route": "app/api/getContent/route.js",
+  "/services-details/page": "app/services-details/page.js",
+  "/partners/[partner]/page": "app/partners/[partner]/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/api/blog/route": "app/api/blog/route.js",
+  "/admin@@/page": "app/admin@@/page.js",
+  "/api/saveServerDataVendor/route": "app/api/saveServerDataVendor/route.js",
+  "/api/gallery/route": "app/api/gallery/route.js"
+}

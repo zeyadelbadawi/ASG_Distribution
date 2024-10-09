@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Security System",
+    "description": "Provide peace of mind through advanced protection and surveillance measures",
+    "imageurl": "a.webp",
+    "iconurl": "camera-cctv.svg",
+    "tabNumber": "1"
+  },
+  {
+    "title": "Networking",
+    "description": "Enables seamless communication and collaboration by connecting devices and systems",
+    "imageurl": "b.webp",
+    "iconurl": "sitemap.svg",
+    "tabNumber": "2"
+  },
+  {
+    "title": "Physical Security",
+    "description": "Enhance communication through technologies like video conferencing and display systems",
+    "imageurl": "c.webp",
+    "iconurl": "key.svg",
+    "tabNumber": "3"
+  },
+  {
+    "title": "Audio Vusial Soltions",
+    "description": "streamline processes by automating tasks and workflows for increased efficiency",
+    "imageurl": "d.webp",
+    "iconurl": "waveform.svg",
+    "tabNumber": "4"
+  },
+  {
+    "title": "Automations",
+    "description": "optimize parking management through technologies like sensors and smart parking systems",
+    "imageurl": "e.webp",
+    "iconurl": "cloud-gear-automation.svg",
+    "tabNumber": "5"
+  },
+  {
+    "title": "Parking Soltions",
+    "description": "A specialized military unit tasked with gathering information",
+    "imageurl": "6.webp",
+    "iconurl": "parking-circle.svg",
+    "tabNumber": "6"
+  }
+]
