@@ -2,11 +2,8 @@ import { promises as fs } from 'fs';
 import { join } from 'path';
 import { NextResponse } from 'next/server';
 
-export const config = {
-  api: {
-    bodyParser: false, // Disable default body parser to handle files
-  },
-};
+export const GET = { config: { api: { bodyParser: false } } };
+
 
 export async function POST(req) {
   try {
