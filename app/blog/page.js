@@ -131,7 +131,7 @@ export default function Home() {
 
     return (
         <>
-            <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Blog">
+            <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Blog" breadcrumbBg="/assets/images/blog.jpg">
                 <section className="blog-page">
                     <div className="container">
                         <div className="row">

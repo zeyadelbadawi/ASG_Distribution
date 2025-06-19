@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 export default function Features() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [featuresData, setFeaturesData] = useState(null);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     useEffect(() => {
         fetch('/api/getContent')
@@ -23,12 +24,12 @@ export default function Features() {
         <>
             <section className="feature-one">
                 <div className="container">
-                <div className="section-title text-left" style={{ maxWidth: '70%', marginTop: '20px', position: 'relative', zIndex: 1 }}>
-    <span className="section-title__tagline" style={{ marginBottom: '20px' }}>features</span>
-    <h2 className="section-title__title" style={{ marginBottom: '30px', whiteSpace: 'normal', wordWrap: 'break-word' }}>
-        {featuresData.title}
-    </h2>
-</div>
+                    <div className="section-title text-left" style={{ maxWidth: '70%', marginTop: '20px', position: 'relative', zIndex: 1 }}>
+                        <span className="section-title__tagline" style={{ marginBottom: '20px' }}>features</span>
+                        <h2 className="section-title__title" style={{ marginBottom: '30px', whiteSpace: 'normal', wordWrap: 'break-word' }}>
+                            {featuresData.title}
+                        </h2>
+                    </div>
 
                     <div className="feature-one__inner tabs-box">
                         <div className="feature-one__tab-box clearfix">
@@ -63,8 +64,18 @@ export default function Features() {
                                                             flexDirection: 'column',
                                                             alignItems: 'center',
                                                             justifyContent: 'center',
-                                                            textAlign: 'center'
+                                                            textAlign: 'center',
+                                                            padding: '20px',
+                                                            borderRadius: '10px',
+                                                            transition: 'all 0.3s ease-in-out',
+                                                            transform: hoveredIndex === idx ? 'scale(1.05)' : 'scale(1)',
+                                                            backgroundColor: '#fff',
+                                                            boxShadow: hoveredIndex === idx ? '0 10px 20px rgba(0,0,0,0.15)' : '0 5px 10px rgba(0,0,0,0.1)',
+                                                            cursor: 'pointer',
+                                                            color: hoveredIndex === idx ? '#EB7230' : '#000' // Change text color on hover
                                                         }}
+                                                        onMouseEnter={() => setHoveredIndex(idx)}
+                                                        onMouseLeave={() => setHoveredIndex(null)}
                                                     >
                                                         <div
                                                             className="feature-one__icon"
@@ -80,19 +91,28 @@ export default function Features() {
                                                             }}
                                                         >
                                                             <img
-                                                                src={feature.iconPath}
+                                                                src={hoveredIndex === idx ? feature.hoverIconPath : feature.iconPath}
                                                                 alt={feature.title}
                                                                 style={{
-                                                                    maxWidth: '80%', // Limits the image's width to fit within the container
-                                                                    maxHeight: '80%', // Limits the image's height to fit within the container
-                                                                    objectFit: 'contain', // Keeps the aspect ratio of the image
+                                                                    maxWidth: '80%',
+                                                                    maxHeight: '80%',
+                                                                    objectFit: 'contain',
                                                                     display: 'block',
-                                                                    margin: '0 auto' // Centers the image horizontally
+                                                                    margin: '0 auto'
                                                                 }}
                                                             />
                                                         </div>
-                                                        <h3 className="feature-one__title" style={{ marginTop: '10px' }}>
-                                                            <Link href="services-details">{feature.title}</Link>
+                                                        <h3 
+                                                            className="feature-one__title" 
+                                                            style={{ 
+                                                                marginTop: '10px',
+                                                                transition: 'color 0.3s ease-in-out',
+                                                                color: 'inherit' // Inherits hover color from the parent div
+                                                            }}
+                                                        >
+                                                            <Link href="services-details" style={{ color: 'inherit', textDecoration: 'none' }}>
+                                                                {feature.title}
+                                                            </Link>
                                                         </h3>
                                                     </div>
                                                 </li>

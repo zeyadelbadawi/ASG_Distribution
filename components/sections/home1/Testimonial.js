@@ -45,16 +45,24 @@ export default function Testimonial() {
                 <div className="container">
                     <div className="section-title text-left">
                         <span className="section-title__tagline">CLIENTS REVIEWS</span>
-                        <h2 className="section-title__title">WHAT OUR CLIENT SAYS</h2>
+                        <h2 className="section-title__title">WHAT OUR CLIENTS SAY</h2>
                     </div>
-                    <p className="testimonial-one__text">
-                        A specialized military unit tasked with gathering information and conducting surveillance in high-risk areas.
-                    </p>
+
                     <div className="testimonial-one__bottom">
                         <Swiper {...swiperOptions} className="testimonial-one__carousel">
                             {testimonials.map((testimonial, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="item">
+                                    <div
+                                        className="item"
+                                        style={{
+                                            height: '520px', // Fixed height
+                                            display: 'flex',
+                                            justifyContent: 'space-between', // Adjust alignment
+                                            padding: '20px',
+                                            boxSizing: 'border-box',
+                                            overflow: 'hidden', // Prevent overflow
+                                        }}
+                                    >
                                         <div className="testimonial-one__single">
                                             <div className="testimonial-one__shape-1">
                                                 <img src="assets/images/shapes/testimonial-one-shape-1.png" alt="" />
@@ -70,12 +78,31 @@ export default function Testimonial() {
                                                 </div>
                                             </div>
                                             <p className="testimonial-one__single-text">{testimonial.text}</p>
-                                            <div className="testimonial-one__client-box">
+                                            <div
+                                                className="testimonial-one__client-box"
+                                                style={{
+                                                    position: 'absolute', // Make it sticky at the bottom
+                                                    bottom: '20px', // Add some spacing from the bottom
+                                                    left: '20px', // Align with card padding
+                                                    right: '20px', // Align with card padding
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                }}
+                                            >
                                                 <div className="testimonial-one__client-img">
-                                                    <img src={testimonial.imagePath} alt={testimonial.clientName} />
+                                                    <img
+                                                        src={testimonial.imagePath}
+                                                        alt={testimonial.clientName}
+                                                        style={{
+                                                            width: '50px',
+                                                            height: '50px',
+                                                            borderRadius: '50%',
+                                                            marginRight: '10px',
+                                                        }}
+                                                    />
                                                 </div>
                                                 <div className="testimonial-one__client-info">
-                                                    <h3>{testimonial.clientName}</h3>
+                                                    <h3 style={{ margin: 0 }}>{testimonial.clientName}</h3>
                                                 </div>
                                             </div>
                                         </div>

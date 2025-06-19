@@ -11,7 +11,7 @@
       "Reliability"
     ],
     "buttonText": "Discover More",
-    "image": "/assets/images/resources/admin-ajax.jpg",
+    "image": "/assets/images/resources/HQ.jpg",
     "text2": "At ASG Distribution, we prioritize your goals and work tirelessly to exceed your expectations, making us the ideal choice for businesses seeking quality, efficiency, and a partner they can depend on."
   },
   "features": {
@@ -22,51 +22,75 @@
         "features": [
           {
             "iconClass": "icon-ip-camera",
-            "title": "HP"
+            "title": "HD Cameras",
+            "iconPath": "/assets/images/resources/gHD.svg",
+            "hoverIconPath": "/assets/1a.svg"
           },
           {
             "iconClass": "icon-vision",
-            "title": "IP"
+            "title": "IP Cameras",
+            "iconPath": "/assets/images/resources/gIP.svg",
+            "hoverIconPath": "/assets/2a.svg"
           },
           {
             "iconClass": "fas fa-wifi",
-            "title": "Wifi"
+            "title": "Wi-Fi",
+            "iconPath": "/assets/images/resources/gWifi.svg",
+            "hoverIconPath": "/assets/3a.svg"
           },
           {
             "iconClass": "fas fa-ethernet",
-            "title": "Cabling"
+            "title": "Structure Cabling",
+            "iconPath": "/assets/images/resources/gCable.svg",
+            "hoverIconPath": "/assets/4a.svg"
           },
           {
             "iconClass": "fas fa-tv",
-            "title": "Monitors"
+            "title": "Monitors",
+            "iconPath": "/assets/images/resources/gMonitor.svg",
+            "hoverIconPath": "/assets/5a.svg"
           },
           {
             "iconClass": "fab fa-intercom",
-            "title": "Intercom"
+            "title": "Intercom",
+            "iconPath": "/assets/images/resources/gintercom.svg",
+            "hoverIconPath": "/assets/6a.svg"
           },
           {
             "iconClass": "icon-waterproof",
-            "title": "Routers"
+            "title": "Routers",
+            "iconPath": "/assets/images/resources/grouter.svg",
+            "hoverIconPath": "/assets/7a.svg"
           },
           {
             "iconClass": "icon-backup-power",
-            "title": "Switches"
+            "title": "Switches",
+            "iconPath": "/assets/images/resources/gswitch.svg",
+            "hoverIconPath": "/assets/8a.svg"
           },
           {
             "iconClass": "icon-sunglass",
-            "title": "Access Points"
+            "title": "Access Point",
+            "iconPath": "/assets/images/resources/gaccess.svg",
+            "hoverIconPath": "/assets/9a.svg"
           },
           {
             "iconClass": "fab fa-ups",
-            "title": "UPS"
+            "title": "UPS",
+            "iconPath": "/assets/images/resources/gups.svg",
+            "hoverIconPath": "/assets/10a.svg"
           },
           {
             "iconClass": "icon-waterproof",
-            "title": "Sliding Gate Motor"
+            "title": "Sliding Gate Motor",
+            "iconPath": "/assets/images/resources/gsliding.svg",
+            "hoverIconPath": "/assets/11a.svg"
           },
           {
             "iconClass": "icon-backup-power",
-            "title": "Swing Gate Motor"
+            "title": "Swing Gate Motor",
+            "iconPath": "/assets/images/resources/gswing.svg",
+            "hoverIconPath": "/assets/12a.svg"
           }
         ]
       },
@@ -75,51 +99,75 @@
         "features": [
           {
             "iconClass": "icon-ip-camera",
-            "title": "IP Camera"
+            "title": "IP Cameras",
+            "hoverIconPath": "/assets/1.svg",
+            "iconPath": "/assets/images/resources/IP.svg"
           },
           {
             "iconClass": "icon-vision",
-            "title": "Cable & Connectors"
+            "title": "Cables & Connectors",
+            "iconPath": "/assets/images/resources/Cable & connectors.svg",
+            "hoverIconPath": "/assets/2.svg"
           },
           {
             "iconClass": "icon-data-guard",
-            "title": "Enterprise Intercomm"
+            "title": "Enterprise Intercom",
+            "iconPath": "/assets/images/resources/Enterprise Intercom.svg",
+            "hoverIconPath": "/assets/3.svg"
           },
           {
             "iconClass": "icon-motion",
-            "title": "Enterprise Router"
+            "title": "Routing & Switches",
+            "iconPath": "/assets/images/resources/Enterprise Router.svg",
+            "hoverIconPath": "/assets/4.svg"
           },
           {
             "iconClass": "icon-sunglass",
-            "title": "Cloud Manage Switches"
+            "title": "Industrial Switch",
+            "iconPath": "/assets/images/resources/Cloud Manage Switchess.svg",
+            "hoverIconPath": "/assets/5.svg"
           },
           {
             "iconClass": "icon-okitok",
-            "title": "Manage Access Points"
+            "title": "Managed Access Point",
+            "iconPath": "/assets/images/resources/Manage Access Points.svg",
+            "hoverIconPath": "/assets/6.svg"
           },
           {
             "iconClass": "icon-waterproof",
-            "title": "Full High Turn Style"
+            "title": "Full Height Turnstile",
+            "iconPath": "/assets/images/resources/Full High Turn Style.svg",
+            "hoverIconPath": "/assets/7.svg"
           },
           {
             "iconClass": "icon-backup-power",
-            "title": "Managed Switches"
+            "title": "Managed Switching",
+            "iconPath": "/assets/images/resources/Managed Switches.svg",
+            "hoverIconPath": "/assets/8.svg"
           },
           {
             "iconClass": "icon-sunglass",
-            "title": "Barrier Gates"
+            "title": "Barrier Gates",
+            "iconPath": "/assets/images/resources/Barrier Gates.svg",
+            "hoverIconPath": "/assets/9.svg"
           },
           {
             "iconClass": "icon-okitok",
-            "title": "Bollards"
+            "title": "Bollards",
+            "iconPath": "/assets/images/resources/Bollards.svg",
+            "hoverIconPath": "/assets/10.svg"
           },
           {
             "iconClass": "icon-waterproof",
-            "title": "Access Control"
+            "title": "Access Control",
+            "iconPath": "/assets/images/resources/Access Control.svg",
+            "hoverIconPath": "/assets/11.svg"
           },
           {
             "iconClass": "icon-backup-power",
-            "title": "Parking Solutions"
+            "title": "Parking Solutions",
+            "iconPath": "/assets/images/resources/parking.svg",
+            "hoverIconPath": "/assets/12.svg"
           }
         ]
       }
@@ -129,38 +177,38 @@
     {
       "clientName": "Technology Valley",
       "text": "We extend a heartfelt gratitude to ASG Distribution for consistently offering the best prices and fastest fulfillment in the market. Your unwavering commitment to excellence and customer satisfaction sets a benchmark in the industry. It's a pleasure partnering with a company that values efficiency and quality above all else. Thank you for being a reliable and trusted ally!",
-      "imagePath": "/assets/images/testimonial/testimonial-1-1.png",
+      "imagePath": "/assets/images/resources/3.png",
       "rating": 5
     },
     {
       "clientName": "Trade House",
       "text": "We express sincere appreciation to ASG Distribution for consistently providing the best prices and maintaining continuous trading opportunities in the market. Your dedication to delivering value and fostering enduring relationships is truly commendable. It is a privilege to collaborate with a company that prioritizes customer satisfaction and reliability above all else. Thank you for being a trusted partner that upholds high standards of service and excellence. Looking forward to further prosperous ventures together!",
-      "imagePath": "/assets/images/testimonial/testimonial-1-2.png",
+      "imagePath": "/assets/images/resources/4.png",
       "rating": 5
     },
     {
       "clientName": "Compusat",
       "text": "Compusat extends its sincere gratitude to ASG Distribution for their exceptional service and fast fulfillment of products. Their efficiency and dedication have played a pivotal role in meeting our business needs promptly, allowing us to serve our customers better. Thank you for your outstanding support and seamless service.",
-      "imagePath": "/assets/images/testimonial/testimonial-1-3.png",
+      "imagePath": "/assets/images/resources/6.png",
       "rating": 5
     },
     {
       "clientName": "Eagle Eye",
       "text": "Eagle Eye company is immensely grateful to ASG Distribution for their unparalleled service in ensuring fast product fulfillment and for consistently offering the best prices in the market. Their commitment to efficiency and affordability has significantly contributed to our business success, allowing us to meet our customer demands effectively. ASG Distribution's dedication to excellence and competitive pricing makes them a standout distributor in the industry.",
-      "imagePath": "/assets/images/testimonial/testimonial-1-4.png",
+      "imagePath": "/assets/images/resources/1 (1).png",
       "rating": 5
     },
     {
       "clientName": "Egypt Laptop",
       "text": "Egypt Laptop company sincerely appreciates ASG Distribution for their swift product fulfillment and unwavering commitment to continuous trading. Thank you for your exceptional support and for being a trusted distributor that we can rely on for our operational needs.",
-      "imagePath": "/assets/images/testimonial/testimonial-1-5.png",
+      "imagePath": "/assets/images/resources/5.png",
       "rating": 5
     },
     {
       "clientName": "Egypt Security",
       "text": "Egypt Security company extends heartfelt appreciation to ASG Distribution for their product fulfillment and consistent trading services. Their efficiency in meeting our demands promptly has been instrumental in maintaining our operational effectiveness. Thank you for your exceptional support and dedication to our success.",
-      "imagePath": "/assets/images/testimonial/testimonial-1-6.png",
-      "rating": "1"
+      "imagePath": "/assets/images/resources/2 (1).png",
+      "rating": "5"
     }
   ],
   "gallery": {
@@ -168,74 +216,524 @@
     "tagline": "Our Success Partners",
     "items": [
       {
-        "title": "Client 1",
-        "imagePath": "/assets/images/project/project-1-1.jpg",
-        "link": "project-details"
+        "title": "ASG Smart",
+        "imagePath": "/assets/images/80.png",
+        "link": " ",
+        "modalData": {
+          "name": "ASG Smart",
+          "number": [
+            "16653"
+          ],
+          "address": [
+            "53 ميدان الفلكي - شارع التحرير، باب اللوق - عابدين - القاهرة"
+          ]
+        }
       },
       {
-        "title": "Client 2",
-        "imagePath": "/assets/images/project/project-1-2.jpg",
-        "link": "project-details"
+        "title": "Wave Tech",
+        "imagePath": "/assets/images/team/1.png",
+        "link": " ",
+        "modalData": {
+          "name": "Wave Tech",
+          "number": [
+            "0 1003720852"
+          ],
+          "address": [
+            "8 شارع سعيد - قسم ثاني طنطا - محافظة الغربية"
+          ]
+        }
       },
       {
-        "title": "Client 4",
-        "imagePath": "/assets/images/project/project-1-4.jpg",
-        "link": "project-details"
+        "title": "Egypt Laptop",
+        "imagePath": "/assets/images/team/3.png",
+        "link": " ",
+        "modalData": {
+          "name": "Egypt Laptop",
+          "number": [
+            "15240"
+          ],
+          "address": [
+            "مول تكنولوجي، مدينة نصر"
+          ]
+        }
+      },
+      {
+        "title": "MAKKA Technology & Security Systems",
+        "imagePath": "/assets/images/team/4.png",
+        "link": " ",
+        "modalData": {
+          "name": "MAKKA Technology & Security Systems",
+          "number": [
+            " 0106907666"
+          ],
+          "address": [
+            "الحي الثالث شارع ابو الخير - المجاورة ١٤ قطعة ٢١٤ - دمياط الجديدة"
+          ]
+        }
+      },
+      {
+        "title": "IT Shop",
+        "imagePath": "/assets/images/team/5.png",
+        "link": " ",
+        "modalData": {
+          "name": "IT Shop",
+          "number": [
+            "01097050505"
+          ],
+          "address": [
+            "شارع عمارات ٤٧ بجوار حضان شرابي للأطفال , Kafr el Sheikh, Egypt"
+          ]
+        }
+      },
+      {
+        "title": "Technology Valley ",
+        "imagePath": "/assets/images/team/6.png",
+        "link": " ",
+        "modalData": {
+          "name": "Technology Valley",
+          "number": [
+            "01005791880"
+          ],
+          "address": [
+            "هيليوبوليس، 7 شارع سخاوي - كمبيوتر مول 1 - محل رقم 11"
+          ]
+        }
+      },
+      {
+        "title": "Wi-Fi Networking",
+        "imagePath": "/assets/images/team/7.png",
+        "link": " ",
+        "modalData": {
+          "name": "Wi-Fi Networking",
+          "number": [
+            "01115222293"
+          ],
+          "address": [
+            "المقر الرئيسي: 8 شارع نجاتي سراج، المنطة الثامنة، مدينة نصر، الدور الثاني، شقة 202، امام البنك الوطني فرع السراج مول"
+          ]
+        }
+      },
+      {
+        "title": "Express",
+        "imagePath": "/assets/images/team/8.png",
+        "link": " ",
+        "modalData": {
+          "name": "Express",
+          "number": [
+            "01002323774"
+          ],
+          "address": [
+            "مول البستان - الدور الاول - باب اللوق "
+          ]
+        }
+      },
+      {
+        "title": "MultiMedia House",
+        "imagePath": "/assets/images/team/9.png",
+        "link": " ",
+        "modalData": {
+          "name": "MultiMedia House",
+          "number": [
+            "01097266697"
+          ],
+          "address": [
+            "Amaaer Bukding - Naser City - Cairo - Egypt, Cairo, Egypt"
+          ]
+        }
+      },
+      {
+        "title": "Egypt Security & Smart",
+        "imagePath": "/assets/images/team/10.png",
+        "link": " ",
+        "modalData": {
+          "name": "Egypt Security & Smart",
+          "number": [
+            "01092239103"
+          ],
+          "address": [
+            "فرع دمياط: سوق الحسبة - بجوار ألبان نظيم ",
+            "فرع المنصورة: شارع أولاد ربيع - متفرع من شارع جيهان - أمام بوابة الجامعة"
+          ]
+        }
+      },
+      {
+        "title": "Smart Link",
+        "imagePath": "/assets/images/team/11.png",
+        "link": " ",
+        "modalData": {
+          "name": "Smart Link",
+          "number": [
+            "01066222918"
+          ],
+          "address": [
+            " 28 شارع محمود حسنين - متفرع من شارع عبد السلام على - المنصورة - محافظة الدقهلية"
+          ]
+        }
+      },
+      {
+        "title": "Karama",
+        "imagePath": "/assets/images/team/12.png",
+        "link": " ",
+        "modalData": {
+          "name": "Karama",
+          "number": [
+            "01014913092"
+          ],
+          "address": [
+            "شارع جيهان - أمام بوابة كلية التربية - خلف مسجد الجوهرة - المنصورة - محافظة الدقهلية"
+          ]
+        }
+      },
+      {
+        "title": "الشركة المصرية الاوروبية ",
+        "imagePath": "/assets/images/team/13.png",
+        "link": " ",
+        "modalData": {
+          "name": "الشركة المصرية الاوروبية ",
+          "number": [
+            "1024202553"
+          ],
+          "address": [
+            "شارع الأمين - أمام إستوديو منير - شبين الكوم - محافظة المنوفي��"
+          ]
+        }
+      },
+      {
+        "title": "ElMothda Group",
+        "imagePath": "/assets/images/team/14.png",
+        "link": " ",
+        "modalData": {
+          "name": "ElMothda Group",
+          "number": [
+            "01000108875"
+          ],
+          "address": [
+            "النعناعيه - طريق القناطر الخيريه - سنتريس - اشمون - المنوفيه"
+          ]
+        }
+      },
+      {
+        "title": "Safety Life",
+        "imagePath": "/assets/images/team/15.png",
+        "link": " ",
+        "modalData": {
+          "name": "Safety Life",
+          "number": [
+            "01065607080"
+          ],
+          "address": [
+            "17 شارع البستان - أمام مول البستان - الدور السادس - القاهرة"
+          ]
+        }
+      },
+      {
+        "title": "Eagle Eye",
+        "imagePath": "/assets/images/team/16.png",
+        "link": " ",
+        "modalData": {
+          "name": "Eagle Eye",
+          "number": [
+            "01005327851"
+          ],
+          "address": [
+            "٣ شارع الجبرتي - منشية البكري - مصر الجديدة - القاهرة"
+          ]
+        }
+      },
+      {
+        "title": "Compusat Security Solutions",
+        "imagePath": "/assets/images/team/17.png",
+        "link": " ",
+        "modalData": {
+          "name": "Compusat Security Solutions",
+          "number": [
+            "01007445123"
+          ],
+          "address": [
+            "4 شارع مصطفى أبو هيف - باب اللوق - عابدين - القاهرة"
+          ]
+        }
+      },
+      {
+        "title": "Future System",
+        "imagePath": "/assets/images/team/18.png",
+        "link": " ",
+        "modalData": {
+          "name": "Future System",
+          "number": [
+            "01271084842"
+          ],
+          "address": [
+            "فرع أسوان: شارع البركة - متفرع من شارع عباس العقاد",
+            "فرع الأقصر: إسنا - بجوار السجل المدني الجديد"
+          ]
+        }
+      },
+      {
+        "title": "Elicon Tech",
+        "imagePath": "/assets/images/team/19.png",
+        "link": " ",
+        "modalData": {
+          "name": "Elicon Tech",
+          "number": [
+            "01012220253",
+            "01012220254"
+          ],
+          "address": [
+            "عماره ٩ بلوك ١٤، شارع الدعوه، حي السفارات - مدينة نصر - القاهرة"
+          ]
+        }
+      },
+      {
+        "title": "Elbatal Security Systems",
+        "imagePath": "/assets/images/team/20.png",
+        "link": " ",
+        "modalData": {
+          "name": "Elbatal Security Systems",
+          "number": [
+            "01200551813"
+          ],
+          "address": [
+            "محافظة قنا مركز قوص شارع طريق النصر بجوار فرع وي"
+          ]
+        }
+      },
+      {
+        "title": "الهرم",
+        "imagePath": "/assets/images/team/21.png",
+        "link": " ",
+        "modalData": {
+          "name": "الهرم",
+          "number": [
+            "01032359991"
+          ],
+          "address": [
+            "شربين - بجوارشارع المركز - محافظة الدقهلية"
+          ]
+        }
+      },
+      {
+        "title": "V Tech",
+        "imagePath": "/assets/images/team/22.png",
+        "link": " ",
+        "modalData": {
+          "name": "V Tech",
+          "number": [
+            "01090013622"
+          ],
+          "address": [
+            "شارع أبو الفرج - أمام برج الإيمان - محافظة بني سويف"
+          ]
+        }
+      },
+      {
+        "title": "El Swifey",
+        "imagePath": "/assets/images/team/23.png",
+        "link": " ",
+        "modalData": {
+          "name": "El Swifey",
+          "number": [
+            "01001653199"
+          ],
+          "address": [
+            "3 شارع مجمع المصالح الحكومية أمام سوق اللؤلؤه"
+          ]
+        }
+      },
+      {
+        "title": "Town Tech",
+        "imagePath": "/assets/images/team/24.png",
+        "link": " ",
+        "modalData": {
+          "name": "Town Tech",
+          "number": [
+            "01001916212"
+          ],
+          "address": [
+            "فرع الإسكندرية: شارع ملك حفني ناصف - أمام ماركت فتح الله - فيكتوريا",
+            "فرع دمنهور: شارع الصفا والمروة - خلف مدرسة الملك فيصل",
+            "فرع أبو حمص: شارع محمد عامر - بجوار بنك مصر"
+          ]
+        }
+      },
+      {
+        "title": "الهندسية للانظمة الامنية",
+        "imagePath": "/assets/images/team/25.png",
+        "link": " ",
+        "modalData": {
+          "name": "الهندسية للانظمة الامنية",
+          "number": [
+            "01020966688"
+          ],
+          "address": [
+            "شارع عبد الحليم مع شارع هدايه - طنطا - محافظة الغربية"
+          ]
+        }
+      },
+      {
+        "title": "شركة المهندس لكاميرات المراقبة",
+        "imagePath": "/assets/images/team/26.png",
+        "link": " ",
+        "modalData": {
+          "name": "شركة المهندس لكاميرات المراقبة",
+          "number": [
+            "01282724126"
+          ],
+          "address": [
+            "الاسماعيليه - حي السلام - ش العصفوري محلات المهندس"
+          ]
+        }
+      },
+      {
+        "title": "Elziny Electronics",
+        "imagePath": "/assets/images/team/27.png",
+        "link": " ",
+        "modalData": {
+          "name": "Elziny Electronics",
+          "number": [
+            "01007138061"
+          ],
+          "address": [
+            "شارع مجمع المحاكم - محلات الزيني - المنزله - محافظة الدقهلية"
+          ]
+        }
+      },
+      {
+        "title": "Zoom Technology Solutions ",
+        "imagePath": "/assets/images/team/28.png",
+        "link": " ",
+        "modalData": {
+          "name": "Zoom Technology Solutions ",
+          "number": [
+            "01099592502"
+          ],
+          "address": [
+            "شارع أوجينا والسواحل - حي الشرق - محافظة بورسعيد"
+          ]
+        }
+      },
+      {
+        "title": "Emerson Tech",
+        "imagePath": "/assets/images/team/30.png",
+        "link": " ",
+        "modalData": {
+          "name": "Emerson Tech",
+          "number": [
+            "01116343434"
+          ],
+          "address": [
+            "15 شارع البستان - باب الللوق - القاهرة"
+          ]
+        }
+      },
+      {
+        "title": "HIVISION",
+        "imagePath": "/assets/images/team/31.png",
+        "link": " ",
+        "modalData": {
+          "name": "HIVISION",
+          "number": [
+            "01229830507"
+          ],
+          "address": [
+            "عمارة ستراند الدور الثانى - شارع التحرير - باب اللوق - عابدين - القاهرة"
+          ]
+        }
+      },
+      {
+        "title": "El-Kayan Systems Integration",
+        "imagePath": "/assets/images/team/32.png",
+        "link": " ",
+        "modalData": {
+          "name": "El-Kayan Systems Integration",
+          "number": [
+            "01004330123"
+          ],
+          "address": [
+            "حي البنفسج 2 - التجمع الأول - القاهرة"
+          ]
+        }
+      },
+      {
+        "title": "Trade House Electronic Systems",
+        "imagePath": "/assets/images/team/33.png",
+        "link": " ",
+        "modalData": {
+          "name": "Trade House Electronic Systems",
+          "number": [
+            "01220110258"
+          ],
+          "address": [
+            "15 شارع البستان - أمام سنتر البستان - باب اللوق - القاهرة"
+          ]
+        }
       }
     ]
   },
   "storage": {
-    "title": "Our success is intertwined with our valued partners",
+    "title": "Our success is intertwined with our valued partnerss",
     "tagline": "Our Success Partners",
-    "bottomText": "Ensuring your digital protection in a secure environment.",
+    "bottomText": " ",
     "items": [
       {
-        "title": "Dahua",
-        "imagePath": "/assets/images/storage/1.png",
+        "title": "Dahua Technology",
+        "imagePath": "/assets/images/resources/ASG Distribution Brands Logo-01.png",
         "link": "partners/dahua",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "Enabling a Smarter Society and Better Living."
       },
       {
-        "title": "Ruiji Reyee",
+        "title": "Ruijie Reyee",
         "imagePath": "/assets/images/storage/5.png",
         "link": "partners/ruijiereyee",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "Committed to fully integrating technologies with applications to creatively solve customers' problems and promote social progress."
+      },
+      {
+        "title": "Aruba",
+        "imagePath": "/assets/aruuba.png",
+        "link": "partners/aruba",
+        "description": "Drive innovation from the edge to the cloud with security-first and AI-powered networking."
+      },
+      {
+        "title": "ITC",
+        "imagePath": "/assets/itcc.png",
+        "link": "partners/itc",
+        "description": "Industry-leading audio visual and stage lighting manufacturer."
       },
       {
         "title": "Imou",
         "imagePath": "/assets/images/storage/3.png",
         "link": "partners/imou",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "Creating a more secure lifestyle for every user and their families through advanced technology and smart product."
       },
       {
         "title": "Kstar",
         "imagePath": "/assets/images/storage/4.png",
         "link": "partners/kstar",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "Well designed UPS solutions for critical power applications."
       },
       {
         "title": "Unitech",
         "imagePath": "/assets/images/storage/6.png",
         "link": "partners/unitech",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "reliable power backup solution designed to keep you running without interruptions."
       },
       {
         "title": "Centurion",
         "imagePath": "/assets/images/storage/2.png",
         "link": "partners/centurion",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "Dedicated to enhancing lives with our cutting-edge gate motors and access control products."
       },
       {
-        "title": "FAAC",
+        "title": "FAAC Technologies",
         "imagePath": "/assets/images/storage/7.png",
         "link": "partners/faac",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "Specialised in access automation, parking and access control business in both the residential and industrial sectors."
       },
       {
         "title": "Magnetic",
         "imagePath": "/assets/images/storage/8.png",
         "link": "partners/magnetic",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "Access systems that take you further."
       }
     ]
   },
@@ -245,53 +743,53 @@
     "items": [
       {
         "title": "Security System",
-        "imagePath": "/assets/images/services/a.webp",
-        "iconPath": "assets/images/resources/camera-cctv.svg",
+        "imagePath": "/assets/images/resources/sec.jpg",
+        "iconPath": "/assets/images/resources/Security System.svg",
         "link": "/services-details?tab=1",
-        "description": "Provide peace of mind through advanced protection and surveillance measures"
+        "description": "Provide peace of mind through advanced protection and surveile measures"
       },
       {
         "title": "Networking",
-        "imagePath": "/assets/images/services/b.webp",
+        "imagePath": "/assets/images/resources/net.jpg",
         "iconPath": "assets/images/resources/sitemap.svg",
         "link": "/services-details?tab=2",
         "description": "Enables seamless communication and collaboration by connecting devices and systems"
       },
       {
         "title": "Physical Security",
-        "imagePath": "/assets/images/services/c.webp",
-        "iconPath": "/assets/images/resources/key.svg",
+        "imagePath": "/assets/images/resources/ps.jpg",
+        "iconPath": "/assets/images/resources/Physical Security.svg",
         "link": "/services-details?tab=3",
         "description": "Enhance communication through technologies like video conferencing and display systems"
       },
       {
         "title": "Audio Visual Solutions",
-        "imagePath": "/assets/images/services/d.webp",
-        "iconPath": "/assets/images/resources/waveform.svg",
+        "imagePath": "/assets/images/resources/AV.jpg",
+        "iconPath": "/assets/images/resources/Audio.svg",
         "link": "/services-details?tab=4",
         "description": "Streamline processes by automating tasks and workflows for increased efficiency"
       },
       {
         "title": "Automations",
-        "imagePath": "/assets/images/services/e.webp",
+        "imagePath": "/assets/images/resources/aut.jpg",
         "iconPath": "/assets/images/resources/cloud-gear-automation.svg",
         "link": "/services-details?tab=5",
         "description": "Optimize parking management through technologies like sensors and smart parking systems"
       },
       {
         "title": "Parking Solutions",
-        "imagePath": "/assets/images/services/6.webp",
+        "imagePath": "/assets/images/resources/Parking.jpg",
         "iconPath": "/assets/images/resources/parking-circle.svg",
         "link": "/services-details?tab=6",
-        "description": "A specialized military unit tasked with gathering information"
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
       }
     ]
   },
   "banner": {
     "slides": [
       {
-        "backgroundImage": "assets/images/backgrounds/slider-img-1-1.webp",
-        "backgroundImageTwo": "assets/images/backgrounds/slider-img-1-1.webp",
+        "backgroundImage": "/assets/images/resources/2394-x-820.jpg",
+        "backgroundImageTwo": "assets/images/backgrounds/1.jpg",
         "shape1": "assets/images/shapes/main-slider-shape-1.png",
         "shape2": "assets/images/shapes/main-slider-shape-2.png",
         "shape3": "assets/images/shapes/main-slider-shape-3.png",
@@ -299,20 +797,6 @@
         "subTitle": "ASG Distribution",
         "title": "Where <span class='icon-camera'></span> Value <br/> Meets Excellence",
         "text": "Partnering with ASG Distribution means gaining access to <br/> not only top-notch products but also a dedicated team ready to <br/> support you to achieve your goals.",
-        "buttonLink": "about",
-        "buttonText": "Learn More",
-        "phoneNumber": "010 50638800"
-      },
-      {
-        "backgroundImage": "assets/images/backgrounds/slider-1-2.jpg",
-        "backgroundImageTwo": "assets/images/backgrounds/slider-img-1-1.png",
-        "shape1": "assets/images/shapes/main-slider-shape-1.png",
-        "shape2": "assets/images/shapes/main-slider-shape-2.png",
-        "shape3": "assets/images/shapes/main-slider-shape-3.png",
-        "shape4": "assets/images/shapes/main-slider-shape-4.png",
-        "subTitle": "ASG Distribution",
-        "title": "Providing <span class='icon-camera'></span> the <br/> best services",
-        "text": "From sourcing top-quality products to seamless logistics management and <br/> timely deliveries, we ensure a smooth and efficient process from start to finish.",
         "buttonLink": "about",
         "buttonText": "Learn More",
         "phoneNumber": "010 50638800"
@@ -343,8 +827,8 @@
     }
   ],
   "processImages": {
-    "img1": "assets/images/resources/process-one-img-1.jpg",
-    "img2": "assets/images/resources/process-one-img-2.jpg",
-    "img3": "assets/images/resources/process-one-img-3.jpg"
+    "img1": "/assets/images/resources/2.jpg",
+    "img2": "/assets/images/resources/1.jpg",
+    "img3": "/assets/images/resources/3.jpg"
   }
 }

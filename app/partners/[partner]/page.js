@@ -1,15 +1,13 @@
+
 'use client';
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { usePathname } from 'next/navigation';
 import Layout from "@/components/layout/Layout";
 import partnersData from '@/data/partnersData';
 
 export default function PartnerPage() {
     const pathname = usePathname();
-
-    // Extract the partner ID from the URL
-    const partner = pathname.split('/').pop();
+    const partnerId = pathname.split('/').pop();
 
     const [partnerData, setPartnerData] = useState(null);
     const [products, setProducts] = useState([]);
@@ -18,16 +16,21 @@ export default function PartnerPage() {
     const [email, setEmail] = useState('');
     const [submissionStatus, setSubmissionStatus] = useState(null);
     const [errors, setErrors] = useState(null);
-
+    
     useEffect(() => {
-        if (partner) {
-            const data = partnersData.find(p => p.id === partner);
-            setPartnerData(data);
-            if (data && data.products) {
-                setProducts(data.products);
-            }
-        }
-    }, [partner]);
+        const data = partnersData.find(p => p.id === partnerId);
+        setPartnerData(data);
+    }, [partnerId]);
+
+    if (!partnerData) {
+        return <div>Loading...</div>;
+    }
+
+
+
+
+
+
 
     // Sorting logic
     const sortProducts = (option) => {
@@ -60,9 +63,9 @@ export default function PartnerPage() {
         // Your form submission logic here
     };
 
-    if (!partnerData) {
-        return <div>Loading...</div>;
-    }
+
+
+
 
     return (
         <Layout headerStyle={3} footerStyle={1} breadcrumbTitle={partnerData.name}>
@@ -79,77 +82,146 @@ export default function PartnerPage() {
                     </div>
                 </section>
 
-                {/* Sorting and Filtering Controls */}
                 <section className="controls-section">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <div className="sort-control">
-                                    <label htmlFor="sort">Sort By:</label>
-                                    <select id="sort" onChange={(e) => sortProducts(e.target.value)}>
-                                        <option value="">Select</option>
-                                        <option value="name-asc">Name: A-Z</option>
-                                        <option value="name-desc">Name: Z-A</option>
-                                    </select>
-                                </div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="sort-control">
+                                <label htmlFor="sort">Sort By:</label>
+                                <select id="sort" onChange={(e) => sortProducts(e.target.value)}>
+                                    <option value="">Select</option>
+                                    <option value="name-asc">Name: A-Z</option>
+                                    <option value="name-desc">Name: Z-A</option>
+                                </select>
                             </div>
-                            <div className="col-md-6">
-                                <div className="filter-control">
-                                    <label htmlFor="filter">Filter By:</label>
-                                    <select id="filter" onChange={(e) => filterProducts(e.target.value)}>
-                                        <option value="All">All</option>
-                                        {categories.map(category => (
-                                            <option key={category} value={category}>
-                                                {category}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="filter-control">
+                                <label htmlFor="filter">Filter By:</label>
+                                <select id="filter" onChange={(e) => filterProducts(e.target.value)}>
+                                    <option value="All">All</option>
+                                    {categories.map(category => (
+                                        <option key={category} value={category}>
+                                            {category}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                {/* Products List Section */}
-                <section className="products-list-section">
-                    <div className="container">
-                        <div className="row">
-                            {/* Ensure products is not undefined or null */}
-                            {products && products.length > 0 ? (
-                                products.map(product => (
-                                    <div className="col-xl-4 col-lg-4 col-md-6" key={product.id}>
-                                        <div className="product-item">
-                                            <div className="product-item__img">
-                                                {product.image ? (
-                                                    <img
-                                                        src={product.image}
-                                                        alt={product.name}
-                                                        style={{ width: '100%', height: '250px', objectFit: 'cover' }}
-                                                    />
-                                                ) : (
-                                                    <img
-                                                        src="/placeholder.png" // Fallback image if none is provided
-                                                        alt={product.name}
-                                                        style={{ width: '100%', height: '250px', objectFit: 'cover' }}
-                                                    />
-                                                )}
+
+                {/* Conditional Rendering for Products or Canva Embed */}
+                {partnerData.products && partnerData.products.length > 0 ? (
+                    <section className="products-list-section">
+                        <div className="container">
+                            <div className="row">
+                                {partnerData.products.map(product => (
+                                    <div
+                                        key={product.id}
+                                        className="col-xl-4 col-lg-4 col-md-6"
+                                        style={{ marginBottom: '30px' }}
+                                    >
+                                        <div
+                                            className="product-card"
+                                            style={{
+                                                backgroundColor: '#fff',
+                                                borderRadius: '16px',
+                                                overflow: 'hidden',
+                                                boxShadow: '0 8px 20px rgba(0, 0, 0, 0.1)',
+                                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                                display: 'flex',
+                                                flexDirection: 'column',
+                                                justifyContent: 'space-between',
+                                                height: '100%',
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.currentTarget.style.transform = 'translateY(-10px)';
+                                                e.currentTarget.style.boxShadow =
+                                                    '0 15px 30px rgba(0, 0, 0, 0.2)';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.currentTarget.style.transform = 'translateY(0)';
+                                                e.currentTarget.style.boxShadow =
+                                                    '0 8px 20px rgba(0, 0, 0, 0.1)';
+                                            }}
+                                        >
+                                            {/* Image Section */}
+                                            <div
+                                                className="product-card__img"
+                                                style={{
+                                                    position: 'relative',
+                                                    overflow: 'hidden',
+                                                    height: '250px',
+                                                }}
+                                            >
+                                                <img
+                                                    src={product.image || '/placeholder.png'}
+                                                    alt={product.name}
+                                                    style={{
+                                                        width: '100%',
+                                                        height: '100%',
+                                                        objectFit: 'cover',
+                                                        transition: 'transform 0.3s ease-in-out',
+                                                    }}
+                                                    onMouseEnter={(e) => {
+                                                        e.currentTarget.style.transform = 'scale(1.1)';
+                                                    }}
+                                                    onMouseLeave={(e) => {
+                                                        e.currentTarget.style.transform = 'scale(1)';
+                                                    }}
+                                                />
                                             </div>
-                                            <div className="product-item__content">
-                                                <h3 className="product-item__title">{product.name}</h3>
-                                                <p className="product-item__text">{product.description}</p>
+
+                                            {/* Content Section */}
+                                            <div
+                                                className="product-card__content"
+                                                style={{
+                                                    padding: '16px',
+                                                    textAlign: 'center',
+                                                }}
+                                            >
+                                                <h3
+                                                    style={{
+                                                        fontSize: '18px',
+                                                        fontWeight: 'bold',
+                                                        margin: '10px 0',
+                                                        color: '#333',
+                                                    }}
+                                                >
+                                                    {product.name}
+                                                </h3>
+                                                <p
+                                                    style={{
+                                                        fontSize: '14px',
+                                                        color: '#666',
+                                                        marginBottom: '10px',
+                                                    }}
+                                                >
+                                                    {product.description}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                ))
-                            ) : (
-                                <p>No products available</p>
-                            )}
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                ) : partnerData.embedCode ? (
+                    <section className="embed-section">
+                        <div className="container">
+                            <div
+                                dangerouslySetInnerHTML={{ __html: partnerData.embedCode }}
+                            />
+                        </div>
+                    </section>
+                ) : (
+                    <p>No products or embedded content available for this partner.</p>
+                )}
 
-                {/* CTA Section */}
-                <section className="cta-one">
+<section className="cta-one">
                     <div className="container">
                         <div className="cta-one__inner">
                             <div className="cta-one__bg" style={{ backgroundImage: 'url(assets/images/backgrounds/cta-one-bg.jpg)' }}></div>

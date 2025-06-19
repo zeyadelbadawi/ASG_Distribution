@@ -1,4 +1,4 @@
-// File: D:\lockdown\app\services-details\page.js
+// File: /home/ziad/ASG_Distribution/app/services-details/page.js
 import * as entry from '../../../../app/services-details/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -247,7 +247,9 @@
 
 .icon-quote:before {
   content: "\e936";
+  color: #fd6909; /* Applies the desired color to the icon */
 }
+
 
 .icon-safety:before {
   content: "\e937";

@@ -27,8 +27,8 @@ export default function About() {
                                 <div className="about-one__happy-client">
                                     <div className="about-one__happy-client-inner">
                                         <div className="about-one__happy-client-count count-box">
-                                            <h3>3000</h3>
-                                            <span className="about-one__happy-client-plus">+</span>
+                                            <h3>30K</h3>
+                                            <span className="about-one__happy-client-plus">+&nbsp;&nbsp;</span>
                                         </div>
                                         
                                         <p className="about-one__happy-client-text">Happy Clients</p>

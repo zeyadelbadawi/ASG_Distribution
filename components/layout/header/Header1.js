@@ -30,16 +30,17 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                                     <i className="icon-pin"></i>
                                 </div>
                                 <div className="text">
-                                    <p>4 Dr Mohamed Awad Street in Front of City Center</p>
+                                                                        <p><Link href="https://www.google.com/maps/dir//in+Front+of+City+Center,+4+Dr.+Mohamed+Awad+St,+from+%D9%85%D9%83%D8%B1%D9%85+%D8%B9%D8%A8%D9%8A%D8%AF%D8%8C+%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D9%86%D8%B5%D8%B1%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%E2%80%AC%E2%80%AD/@30.0677685,31.4133808,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14583f92ba92b499:0xe71112fc96b95222!2m2!1d31.3433406!2d30.0677871?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D">4 Dr Mohamed Awad Street in Front of City Center</Link></p>
+
                                 </div>
                             </li>
                         </ul>
                         <div className="main-menu__top-right">
                             <div className="main-menu__social">
-                                <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                <Link href="https://www.facebook.com/asgdisty/"><i className="fab fa-facebook"></i></Link>
+                                    <Link href="https://www.facebook.com/asgdisty/"><i className="fab fa-facebook"></i></Link>
+                            <Link href="https://www.instagram.com/asg.distribution/"><i className="fab fa-instagram"></i></Link>
+                                <Link href="https://www.linkedin.com/company/asg-distribution/"><i className="fab fa-linkedin"></i></Link>
                                 <Link href="#"><i className="fab fa-youtube"></i></Link>
-                                <Link href="#"><i className="fab fa-instagram"></i></Link>
                             </div>
                         </div>
                     </div>

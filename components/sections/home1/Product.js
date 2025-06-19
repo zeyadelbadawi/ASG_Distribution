@@ -85,7 +85,7 @@ export default function Product() {
                     ]
                 };
     
-                const response = await fetch('http://localhost:5000/api/contacts', { // Change to your backend URL
+                const response = await fetch('http://asgdistribution.com/api/contacts', { // Change to your backend URL
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ export default function Product() {
                         <div className="product-one__left">
                             <div className="section-title text-left">
                                 <div className="section-title__tagline-box">
-                                    <span className="section-title__tagline">Product</span>
+                                    <span className="section-title__tagline">Contact us</span>
                                 </div>
                                 <h2 className="section-title__title">Become one of our Success partners! 
                                 </h2>
@@ -141,129 +141,143 @@ export default function Product() {
                         </div>
                     </div>
                     <div className="col-xl-6">
-                        <div className="product-one__right wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
-                            <form onSubmit={handleSubmit} className="product-one__form contact-form-validated">
-                                <div className="product-one__single-list">
-                                    <div className="select-box">
-                                        <input 
-                                            type="text" 
-                                            name="name" 
-                                            placeholder="Enter your name" 
-                                            className="wide" 
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            style={{
-                                                backgroundColor: '#FF6600', 
-                                                color: '#FFFFFF', 
-                                                height: '70px', 
-                                                borderRadius: '5px', 
-                                                padding: '0 20px', 
-                                                width: '100%', 
-                                                boxSizing: 'border-box',
-                                                border: '2px solid #FFFFFF' 
-                                            }}/>
-                                        {errors.name && <p style={{color: 'red'}}>{errors.name}</p>}
-                                    </div>
-                                </div>
-                                <div className="product-one__single-list">
-                                    <div className="select-box">
-                                        <input 
-                                            type="text" 
-                                            name="company" 
-                                            placeholder="Enter your company name" 
-                                            className="wide" 
-                                            value={formData.company}
-                                            onChange={handleChange}
-                                            style={{
-                                                backgroundColor: '#FF6600', 
-                                                color: '#FFFFFF', 
-                                                height: '70px', 
-                                                borderRadius: '5px', 
-                                                padding: '0 20px', 
-                                                width: '100%', 
-                                                boxSizing: 'border-box',
-                                                border: '2px solid #FFFFFF' 
-                                            }}/>
-                                        {errors.company && <p style={{color: 'red'}}>{errors.company}</p>}
-                                    </div>
-                                </div>
-                                <div className="product-one__single-list">
-                                    <div className="select-box">
-                                        <input 
-                                            type="text" 
-                                            name="phone" 
-                                            placeholder="Enter your phone number" 
-                                            className="wide" 
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                            style={{
-                                                backgroundColor: '#FF6600', 
-                                                color: '#FFFFFF', 
-                                                height: '70px', 
-                                                borderRadius: '5px', 
-                                                padding: '0 20px', 
-                                                width: '100%', 
-                                                boxSizing: 'border-box',
-                                                border: '2px solid #FFFFFF' 
-                                            }}/>
-                                        {errors.phone && <p style={{color: 'red'}}>{errors.phone}</p>}
-                                    </div>
-                                </div>
-                                <div className="product-one__single-list">
-                                    <div className="select-box">
-                                        <input 
-                                            type="text" 
-                                            name="email" 
-                                            placeholder="Enter your email" 
-                                            className="wide" 
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            style={{
-                                                backgroundColor: '#FF6600', 
-                                                color: '#FFFFFF', 
-                                                height: '70px', 
-                                                borderRadius: '5px', 
-                                                padding: '0 20px', 
-                                                width: '100%', 
-                                                boxSizing: 'border-box',
-                                                border: '2px solid #FFFFFF' 
-                                            }}/>
-                                        {errors.email && <p style={{color: 'red'}}>{errors.email}</p>}
-                                    </div>
-                                </div>
-                                
-                               
-                                <div className="product-one__single-list">
-                                    <div className="select-box">
-                                        <input 
-                                            type="text" 
-                                            name="message" 
-                                            placeholder="Enter your Message" 
-                                            className="wide" 
-                                            value={formData.message}
-                                            onChange={handleChange}
-                                            style={{
-                                                backgroundColor: '#FF6600', 
-                                                color: '#FFFFFF', 
-                                                height: '120px', 
-                                                borderRadius: '5px', 
-                                                padding: '0 20px', 
-                                                width: '100%', 
-                                                boxSizing: 'border-box',
-                                                border: '2px solid #FFFFFF' 
-                                            }}/>
-                                        {errors.message && <p style={{color: 'red'}}>{errors.message}</p>}
-                                    </div>
-                                </div>
-                                <div className="product-one__btn-box">
-                                    <button type="submit" className="thm-btn product-one__btn">Send</button>
-                                </div>
-                                {submissionStatus && <p>{submissionStatus}</p>} {/* Show submission status */}
-                            </form>
+    <div className="product-one__right wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
+        {/* Title */}
+   
+        <form onSubmit={handleSubmit} className="product-one__form contact-form-validated">
+            <div className="product-one__single-list">
+            <h1 
+            style={{
+                textAlign: 'left',
+                color: '#FFFFFF', // White text
+                fontSize: '35px', // Larger font size to match the screenshot
+                fontWeight: 'bold', // Bold font weight
+                marginBottom: '20px', // Space below the title
+                lineHeight: '1.2', // Adjust line height for spacing between lines
+                fontFamily: "'Arial', sans-serif", // Clean font family for a professional look
+                padding: '20px',
+            }}
+        >
+            Get a Free Quote
+        </h1>
+                <div className="select-box">
+                    <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Enter your name" 
+                        className="wide" 
+                        value={formData.name}
+                        onChange={handleChange}
+                        style={{
+                            backgroundColor: '#FF6600', 
+                            color: '#FFFFFF', 
+                            height: '70px', 
+                            borderRadius: '5px', 
+                            padding: '0 20px', 
+                            width: '100%', 
+                            boxSizing: 'border-box',
+                            border: '2px solid #FFFFFF' 
+                        }}/>
+                    {errors.name && <p style={{color: 'red'}}>{errors.name}</p>}
+                </div>
+            </div>
+            <div className="product-one__single-list">
+                <div className="select-box">
+                    <input 
+                        type="text" 
+                        name="company" 
+                        placeholder="Enter your company name" 
+                        className="wide" 
+                        value={formData.company}
+                        onChange={handleChange}
+                        style={{
+                            backgroundColor: '#FF6600', 
+                            color: '#FFFFFF', 
+                            height: '70px', 
+                            borderRadius: '5px', 
+                            padding: '0 20px', 
+                            width: '100%', 
+                            boxSizing: 'border-box',
+                            border: '2px solid #FFFFFF' 
+                        }}/>
+                    {errors.company && <p style={{color: 'red'}}>{errors.company}</p>}
+                </div>
+            </div>
+            <div className="product-one__single-list">
+                <div className="select-box">
+                    <input 
+                        type="text" 
+                        name="phone" 
+                        placeholder="Enter your phone number" 
+                        className="wide" 
+                        value={formData.phone}
+                        onChange={handleChange}
+                        style={{
+                            backgroundColor: '#FF6600', 
+                            color: '#FFFFFF', 
+                            height: '70px', 
+                            borderRadius: '5px', 
+                            padding: '0 20px', 
+                            width: '100%', 
+                            boxSizing: 'border-box',
+                            border: '2px solid #FFFFFF' 
+                        }}/>
+                    {errors.phone && <p style={{color: 'red'}}>{errors.phone}</p>}
+                </div>
+            </div>
+            <div className="product-one__single-list">
+                <div className="select-box">
+                    <input 
+                        type="text" 
+                        name="email" 
+                        placeholder="Enter your email" 
+                        className="wide" 
+                        value={formData.email}
+                        onChange={handleChange}
+                        style={{
+                            backgroundColor: '#FF6600', 
+                            color: '#FFFFFF', 
+                            height: '70px', 
+                            borderRadius: '5px', 
+                            padding: '0 20px', 
+                            width: '100%', 
+                            boxSizing: 'border-box',
+                            border: '2px solid #FFFFFF' 
+                        }}/>
+                    {errors.email && <p style={{color: 'red'}}>{errors.email}</p>}
+                </div>
+            </div>
+            <div className="product-one__single-list">
+                <div className="select-box">
+                    <input 
+                        type="text" 
+                        name="message" 
+                        placeholder="Enter your Message" 
+                        className="wide" 
+                        value={formData.message}
+                        onChange={handleChange}
+                        style={{
+                            backgroundColor: '#FF6600', 
+                            color: '#FFFFFF', 
+                            height: '120px', 
+                            borderRadius: '5px', 
+                            padding: '0 20px', 
+                            width: '100%', 
+                            boxSizing: 'border-box',
+                            border: '2px solid #FFFFFF' 
+                        }}/>
+                    {errors.message && <p style={{color: 'red'}}>{errors.message}</p>}
+                </div>
+            </div>
+            <div className="product-one__btn-box">
+                <button type="submit" className="thm-btn product-one__btn">Send</button>
+            </div>
+            {submissionStatus && <p>{submissionStatus}</p>} {/* Show submission status */}
+        </form>
+        <div className="result"></div>
+    </div>
+</div>
 
-                            <div className="result"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>

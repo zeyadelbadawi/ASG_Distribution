@@ -61,12 +61,13 @@ export default function Home() {
 
   return (
     <>
-      <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Our Solutions">
+      <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Our Solutions" breadcrumbBg="/assets/images/solution.jpg" // Pass the background image for Breadcrumb
+      >
         <div>
           <br></br> <br></br>
           <section className="services-one">
             <div className="container">
-              <div className='row'>
+              <div className='row services-row'>
                 {services.map((item, index) => (
                   <div key={index} className="col-xl-4 col-lg-4 wow fadeInLeft" data-wow-delay="100ms">
                     <div className="services-one__single">

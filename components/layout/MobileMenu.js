@@ -91,9 +91,9 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
 
                     {/* Social Media Icons */}
                     <div className="custom-nav-social full-width-icons">
-    <Link href="#" className="fab fa-facebook"></Link>
-    <Link href="#" className="fab fa-instagram"></Link>
-    <Link href="#" className="fab fa-linkedin"></Link>
+    <Link href="https://www.facebook.com/asgdisty" className="fab fa-facebook"></Link>
+    <Link href="https://www.instagram.com/asg.distribution/" className="fab fa-instagram"></Link>
+    <Link href="https://www.linkedin.com/company/asg-distribution/" className="fab fa-linkedin"></Link>
     <Link href="#" className="fab fa-youtube"></Link>
 </div>
                 </div>

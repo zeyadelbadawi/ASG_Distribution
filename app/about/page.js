@@ -139,7 +139,14 @@ export default function About() {
 
     return (
         <>
-            <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="About ASG Distribution">
+ 
+
+ <Layout
+            headerStyle={3} // Specify the header style
+            footerStyle={1} // Specify the footer style
+            breadcrumbTitle="About ASG Distribution"
+            breadcrumbBg="/assets/images/about.jpg" // Pass the background image for Breadcrumb
+        >
                 {/*About One Start */}
                 <section className="about-one">
                     <div className="container">
@@ -157,8 +164,8 @@ export default function About() {
                                         <div className="about-one__happy-client">
                                             <div className="about-one__happy-client-inner">
                                                 <div className="about-one__happy-client-count count-box">
-                                                    <h3>3000</h3>
-                                                    <span className="about-one__happy-client-plus">+</span>
+                                                    <h3>30K</h3>
+                                                    <span className="about-one__happy-client-plus">+&nbsp;&nbsp;</span>
                                                 </div>
 
                                                 <p className="about-one__happy-client-text">Happy Clients</p>
@@ -293,21 +300,21 @@ export default function About() {
                                 <li className="wow fadeInLeft" data-wow-delay="100ms">
                                     <div className="process-one__count"></div>
                                     <div className="icon">
-                                        <span className="icon-peace-mind"></span>
+                                        <img src="/assets/images/i1.png" alt="Customer Satisfaction" />
                                     </div>
                                     <h3><Link href="about">Customer Satisfaction</Link></h3>
                                 </li>
                                 <li className="wow fadeInLeft" data-wow-delay="300ms">
                                     <div className="process-one__count"></div>
                                     <div className="icon">
-                                        <span className="icon-shoes"></span>
+                                       <img src="/assets/images/i2.png" alt="Quality Products Icon" />
                                     </div>
                                     <h3><Link href="about">Quality Products</Link></h3>
                                 </li>
                                 <li className="wow fadeInLeft" data-wow-delay="600ms">
                                     <div className="process-one__count"></div>
                                     <div className="icon">
-                                        <span className="icon-emil-2"></span>
+                                        <img src="/assets/images/i3.png" alt="Partnership Development" />
                                     </div>
                                     <h3><Link href="about">Partnership Development</Link></h3>
                                 </li>
@@ -325,8 +332,8 @@ export default function About() {
                                         <div className="process-one__count-box">
                                             <p className="process-one__count-text">Trusted By</p>
                                             <div className="process-one__count-2 count-box">
-                                                <h3>10</h3>
-                                                <span className="process-one__count-plus">k</span>
+                                                <h3>30</h3>
+                                                <span className="process-one__count-plus">K</span>
                                             </div>
                                         </div>
                                     </div>

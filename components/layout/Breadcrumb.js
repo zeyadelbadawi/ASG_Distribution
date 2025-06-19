@@ -1,31 +1,36 @@
-import Link from "next/link"
+import Link from "next/link";
 
-export default function Breadcrumb({ breadcrumbTitle }) {
+export default function Breadcrumb({ breadcrumbTitle, bgImage }) {
     return (
         <>
+            {/* Page Header Start */}
+            <section
+    className="page-header"
+    style={{
+        backgroundImage: bgImage
+            ? `url(${bgImage})`
+            : 'url(/assets/images/default-bg.png)', // Fallback background image
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '400px', // Ensure enough height for the section
+    }}
+>
 
-        {/*Page Header Start*/}
-        <section className="page-header">
-            <div className="page-header__bg"  style={{ backgroundImage: 'url(assets/images/backgrounds/page-header-bg.png)' }} >
-            </div>
-            <div className="page-header__shape-1">
-                <img src="assets/images/shapes/page-header-shape-1.png" alt=""/>
-            </div>
-            <div className="container">
-                <div className="page-header__inner">
-                 <h2>{breadcrumbTitle}</h2>
-                    <div className="thm-breadcrumb__inner">
-                        <ul className="thm-breadcrumb list-unstyled">
-                            <li><Link href="/">home</Link></li>
-                            <li><span className="icon-angle-left"></span></li>
-                            <li>{breadcrumbTitle}</li>
-                        </ul>
+                <div className="container">
+                    <div className="page-header__inner">
+                        <h2>{breadcrumbTitle}</h2>
+                        <div className="thm-breadcrumb__inner">
+                            <ul className="thm-breadcrumb list-unstyled">
+                                <li><Link href="/">Home</Link></li>
+                                <li><span className="icon-angle-left"></span></li>
+                                <li>{breadcrumbTitle}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        {/*Page Header End*/}
-
+            </section>
+            {/* Page Header End */}
         </>
-    )
+    );
 }

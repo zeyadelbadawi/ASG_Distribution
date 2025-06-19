@@ -8,17 +8,14 @@ export default function Cta() {
 
     const listId = 'kVfvu';
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-
             const requestBody = {
                 email: email,
                 campaign: {
                     campaignId: listId,
                 },
-
             };
 
             const response = await fetch('http://localhost:5000/api/contacts', {
@@ -33,7 +30,6 @@ export default function Cta() {
                 setSubmissionStatus("Form submitted successfully!");
                 console.log("Form data sent to GetResponse successfully!");
                 setEmail(''); // Reset email field after successful submission
-
             } else {
                 const errorData = await response.json();
                 setSubmissionStatus(`Failed to submit the form: ${errorData.message}`);
@@ -53,11 +49,22 @@ export default function Cta() {
                     <div className="cta-one__inner">
                         <div className="cta-one__bg" style={{ backgroundImage: 'url(assets/images/backgrounds/cta-one-bg.jpg)' }}></div>
                         <div className="row">
-                            <div className="col-xl-6 col-lg-6"></div>
+                            {/* Left Column with Image */}
+                            <div className="col-xl-6 col-lg-6">
+                                <div className="cta-one__image-container">
+                                    <img 
+                                        src="assets/images/resources/1.png" 
+                                        alt=" " 
+                                        className="cta-one__image" 
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Right Column with Form */}
                             <div className="col-xl-6 col-lg-6">
                                 <div className="cta-one__right">
                                     <h3 className="cta-one__title">Get Free Estimate</h3>
-                                    <p className="cta-one__text">Lorem Ipsum is simply is dumiomy is text Lorem Ipsum</p>
+                                    <p className="cta-one__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                                     <form className="cta-one__form mc-form" onSubmit={handleSubmit}>
                                         <div className="cta-one__form-input-box">
                                             <input
@@ -74,10 +81,11 @@ export default function Cta() {
                                                     padding: '0 20px',
                                                     width: '100%',
                                                     boxSizing: 'border-box',
-                                                    border: '2px solid #FFFFFF'
+                                                    border: '2px solid #FFFFFF',
+                                                    alignItems: 'center',
                                                 }}
                                             />
-                                            <button type="submit" className="cta-one__btn thm-btn">Message</button>
+                                            <button type="submit" className="cta-one__btn thm-btn">Submit</button>
                                         </div>
                                         {errors && <p style={{ color: 'red' }}>{errors}</p>}
                                     </form>

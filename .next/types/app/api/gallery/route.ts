@@ -1,4 +1,4 @@
-// File: D:\lockdown\app\api\gallery\route.js
+// File: /home/ziad/ASG_Distribution/app/api/gallery/route.js
 import * as entry from '../../../../../app/api/gallery/route.js'
 import type { NextRequest } from 'next/server.js'
 

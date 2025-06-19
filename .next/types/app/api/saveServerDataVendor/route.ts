@@ -1,4 +1,4 @@
-// File: D:\lockdown\app\api\saveServerDataVendor\route.js
+// File: /home/ziad/ASG_Distribution/app/api/saveServerDataVendor/route.js
 import * as entry from '../../../../../app/api/saveServerDataVendor/route.js'
 import type { NextRequest } from 'next/server.js'
 

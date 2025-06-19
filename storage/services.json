@@ -3,7 +3,7 @@
         "id": 1,
         "title": "Security System",
         "content": "At ASG Distribution, we pride ourselves on offering a comprehensive range of advanced security systems designed to safeguard your property, assets, and peace of mind.",
-        "imageUrl": "assets/images/services/a.webp",
+        "imageUrl": "assets/images/resources/security-system.jpg",
         "points": [
             "Surveillance Cameras",
             "Intrusion Detection Systems",
@@ -22,7 +22,7 @@
         "id": 2,
         "title": "Networking",
         "content": "ASG Distribution offers a comprehensive array of networking solutions to meet the connectivity needs of businesses and individuals alike.",
-        "imageUrl": "assets/images/services/b.webp",
+        "imageUrl":  "assets/images/resources/Networking.jpg",
         "points": [
             "Network Management",
             "Network Security",
@@ -41,7 +41,7 @@
         "id": 3,
         "title": "Physical Security",
         "content": "ASG Distribution offers a comprehensive range of cutting-edge physical security solutions designed to protect your assets, premises, and people.",
-        "imageUrl": "assets/images/services/c.webp",
+        "imageUrl": "assets/images/resources/Phisycal-Security.jpg",
         "points": [
             "Video Surveillance Systems",
             "Intrusion Detection Systems",
@@ -60,7 +60,7 @@
         "id": 4,
         "title": "Audio Visual Solutions",
         "content": "ASG Distribution offers a wide array of innovative audio-visual solutions designed to elevate your communication, presentation, and entertainment experiences.",
-        "imageUrl": "assets/images/services/d.webp",
+        "imageUrl": "assets/images/resources/AV.jpg",
         "points": [
             "Projection Systems",
             "Sound Systems",
@@ -79,7 +79,7 @@
         "id": 5,
         "title": "Automations",
         "content": "ASG Distribution offers a diverse range of cutting-edge automation solutions designed to streamline processes, enhance efficiency, and elevate convenience.",
-        "imageUrl": "assets/images/services/e.webp",
+        "imageUrl": "assets/images/resources/automation.jpg",
         "points": [
             "Home Automation",
             "Building Automation",
@@ -98,7 +98,7 @@
         "id": 6,
         "title": "Parking Solutions",
         "content": "ASG Distribution offers a range of advanced parking solutions designed to optimize parking management, improve efficiency, and enhance the overall parking experience.",
-        "imageUrl": "assets/images/services/6.webp",
+        "imageUrl": "assets/images/resources/Parking.jpg",
         "points": [
             "Automated Parking Systems",
             "Parking Guidance Systems",
