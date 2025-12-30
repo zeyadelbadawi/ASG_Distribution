@@ -65,7 +65,7 @@ export default function Home() {
             headerStyle={3} // Specify the header style
             footerStyle={1} // Specify the footer style
             breadcrumbTitle="Our Partners"
-            breadcrumbBg="/assets/gallery.jpg" // Pass the background image for Breadcrumb
+            breadcrumbBg="/assets/PHeader.jpg" // Pass the background image for Breadcrumb
         >
             <div>
                 {/* Services Page Start */}

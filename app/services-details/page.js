@@ -67,7 +67,9 @@ export default function Home() {
 
     return (
         <>
-            <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Service Details">
+            <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Service Details"
+                        breadcrumbBg="/assets/ServicesHeader.png" // Pass the background image for Breadcrumb
+>
                 <div>
                     <section className="services-details">
                         <div className="container">
@@ -149,15 +151,15 @@ export default function Home() {
                                                                 <ul className="services-details__popular-services-list list-unstyled">
                                                                     <li>
                                                                         <div className="services-details__popular-services-img">
-                                                                            <img src="assets/images/services/services-lp-1-1.jpg" alt="/services-details?tab=2" />
+                                                                            <img src="assets/images/services/Parking.png" alt="/services-details?tab=2" />
                                                                         </div>
                                                                         <div className="services-details__popular-services-content">
-                                                                            <h3><Link href="/services-details?tab=2">Networking</Link></h3>
+                                                                            <h3><Link href="/services-details?tab=2">Parking Solutions</Link></h3>
                                                                         </div>
                                                                     </li>
                                                                     <li>
                                                                         <div className="services-details__popular-services-img">
-                                                                            <img src="assets/images/services/services-lp-1-2.jpg" alt="/services-details?tab=5" />
+                                                                            <img src="assets/images/services/Automations.png" alt="/services-details?tab=5" />
                                                                         </div>
                                                                         <div className="services-details__popular-services-content">
                                                                             <h3><Link href="/services-details?tab=5">Automations</Link></h3>
