@@ -75,7 +75,7 @@ export default function Cta() {
                       height: "auto",
                       display: "block",
                       position: "relative", // added relative to override global absolute
-                      transform: "translateY(-60px)", // Pull image up out of the orange box
+                      paddingBottom: "20px",
                       zIndex: "21",
                     }}
                   />
