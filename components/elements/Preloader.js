@@ -15,7 +15,6 @@ export default function Preloader() {
             </div>
           </div>
           {/* Loading Text */}
-          <p className="mt-4 text-xs font-semibold tracking-[0.3em] text-slate-400 uppercase animate-pulse">Loading</p>
         </div>
       </div>
     )
