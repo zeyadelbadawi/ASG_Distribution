@@ -5,7 +5,9 @@ import "swiper/css"
 // import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/free-mode"
+import "./responsive-menu.css"
 import { nunito, montserratAlternates } from "@/lib/font"
+
 export const metadata = {
   title: "ASG Distribution",
 }

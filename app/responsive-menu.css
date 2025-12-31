@@ -1,0 +1,46 @@
+/* Updated CSS to target the correct button classes used in headers */
+
+/* Rewritten to properly show menu button on mobile/tablet only */
+
+/* Default: hide everything for mobile first approach */
+/* Show navSidebar-button on tablets and below (< 1200px) */
+@media (max-width: 1199px) {
+    .navSidebar-button {
+      display: inline-flex !important;
+      visibility: visible !important;
+    }
+  
+    /* Hide the main menu on mobile/tablet */
+    .main-menu__main-menu-box {
+      display: none !important;
+    }
+  
+    .main-menu-two .main-menu-box {
+      display: none !important;
+    }
+  
+    .mobile-nav__toggler {
+      display: block !important;
+    }
+  }
+  
+  /* Desktop: show menu, hide button (>= 1200px) */
+  @media (min-width: 1200px) {
+    .navSidebar-button {
+      display: none !important;
+      visibility: hidden !important;
+    }
+  
+    .main-menu__main-menu-box {
+      display: block !important;
+    }
+  
+    .main-menu-two .main-menu-box {
+      display: block !important;
+    }
+  
+    .mobile-nav__toggler {
+      display: none !important;
+    }
+  }
+  
