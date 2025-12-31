@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import Layout from "@/components/layout/Layout"
 import partnersData from "@/data/partnersData"
-
+//test deploy
 export default function PartnerPage() {
   const pathname = usePathname()
   const partnerId = pathname.split("/").pop()
