@@ -5,6 +5,8 @@ import Menu from "../Menu"
 import MobileMenu from "../MobileMenu"
 
 export default function Header3({ scroll, isMobileMenu, handleMobileMenu, bgImage }) {
+  console.log("Header Background Image:", bgImage)
+
   return (
     <>
       <header
@@ -22,7 +24,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu, bgImag
               <div className="main-menu-two__left">
                 <div className="main-menu-two__logo">
                   <Link href="/">
-                    <img src="assets/images/resources/logo-1.png" alt="Logo" />
+                    <img src="/assets/images/resources/logo-1.png" alt="Logo" />
                   </Link>
                 </div>
               </div>
@@ -62,7 +64,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu, bgImag
                 <div className="main-menu-two__left">
                   <div className="main-menu-two__logo">
                     <Link href="/">
-                      <img src="assets/images/resources/logo-1.png" alt="Logo" />
+                      <img src="/assets/images/resources/logo-1.png" alt="Logo" />
                     </Link>
                   </div>
                 </div>

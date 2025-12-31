@@ -65,7 +65,7 @@ export default function Gallery() {
 
     return (
         <>
-            <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Gallery" breadcrumbBg="/assets/images/gallery.jpg">
+            <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Gallery" breadcrumbBg="/assets/images/services/gallery.jpg">
                 {/*Gallery Page Start*/}
                 <section className="gallery-page">
                     <div className="container">

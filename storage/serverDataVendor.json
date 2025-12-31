@@ -2,41 +2,65 @@
   {
     "title": "Dahua",
     "description": "Innovative security solutions provider enhancing safety with advanced technology.",
-    "imageUrl": "1.png"
+    "imageUrl": "1.png",
+    "slug": "dahua" 
   },
   {
     "title": "Ruijie Reyee",
     "description": "Leading networking solutions for seamless connectivity and efficiency.",
-    "imageUrl": "5.png"
+    "imageUrl": "5.png",
+    "slug": "ruijie-reyee"
   },
   {
     "title": "Imou",
     "description": "Smart security solutions for modern surveillance, enhanced protection, and peace of mind.",
-    "imageUrl": "3.png"
+    "imageUrl": "3.png",
+    "slug": "imou"
   },
   {
     "title": "Kstar",
     "description": "Powering reliability and performance with cutting-edge energy solutions.",
-    "imageUrl": "4.png"
+    "imageUrl": "4.png",
+    "slug": "kstar"
   },
   {
     "title": "Unitech",
     "description": " Reliable Uninterruptible Power Supply solutions for continuous performance.",
-    "imageUrl": "6.png"
+    "imageUrl": "6.png",
+    "slug": "unitech"
   },
   {
     "title": "Centurion",
     "description": "Innovative access control and automation systems for enhanced security.",
-    "imageUrl": "2.png"
+    "imageUrl": "2.png",
+    "slug": "centurion"
   },
   {
     "title": "FAAC",
     "description": "Leading the way in gate automation, advanced security, and access control solutions.",
-    "imageUrl": "7.png"
+    "imageUrl": "7.png",
+    "slug": "faac"
   },
   {
     "title": "Magnetic",
     "description": " Cutting-edge solutions for secure access control and automation systems.",
-    "imageUrl": "8.png"
+    "imageUrl": "8.png",
+    "slug": "magnetic"
+  },
+
+  {
+    "title": "Aruba",
+    "description": " Cutting-edge solutions for secure access control and automation systems.",
+    "imageUrl": "10.png",
+    "slug": "aruba"
+
+  },
+  {
+    "title": "Itc",
+    "description": " Cutting-edge solutions for secure access control and automation systems.",
+    "imageUrl": "11.png",
+    "link": "/partners/itc",
+    "slug": "itc"
+
   }
 ]

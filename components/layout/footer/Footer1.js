@@ -23,9 +23,6 @@ export default function Footer1() {
                                         <Link href="https://www.facebook.com/asgdisty/"><span className="icon-facebook"></span></Link>
                                     </li>
                                     <li>
-                                        <Link href="#"><span className="fab fa-youtube"></span></Link>
-                                    </li>
-                                    <li>
                                         <Link href="https://www.instagram.com/asg.distribution/"><span className="icon-instagram"></span></Link>
                                     </li>
                                 </ul>
@@ -71,10 +68,10 @@ export default function Footer1() {
                                         <Link href="contact"><span className="icon-angle-left"></span>Contact</Link>
                                     </li>
                                     <li>
-                                        <Link href="gallary"><span className="icon-angle-left"></span>Gallery</Link>
+                                        <Link href="gallery"><span className="icon-angle-left"></span>Gallery</Link>
                                     </li>
                                     <li>
-                                        <Link href="faq"><span className="icon-angle-left"></span>FAQ</Link>
+                                        <Link href="blog"><span className="icon-angle-left"></span>Blog</Link>
                                     </li>
                                     <li>
                                         <Link href="about"><span className="icon-angle-left"></span> Privacy Policy</Link>
@@ -96,13 +93,13 @@ export default function Footer1() {
                                         <Link href="/partners/ruijiereyee"><span className="icon-angle-left"></span>Ruijie | Reyee</Link>
                                     </li>
                                     <li>
-                                        <Link href="/partners/imou"><span className="icon-angle-left"></span>Imou</Link>
+                                        <Link href="/partners/skidata"><span className="icon-angle-left"></span>Skidata</Link>
                                     </li>
                                     <li>
-                                        <Link href="/partners/kstar"><span className="icon-angle-left"></span>ITC</Link>
+                                        <Link href="/partners/itc"><span className="icon-angle-left"></span>ITC</Link>
                                     </li>
                                     <li>
-                                        <Link href="/partners/unitech"><span className="icon-angle-left"></span>Aruba</Link>
+                                        <Link href="/partners/aruba"><span className="icon-angle-left"></span>Aruba</Link>
                                     </li>
 
                                 </ul>
@@ -114,7 +111,7 @@ export default function Footer1() {
             <div className="site-footer__bottom">
                 <div className="container">
                     <div className="site-footer__bottom-inner">
-                        <p className="site-footer__bottom-text">© ASG Distribution 2025 | All Rights Reserved </p>
+                        <p className="site-footer__bottom-text">© ASG Distribution 2026 | All Rights Reserved </p>
                         <ul className="list-unstyled site-footer__bottom-menu">
                             <li><Link href="about">Terms & Conditions</Link></li>
                             <li><Link href="about">Privacy Policy</Link></li>

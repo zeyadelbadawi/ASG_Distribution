@@ -83,11 +83,11 @@ export default function Home() {
                     </div>
                     <div className="services-one__content flex-grow-1 d-flex flex-column">
                       <h3 className="services-one__title">
-                        <Link href={`/${item.link}`}>{item.title}</Link>
+                        <Link href={`/partners/${item.slug || item.id}`}>{item.title}</Link>
                       </h3>
                       <p className="services-one__text">{item.description}</p>
                       <div className="services-one__btn-box mt-auto">
-                        <Link href={`/${item.link}`} className="services-one__btn thm-btn">
+                        <Link href={`/partners/${item.slug || item.id}`} className="services-one__btn thm-btn">
                           Discover More<span className="icon-plus"></span>
                         </Link>
                       </div>
