@@ -38,7 +38,17 @@ export default function Breadcrumb({ breadcrumbTitle, bgImage }) {
 
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div className="page-header__inner">
-            <h2>{breadcrumbTitle}</h2>
+            <h2
+              style={{
+                fontSize: "clamp(1.75rem, 5vw, 3rem)",
+                fontWeight: "700",
+                lineHeight: "1.2",
+                marginBottom: "1rem",
+                textAlign: "center",
+              }}
+            >
+              {breadcrumbTitle}
+            </h2>
             <div className="thm-breadcrumb__inner">
               <ul className="thm-breadcrumb list-unstyled">
                 <li>
