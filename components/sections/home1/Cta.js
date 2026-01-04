@@ -87,7 +87,7 @@ export default function Cta() {
                 <div className="cta-one__right">
                   <h3 className="cta-one__title">Get Free Estimate</h3>
                   <p className="cta-one__text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  Stay updated with the latest products, offers, and smart solutions delivered straight to your inbox!
                   </p>
                   <form className="cta-one__form mc-form" onSubmit={handleSubmit}>
                     <div className="cta-one__form-input-box">

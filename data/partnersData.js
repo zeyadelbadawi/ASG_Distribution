@@ -32,19 +32,19 @@ const partnersData = [
     {
       id: "skidata",
       name: "Skidata",
-      headerImage: "/assets/images/brandsheader/imou.png",
+      headerImage: "/assets/images/brandsheader/skidata.png",
 
       description:
-        "a leading brand in smart security solutions, offering a range of surveillance cameras, video doorbells, and security systems that combine cutting-edge technology with user-friendly design. Imou products empower users to monitor their spaces remotely with ease, providing peace of mind and enhanced security for homes and businesses.",
+        "SKIDATA is a global leader in access control and parking management solutions, providing innovative systems for airports, commercial facilities, leisure venues, and smart cities. Their solutions combine hardware, software, and cloud-based platforms to ensure seamless entry, efficient parking operations, and enhanced user experiences. By integrating smart technologies such as ticketless access, mobile apps, and real-time monitoring, SKIDATA helps organizations improve security, optimize operations, and deliver convenience to millions of visitors every day.",
       products: [],
     },
     {
         id: "itc",
         name: "itc",
-        headerImage: "/assets/images/brandsheader/imou.png",
+        headerImage: "/assets/images/brandsheader/itc.png",
   
         description:
-          "a leading brand in smart security solutions, offering a range of surveillance cameras, video doorbells, and security systems that combine cutting-edge technology with user-friendly design. Imou products empower users to monitor their spaces remotely with ease, providing peace of mind and enhanced security for homes and businesses.",
+          "ITC is a leading provider of professional audio solutions, offering high-quality speakers, amplifiers, and complete sound systems for commercial, residential, and public spaces. Their products are designed to deliver clear, powerful, and reliable audio performance, whether for background music, public announcements, or large-scale events. With a focus on innovation, durability, and ease of installation, ITC helps businesses, schools, hotels, and entertainment venues create immersive sound experiences while ensuring consistent quality and long-term performance.",
         products: [],
       },
       {
@@ -53,7 +53,7 @@ const partnersData = [
         headerImage: "/assets/images/brandsheader/imou.png",
   
         description:
-          "a leading brand in smart security solutions, offering a range of surveillance cameras, video doorbells, and security systems that combine cutting-edge technology with user-friendly design. Imou products empower users to monitor their spaces remotely with ease, providing peace of mind and enhanced security for homes and businesses.",
+          "Aruba is a global leader in networking and wireless solutions, delivering secure, intelligent, and automated connectivity for enterprises of all sizes. Their solutions include Wi-Fi, LAN, SD-WAN, network security, and cloud-managed platforms that simplify IT operations while enhancing user experiences. By combining advanced analytics, AI-driven automation, and zero-trust security, Aruba enables organizations to stay connected, agile, and protected in an increasingly mobile and digital world.",
         products: [],
       },
     {
