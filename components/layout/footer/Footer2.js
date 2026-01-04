@@ -97,7 +97,7 @@ export default function Footer2() {
                         <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                             <div className="footer-widget__column footer-widget__newsletter">
                                 <div className="footer-widget__title-box">
-                                    <h3 className="footer-widget__title">Get Free Estimate</h3>
+                                    <h3 className="footer-widget__title">Subscribe to Our Newsletter</h3>
                                 </div>
                                 <p className="footer-widget__newsletter-text">Lorem Ipsum is simply is dumiomy is<br/> text
                                     Lorem

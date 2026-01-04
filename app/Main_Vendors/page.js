@@ -2,6 +2,7 @@
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import Cta from "@/components/sections/home1/Cta" // Import the reusable Cta component
 
 export default function Home() {
   const [email, setEmail] = useState("")
@@ -100,53 +101,7 @@ export default function Home() {
         </section>
         {/* Services Page End */}
 
-        {/* CTA One Start */}
-        <section className="cta-one">
-          <div className="container">
-            <div className="cta-one__inner">
-              <div
-                className="cta-one__bg"
-                style={{ backgroundImage: "url(assets/images/backgrounds/cta-one-bg.jpg)" }}
-              ></div>
-              <div className="row">
-                <div className="col-xl-6 col-lg-6"></div>
-                <div className="col-xl-6 col-lg-6">
-                  <div className="cta-one__right">
-                    <h3 className="cta-one__title">Get Free Estimate</h3>
-                    <p className="cta-one__text">Lorem Ipsum is simply is dumiomy is text Lorem Ipsum</p>
-                    <form className="cta-one__form mc-form" onSubmit={handleSubmit}>
-                      <div className="cta-one__form-input-box">
-                        <input
-                          type="email"
-                          placeholder="Your email..."
-                          name="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          style={{
-                            backgroundColor: "#FF6600",
-                            color: "#FFFFFF",
-                            height: "50px",
-                            borderRadius: "5px",
-                            padding: "0 20px",
-                            width: "100%",
-                            boxSizing: "border-box",
-                            border: "2px solid #FFFFFF",
-                          }}
-                        />
-                        <button type="submit" className="cta-one__btn thm-btn">
-                          Message
-                        </button>
-                      </div>
-                      {errors && <p style={{ color: "red" }}>{errors}</p>}
-                    </form>
-                    {submissionStatus && <p>{submissionStatus}</p>} {/* Show submission status */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* CTA One End */}
+        <Cta />
       </div>
     </Layout>
   )

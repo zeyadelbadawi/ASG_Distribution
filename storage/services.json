@@ -1,116 +1,169 @@
 [
     {
-        "id": 1,
-        "title": "Security System",
-        "content": "At ASG Distribution, we pride ourselves on offering a comprehensive range of advanced security systems designed to safeguard your property, assets, and peace of mind.",
-        "imageUrl": "assets/images/servicede/security-system.jpg",
-        "points": [
-            "Surveillance Cameras",
-            "Intrusion Detection Systems",
-            "Access Control Systems",
-            "Alarm Systems"
-        ],
-        "description2": "ASG Distribution is committed to providing top-notch security solutions that combine cutting-edge technology with reliability and ease of use. Safeguard your assets and loved ones with our range of security systems, tailored to meet the demands of modern security challenges. Contact us today to find the perfect security system for your needs.",
-        "benefits": [
-            "Enhanced Safety",
-            "Deterrence",
-            "Remote Monitoring",
-            "Improved Efficiency"
-        ]
+      "id": 1,
+      "title": "Security System",
+      "content": "At ASG Distribution, we pride ourselves on offering a comprehensive range of advanced security systems designed to safeguard your property, assets, and peace of mind.",
+      "imageUrl": "assets/images/servicede/security-system.jpg",
+      "points": ["Surveillance Cameras", "Intrusion Detection Systems", "Access Control Systems", "Alarm Systems"],
+      "description2": "ASG Distribution is committed to providing top-notch security solutions that combine cutting-edge technology with reliability and ease of use. Safeguard your assets and loved ones with our range of security systems, tailored to meet the demands of modern security challenges. Contact us today to find the perfect security system for your needs.",
+      "benefits": [
+        {
+          "name": "Enhanced Safety",
+          "icon": "assets/images/Security/Enhanced.svg"
+        },
+        {
+          "name": "Deterrence",
+          "icon": "assets/images/Security/Deterrence.svg"
+        },
+        {
+          "name": "Remote Monitoring",
+          "icon": "assets/images/Security/Remote.svg"
+        },
+        {
+          "name": "Improved Efficiency",
+          "icon": "assets/images/Security/Improved.svg"
+        }
+      ]
     },
     {
-        "id": 2,
-        "title": "Networking",
-        "content": "ASG Distribution offers a comprehensive array of networking solutions to meet the connectivity needs of businesses and individuals alike.",
-        "imageUrl":  "assets/images/servicede/Networking.jpg",
-        "points": [
-            "Network Management",
-            "Network Security",
-            "Wireless Networking",
-            "Wired Networking"
-        ],
-        "description2": "ASG Distribution is dedicated to providing top-quality networking solutions that cater to the diverse requirements of modern businesses and individuals. Whether you need to establish a robust wired network, deploy secure wireless connections, or enhance network performance and security, we have the expertise and products to meet your networking needs.",
-        "benefits": [
-            "Cost-Efficiency",
-            "Improved Productivity",
-            "Scalability",
-            "Enhanced Connectivity"
-        ]
+      "id": 2,
+      "title": "Networking",
+      "content": "ASG Distribution offers a comprehensive array of networking solutions to meet the connectivity needs of businesses and individuals alike.",
+      "imageUrl": "assets/images/servicede/Networking.jpg",
+      "points": ["Network Management", "Network Security", "Wireless Networking", "Wired Networking"],
+      "description2": "ASG Distribution is dedicated to providing top-quality networking solutions that cater to the diverse requirements of modern businesses and individuals. Whether you need to establish a robust wired network, deploy secure wireless connections, or enhance network performance and security, we have the expertise and products to meet your networking needs.",
+      "benefits": [
+        {
+          "name": "Cost-Efficiency",
+          "icon": "assets/images/Networking/Cost.svg"
+        },
+        {
+          "name": "Improved Productivity",
+          "icon": "assets/images/Networking/Improved.svg"
+        },
+        {
+          "name": "Scalability",
+          "icon": "assets/images/Networking/Scalability.svg"
+        },
+        {
+          "name": "Enhanced Connectivity",
+          "icon": "assets/images/Networking/Enhanced.svg"
+        }
+      ]
     },
     {
-        "id": 3,
-        "title": "Physical Security",
-        "content": "ASG Distribution offers a comprehensive range of cutting-edge physical security solutions designed to protect your assets, premises, and people.",
-        "imageUrl": "assets/images/servicede/Phisycal-Security.jpg",
-        "points": [
-            "Video Surveillance Systems",
-            "Intrusion Detection Systems",
-            "Access Control Systems",
-            "Perimeter Security Solutions"
-        ],
-        "description2": "ASG Distribution is committed to providing reliable, innovative, and tailored physical security solutions that offer peace of mind and protection for your property and personnel.",
-        "benefits": [
-            "Crime Prevention",
-            "Asset Protection",
-            "Enhanced Safety",
-            "Regulatory Compliance"
-        ]
+      "id": 3,
+      "title": "Physical Security",
+      "content": "ASG Distribution offers a comprehensive range of cutting-edge physical security solutions designed to protect your assets, premises, and people.",
+      "imageUrl": "assets/images/servicede/Phisycal-Security.jpg",
+      "points": [
+        "Video Surveillance Systems",
+        "Intrusion Detection Systems",
+        "Access Control Systems",
+        "Perimeter Security Solutions"
+      ],
+      "description2": "ASG Distribution is committed to providing reliable, innovative, and tailored physical security solutions that offer peace of mind and protection for your property and personnel.",
+      "benefits": [
+        {
+          "name": "Crime Prevention",
+          "icon": "assets/images/Physical/crime.svg"
+        },
+        {
+          "name": "Asset Protection",
+          "icon": "assets/images/Physical/asset.svg"
+        },
+        {
+          "name": "Enhanced Safety",
+          "icon": "assets/images/Physical/enhanced.svg"
+        },
+        {
+          "name": "Regulatory Compliance",
+          "icon": "assets/images/Physical/regulatory.svg"
+        }
+      ]
     },
     {
-        "id": 4,
-        "title": "Audio Visual Solutions",
-        "content": "ASG Distribution offers a wide array of innovative audio-visual solutions designed to elevate your communication, presentation, and entertainment experiences.",
-        "imageUrl": "assets/images/servicede/Audio.png",
-        "points": [
-            "Projection Systems",
-            "Sound Systems",
-            "Video Conferencing Solutions",
-            "Digital Signage Displays"
-        ],
-        "description2": "ASG Distribution is dedicated to providing top-of-the-line audio-visual solutions that combine innovation, quality, and reliability.",
-        "benefits": [
-            "Enhanced Communication",
-            "Engagement and Impact",
-            "Improved Productivity",
-            "Flexibility and Versatility"
-        ]
+      "id": 4,
+      "title": "Audio Visual Solutions",
+      "content": "ASG Distribution offers a wide array of innovative audio-visual solutions designed to elevate your communication, presentation, and entertainment experiences.",
+      "imageUrl": "assets/images/servicede/Audio.png",
+      "points": ["Projection Systems", "Sound Systems", "Video Conferencing Solutions", "Digital Signage Displays"],
+      "description2": "ASG Distribution is dedicated to providing top-of-the-line audio-visual solutions that combine innovation, quality, and reliability.",
+      "benefits": [
+        {
+          "name": "Enhanced Communication",
+          "icon": "assets/images/audio/enhanced.svg"
+        },
+        {
+          "name": "Engagement and Impact",
+          "icon": "assets/images/audio/engagement.svg"
+        },
+        {
+          "name": "Improved Productivity",
+          "icon": "assets/images/audio/improved.svg"
+        },
+        {
+          "name": "Flexibility and Versatility",
+          "icon": "assets/images/audio/flexibility.svg"
+        }
+      ]
     },
     {
-        "id": 5,
-        "title": "Automations",
-        "content": "ASG Distribution offers a diverse range of cutting-edge automation solutions designed to streamline processes, enhance efficiency, and elevate convenience.",
-        "imageUrl": "assets/images/servicede/automation.jpg",
-        "points": [
-            "Home Automation",
-            "Building Automation",
-            "Industrial Automation",
-            "Retail Automation"
-        ],
-        "description2": "ASG Distribution is committed to providing innovative automation solutions that empower individuals and businesses to embrace the advantages of smart technology.",
-        "benefits": [
-            "Efficiency and Productivity",
-            "Cost Savings",
-            "Enhanced Security",
-            "Personalized Experiences"
-        ]
+      "id": 5,
+      "title": "Automations",
+      "content": "ASG Distribution offers a diverse range of cutting-edge automation solutions designed to streamline processes, enhance efficiency, and elevate convenience.",
+      "imageUrl": "assets/images/servicede/automation.jpg",
+      "points": ["Home Automation", "Building Automation", "Industrial Automation", "Retail Automation"],
+      "description2": "ASG Distribution is committed to providing innovative automation solutions that empower individuals and businesses to embrace the advantages of smart technology.",
+      "benefits": [
+        {
+          "name": "Efficiency and Productivity",
+          "icon": "assets/images/Automations/improved.svg"
+        },
+        {
+          "name": "Cost Savings",
+          "icon": "assets/images/Automations/cost.svg"
+        },
+        {
+          "name": "Enhanced Security",
+          "icon": "assets/images/Automations/enhanced.svg"
+        },
+        {
+          "name": "Personalized Experiences",
+          "icon": "assets/images/Automations/personalized.svg"
+        }
+      ]
     },
     {
-        "id": 6,
-        "title": "Parking Solutions",
-        "content": "ASG Distribution offers a range of advanced parking solutions designed to optimize parking management, improve efficiency, and enhance the overall parking experience.",
-        "imageUrl": "assets/images/servicede/Parking.jpg",
-        "points": [
-            "Automated Parking Systems",
-            "Parking Guidance Systems",
-            "License Plate Recognition",
-            "Payment and Ticketing Solutions"
-        ],
-        "description2": "ASG Distribution is dedicated to providing cutting-edge parking solutions that transform parking management and elevate user experience.",
-        "benefits": [
-            "Optimized Space Utilization",
-            "Improved User Experience",
-            "Enhanced Security",
-            "Increased Revenue"
-        ]
+      "id": 6,
+      "title": "Parking Solutions",
+      "content": "ASG Distribution offers a range of advanced parking solutions designed to optimize parking management, improve efficiency, and enhance the overall parking experience.",
+      "imageUrl": "assets/images/servicede/Parking.jpg",
+      "points": [
+        "Automated Parking Systems",
+        "Parking Guidance Systems",
+        "License Plate Recognition",
+        "Payment and Ticketing Solutions"
+      ],
+      "description2": "ASG Distribution is dedicated to providing cutting-edge parking solutions that transform parking management and elevate user experience.",
+      "benefits": [
+        {
+          "name": "Optimized Space Utilization",
+          "icon": "assets/images/Parking/optimized.svg"
+        },
+        {
+          "name": "Improved User Experience",
+          "icon": "assets/images/Parking/improved.svg"
+        },
+        {
+          "name": "Enhanced Security",
+          "icon": "assets/images/Parking/enhanced.svg"
+        },
+        {
+          "name": "Increased Revenue",
+          "icon": "assets/images/Parking/increased.svg"
+        }
+      ]
     }
-]
+  ]
+  

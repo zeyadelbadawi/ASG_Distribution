@@ -49,7 +49,7 @@ export default function Cta() {
           <div className="cta-one__inner" style={{ position: "relative", overflow: "visible" }}>
             <div
               className="cta-one__bg"
-              style={{ backgroundImage: "url(assets/images/backgrounds/cta-one-bg.jpg)" }}
+              style={{ backgroundImage: "url(/assets/images/backgrounds/cta-one-bg.jpg)" }}
             ></div>
             <div className="row">
               {/* Left Column with Image */}
@@ -62,19 +62,18 @@ export default function Cta() {
                     left: "30px",
                     width: "45%",
                     height: "auto",
-                    zIndex: "20", // increased z-index
+                    zIndex: "20",
                   }}
                 >
                   <img
-                                src="assets/images/resources/cta-one-bg.png" 
-                                // ensured correct public path
+                    src="/assets/images/resources/cta-one-bg.png"
                     alt="Company Profile"
                     className="cta-one__image"
                     style={{
                       width: "100%",
                       height: "auto",
                       display: "block",
-                      position: "relative", // added relative to override global absolute
+                      position: "relative",
                       paddingBottom: "20px",
                       zIndex: "21",
                     }}
@@ -85,9 +84,9 @@ export default function Cta() {
               {/* Right Column with Form */}
               <div className="col-xl-6 col-lg-6">
                 <div className="cta-one__right">
-                  <h3 className="cta-one__title">Get Free Estimate</h3>
+                  <h3 className="cta-one__title">Subscribe to Our Newsletter</h3>
                   <p className="cta-one__text">
-                  Stay updated with the latest products, offers, and smart solutions delivered straight to your inbox!
+                    Stay updated with the latest products, offers, and smart solutions delivered straight to your inbox!
                   </p>
                   <form className="cta-one__form mc-form" onSubmit={handleSubmit}>
                     <div className="cta-one__form-input-box">

@@ -1,8 +1,11 @@
 "use client"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
+  const pathname = usePathname()
+
   const [isActive, setIsActive] = useState({
     status: false,
     key: "",
@@ -30,7 +33,18 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
     }
   }, [isMobile, isSidebar, handleMobileMenu])
 
-  const handleToggle = (key, subMenuKey = "") => {
+  useEffect(() => {
+    if (isSidebar) {
+      handleMobileMenu()
+    }
+  }, [pathname])
+
+  const handleToggle = (key, subMenuKey = "", event) => {
+    if (event) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
     if (isActive.key === key && isActive.subMenuKey === subMenuKey) {
       setIsActive({
         status: false,
@@ -44,6 +58,24 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
         subMenuKey,
       })
     }
+  }
+
+  const linkStyle = {
+    textDecoration: "none",
+    display: "block",
+    padding: "8px 0",
+    color: "white",
+    transition: "color 0.3s ease",
+  }
+
+  const buttonStyle = {
+    background: "none",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "20px",
+    padding: "0 5px",
+    color: "#FF6600",
+    fontWeight: "bold",
   }
 
   if (!isMobile && isSidebar) {
@@ -68,28 +100,16 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
             {/* Sidebar Menu - Same as main menu */}
             <ul className="main-menu__list" style={{ listStyle: "none", padding: 0 }}>
               <li style={{ marginBottom: "10px" }}>
-                <Link href="/" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+                <Link href="/" style={linkStyle} className="mobile-menu-link">
                   Home
                 </Link>
               </li>
               <li className="dropdown" style={{ marginBottom: "10px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <Link
-                    href="/Main_Vendors"
-                    style={{ textDecoration: "none", display: "block", padding: "8px 0", flex: 1 }}
-                  >
+                  <Link href="/Main_Vendors" style={{ ...linkStyle, flex: 1 }} className="mobile-menu-link">
                     Partners
                   </Link>
-                  <button
-                    onClick={() => handleToggle("partners")}
-                    style={{
-                      background: "none",
-                      border: "none",
-                      cursor: "pointer",
-                      fontSize: "16px",
-                      padding: "0 5px",
-                    }}
-                  >
+                  <button onClick={(e) => handleToggle("partners", "", e)} style={buttonStyle}>
                     {isActive.key === "partners" ? "−" : "+"}
                   </button>
                 </div>
@@ -101,55 +121,63 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                   }}
                 >
                   <li>
-                    <Link href="/partners/dahua">Dahua Technology</Link>
+                    <Link href="/partners/dahua" style={linkStyle} className="mobile-menu-link">
+                      Dahua Technology
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/ruijiereyee">Ruijie | Reyee</Link>
+                    <Link href="/partners/ruijiereyee" style={linkStyle} className="mobile-menu-link">
+                      Ruijie | Reyee
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/aruba">Aruba</Link>
+                    <Link href="/partners/aruba" style={linkStyle} className="mobile-menu-link">
+                      Aruba
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/itc">ITC</Link>
+                    <Link href="/partners/itc" style={linkStyle} className="mobile-menu-link">
+                      ITC
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/imou">Imou</Link>
+                    <Link href="/partners/imou" style={linkStyle} className="mobile-menu-link">
+                      Imou
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/kstar">Kstar</Link>
+                    <Link href="/partners/kstar" style={linkStyle} className="mobile-menu-link">
+                      Kstar
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/unitech">Unitech</Link>
+                    <Link href="/partners/unitech" style={linkStyle} className="mobile-menu-link">
+                      Unitech
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/centurion">Centurion</Link>
+                    <Link href="/partners/centurion" style={linkStyle} className="mobile-menu-link">
+                      Centurion
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/faac">FAAC Technologies</Link>
+                    <Link href="/partners/faac" style={linkStyle} className="mobile-menu-link">
+                      FAAC Technologies
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/partners/magnetic">Magnetic</Link>
+                    <Link href="/partners/magnetic" style={linkStyle} className="mobile-menu-link">
+                      Magnetic
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="dropdown" style={{ marginBottom: "10px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <Link
-                    href="/services"
-                    style={{ textDecoration: "none", display: "block", padding: "8px 0", flex: 1 }}
-                  >
+                  <Link href="/services" style={{ ...linkStyle, flex: 1 }} className="mobile-menu-link">
                     Solutions
                   </Link>
-                  <button
-                    onClick={() => handleToggle("solutions")}
-                    style={{
-                      background: "none",
-                      border: "none",
-                      cursor: "pointer",
-                      fontSize: "16px",
-                      padding: "0 5px",
-                    }}
-                  >
+                  <button onClick={(e) => handleToggle("solutions", "", e)} style={buttonStyle}>
                     {isActive.key === "solutions" ? "−" : "+"}
                   </button>
                 </div>
@@ -161,42 +189,54 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                   }}
                 >
                   <li>
-                    <Link href="/services-details?tab=1">Security System</Link>
+                    <Link href="/services-details?tab=1" style={linkStyle} className="mobile-menu-link">
+                      Security System
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/services-details?tab=2">Networking</Link>
+                    <Link href="/services-details?tab=2" style={linkStyle} className="mobile-menu-link">
+                      Networking
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/services-details?tab=3">Physical Security</Link>
+                    <Link href="/services-details?tab=3" style={linkStyle} className="mobile-menu-link">
+                      Physical Security
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/services-details?tab=4">Audio Visual Solutions</Link>
+                    <Link href="/services-details?tab=4" style={linkStyle} className="mobile-menu-link">
+                      Audio Visual Solutions
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/services-details?tab=5">Automations</Link>
+                    <Link href="/services-details?tab=5" style={linkStyle} className="mobile-menu-link">
+                      Automations
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/services-details?tab=6">Parking Solutions</Link>
+                    <Link href="/services-details?tab=6" style={linkStyle} className="mobile-menu-link">
+                      Parking Solutions
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li style={{ marginBottom: "10px" }}>
-                <Link href="/about" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+                <Link href="/about" style={linkStyle} className="mobile-menu-link">
                   About
                 </Link>
               </li>
               <li style={{ marginBottom: "10px" }}>
-                <Link href="/contact" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+                <Link href="/contact" style={linkStyle} className="mobile-menu-link">
                   Contact
                 </Link>
               </li>
               <li style={{ marginBottom: "10px" }}>
-                <Link href="/gallery" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+                <Link href="/gallery" style={linkStyle} className="mobile-menu-link">
                   Gallery
                 </Link>
               </li>
               <li style={{ marginBottom: "10px" }}>
-                <Link href="/blog" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+                <Link href="/blog" style={linkStyle} className="mobile-menu-link">
                   Blog
                 </Link>
               </li>
@@ -285,28 +325,16 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
           {/* Mobile Menu - Only Navigation, no company info */}
           <ul className="main-menu__list" style={{ listStyle: "none", padding: 0 }}>
             <li style={{ marginBottom: "10px" }}>
-              <Link href="/" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+              <Link href="/" style={linkStyle} className="mobile-menu-link">
                 Home
               </Link>
             </li>
             <li className="dropdown" style={{ marginBottom: "10px" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <Link
-                  href="/Main_Vendors"
-                  style={{ textDecoration: "none", display: "block", padding: "8px 0", flex: 1 }}
-                >
+                <Link href="/Main_Vendors" style={{ ...linkStyle, flex: 1 }} className="mobile-menu-link">
                   Partners
                 </Link>
-                <button
-                  onClick={() => handleToggle("partners")}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    fontSize: "16px",
-                    padding: "0 5px",
-                  }}
-                >
+                <button onClick={(e) => handleToggle("partners", "", e)} style={buttonStyle}>
                   {isActive.key === "partners" ? "−" : "+"}
                 </button>
               </div>
@@ -318,52 +346,63 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                 }}
               >
                 <li>
-                  <Link href="/partners/dahua">Dahua Technology</Link>
+                  <Link href="/partners/dahua" style={linkStyle} className="mobile-menu-link">
+                    Dahua Technology
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/ruijiereyee">Ruijie | Reyee</Link>
+                  <Link href="/partners/ruijiereyee" style={linkStyle} className="mobile-menu-link">
+                    Ruijie | Reyee
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/aruba">Aruba</Link>
+                  <Link href="/partners/aruba" style={linkStyle} className="mobile-menu-link">
+                    Aruba
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/itc">ITC</Link>
+                  <Link href="/partners/itc" style={linkStyle} className="mobile-menu-link">
+                    ITC
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/imou">Imou</Link>
+                  <Link href="/partners/imou" style={linkStyle} className="mobile-menu-link">
+                    Imou
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/kstar">Kstar</Link>
+                  <Link href="/partners/kstar" style={linkStyle} className="mobile-menu-link">
+                    Kstar
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/unitech">Unitech</Link>
+                  <Link href="/partners/unitech" style={linkStyle} className="mobile-menu-link">
+                    Unitech
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/centurion">Centurion</Link>
+                  <Link href="/partners/centurion" style={linkStyle} className="mobile-menu-link">
+                    Centurion
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/faac">FAAC Technologies</Link>
+                  <Link href="/partners/faac" style={linkStyle} className="mobile-menu-link">
+                    FAAC Technologies
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/partners/magnetic">Magnetic</Link>
+                  <Link href="/partners/magnetic" style={linkStyle} className="mobile-menu-link">
+                    Magnetic
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="dropdown" style={{ marginBottom: "10px" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <Link href="/services" style={{ textDecoration: "none", display: "block", padding: "8px 0", flex: 1 }}>
+                <Link href="/services" style={{ ...linkStyle, flex: 1 }} className="mobile-menu-link">
                   Solutions
                 </Link>
-                <button
-                  onClick={() => handleToggle("solutions")}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    fontSize: "16px",
-                    padding: "0 5px",
-                  }}
-                >
+                <button onClick={(e) => handleToggle("solutions", "", e)} style={buttonStyle}>
                   {isActive.key === "solutions" ? "−" : "+"}
                 </button>
               </div>
@@ -375,42 +414,54 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                 }}
               >
                 <li>
-                  <Link href="/services-details?tab=1">Security System</Link>
+                  <Link href="/services-details?tab=1" style={linkStyle} className="mobile-menu-link">
+                    Security System
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/services-details?tab=2">Networking</Link>
+                  <Link href="/services-details?tab=2" style={linkStyle} className="mobile-menu-link">
+                    Networking
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/services-details?tab=3">Physical Security</Link>
+                  <Link href="/services-details?tab=3" style={linkStyle} className="mobile-menu-link">
+                    Physical Security
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/services-details?tab=4">Audio Visual Solutions</Link>
+                  <Link href="/services-details?tab=4" style={linkStyle} className="mobile-menu-link">
+                    Audio Visual Solutions
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/services-details?tab=5">Automations</Link>
+                  <Link href="/services-details?tab=5" style={linkStyle} className="mobile-menu-link">
+                    Automations
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/services-details?tab=6">Parking Solutions</Link>
+                  <Link href="/services-details?tab=6" style={linkStyle} className="mobile-menu-link">
+                    Parking Solutions
+                  </Link>
                 </li>
               </ul>
             </li>
             <li style={{ marginBottom: "10px" }}>
-              <Link href="/about" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+              <Link href="/about" style={linkStyle} className="mobile-menu-link">
                 About
               </Link>
             </li>
             <li style={{ marginBottom: "10px" }}>
-              <Link href="/contact" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+              <Link href="/contact" style={linkStyle} className="mobile-menu-link">
                 Contact
               </Link>
             </li>
             <li style={{ marginBottom: "10px" }}>
-              <Link href="/gallery" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+              <Link href="/gallery" style={linkStyle} className="mobile-menu-link">
                 Gallery
               </Link>
             </li>
             <li style={{ marginBottom: "10px" }}>
-              <Link href="/blog" style={{ textDecoration: "none", display: "block", padding: "8px 0" }}>
+              <Link href="/blog" style={linkStyle} className="mobile-menu-link">
                 Blog
               </Link>
             </li>

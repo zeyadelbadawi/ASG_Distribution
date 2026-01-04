@@ -3,6 +3,8 @@ import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import Layout from "@/components/layout/Layout"
 import partnersData from "@/data/partnersData"
+import Cta from "@/components/sections/home1/Cta"
+
 //test deploy
 export default function PartnerPage() {
   const pathname = usePathname()
@@ -59,7 +61,7 @@ export default function PartnerPage() {
 
   return (
     <Layout headerStyle={3} footerStyle={1} breadcrumbTitle={partnerData.name} breadcrumbBg={partnerData.headerImage}>
-      <div style={{ backgroundColor: "#fcfcf9", minHeight: "100vh" }}>
+      <div>
         {/* Description Section */}
         <section className="description-section" style={{ padding: "80px 0 40px" }}>
           <div className="container">
@@ -273,50 +275,8 @@ export default function PartnerPage() {
           <p>No products or embedded content available for this partner.</p>
         )}
 
-        <section className="cta-one">
-          <div className="container">
-            <div className="cta-one__inner">
-              <div
-                className="cta-one__bg"
-                style={{ backgroundImage: "url(assets/images/backgrounds/cta-one-bg.jpg)" }}
-              ></div>
-              <div className="row">
-                <div className="col-xl-6 col-lg-6"></div>
-                <div className="col-xl-6 col-lg-6">
-                  <div className="cta-one__right">
-                    <h3 className="cta-one__title">Get Free Estimate</h3>
-                    <form className="cta-one__form mc-form" onSubmit={handleSubmit}>
-                      <div className="cta-one__form-input-box">
-                        <input
-                          type="email"
-                          placeholder="Your email..."
-                          name="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          style={{
-                            backgroundColor: "#FF6600",
-                            color: "#FFFFFF",
-                            height: "50px",
-                            borderRadius: "5px",
-                            padding: "0 20px",
-                            width: "100%",
-                            boxSizing: "border-box",
-                            border: "2px solid #FFFFFF",
-                          }}
-                        />
-                        <button type="submit" className="cta-one__btn thm-btn">
-                          Message
-                        </button>
-                      </div>
-                      {errors && <p style={{ color: "red" }}>{errors}</p>}
-                    </form>
-                    {submissionStatus && <p>{submissionStatus}</p>} {/* Show submission status */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Reusable CTA component */}
+        <Cta />
       </div>
     </Layout>
   )

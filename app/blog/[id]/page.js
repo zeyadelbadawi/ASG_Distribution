@@ -201,7 +201,7 @@ export default function BlogDetails() {
                             <div className="col-xl-6 col-lg-6"></div>
                             <div className="col-xl-6 col-lg-6">
                                 <div className="cta-one__right">
-                                    <h3 className="cta-one__title">Get Free Estimate</h3>
+                                    <h3 className="cta-one__title">Subscribe to Our Newsletter</h3>
                                     <p className="cta-one__text">Lorem Ipsum is simply dummy text</p>
                                     <form className="cta-one__form mc-form" onSubmit={handleSubmit}>
                                         <div className="cta-one__form-input-box">

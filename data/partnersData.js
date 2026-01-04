@@ -50,7 +50,7 @@ const partnersData = [
       {
         id: "aruba",
         name: "aruba",
-        headerImage: "/assets/images/brandsheader/imou.png",
+        headerImage: "/assets/images/brandsheader/aruba.png",
   
         description:
           "Aruba is a global leader in networking and wireless solutions, delivering secure, intelligent, and automated connectivity for enterprises of all sizes. Their solutions include Wi-Fi, LAN, SD-WAN, network security, and cloud-managed platforms that simplify IT operations while enhancing user experiences. By combining advanced analytics, AI-driven automation, and zero-trust security, Aruba enables organizations to stay connected, agile, and protected in an increasingly mobile and digital world.",

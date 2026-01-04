@@ -55,9 +55,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                 <Link href="https://www.linkedin.com/company/asg-distribution/">
                   <i className="fab fa-linkedin"></i>
                 </Link>
-                <Link href="#">
-                  <i className="fab fa-youtube"></i>
-                </Link>
+                
               </div>
             </div>
           </div>
