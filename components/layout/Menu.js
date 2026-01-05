@@ -37,13 +37,13 @@ export default function Menu() {
                     <Link href="/services">Solutions</Link>
                     <ul>
                         <li className="dropdown">
-                            <Link href="/services-details?tab=1">Security System</Link>
+                            <Link href="/services-details?tab=1">Surveillance System</Link>
                         </li>
                         <li className="dropdown">
                             <Link href="/services-details?tab=2">Networking</Link>
                         </li>
                         <li className="dropdown">
-                            <Link href="/services-details?tab=3">Physical Security</Link>
+                            <Link href="/services-details?tab=3">Access Control</Link>
                         </li>
                         <li className="dropdown">
                             <Link href="/services-details?tab=4">Audio Visual Solutions</Link>

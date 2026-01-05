@@ -1,6 +1,6 @@
 [
   {
-    "title": "Security System",
+    "title": "Surveillance System",
     "description": "Provide peace of mind through advanced protection and surveillance measures",
     "imageurl": "a.webp",
     "iconurl": "camera-cctv.svg",
@@ -14,7 +14,7 @@
     "tabNumber": "2"
   },
   {
-    "title": "Physical Security",
+    "title": "Access Control",
     "description": "Enhance communication through technologies like video conferencing and display systems",
     "imageurl": "c.webp",
     "iconurl": "key.svg",

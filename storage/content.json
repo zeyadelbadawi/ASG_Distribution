@@ -258,11 +258,11 @@
         }
       },
       {
-        "title": "MAKKA Technology & Security Systems",
+        "title": "MAKKA Technology & Surveillance Systems",
         "imagePath": "/assets/images/team/4.png",
         "link": " ",
         "modalData": {
-          "name": "MAKKA Technology & Security Systems",
+          "name": "MAKKA Technology & Surveillance Systems",
           "number": [
             " 0106907666"
           ],
@@ -485,11 +485,11 @@
         }
       },
       {
-        "title": "Elbatal Security Systems",
+        "title": "Elbatal Surveillance Systems",
         "imagePath": "/assets/images/team/20.png",
         "link": " ",
         "modalData": {
-          "name": "Elbatal Security Systems",
+          "name": "Elbatal Surveillance Systems",
           "number": [
             "01200551813"
           ],
@@ -742,7 +742,7 @@
     "tagline": "Our Solutions",
     "items": [
       {
-        "title": "Security System",
+        "title": "Surveillance System",
         "imagePath": "/assets/images/resources/sec.jpg",
         "iconPath": "/assets/images/resources/Security System.svg",
         "link": "/services-details?tab=1",
@@ -756,9 +756,9 @@
         "description": "Enables seamless communication and collaboration by connecting devices and systems"
       },
       {
-        "title": "Physical Security",
+        "title": "Access Control",
         "imagePath": "/assets/images/resources/ps.jpg",
-        "iconPath": "/assets/images/resources/Physical Security.svg",
+        "iconPath": "/assets/images/resources/Access Control.svg",
         "link": "/services-details?tab=3",
         "description": "Enhance communication through technologies like video conferencing and display systems"
       },
@@ -778,6 +778,13 @@
       },
       {
         "title": "Parking Solutions",
+        "imagePath": "/assets/images/resources/Parking.jpg",
+        "iconPath": "/assets/images/resources/parking-circle.svg",
+        "link": "/services-details?tab=6",
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+      {
+        "title": "Parking ",
         "imagePath": "/assets/images/resources/Parking.jpg",
         "iconPath": "/assets/images/resources/parking-circle.svg",
         "link": "/services-details?tab=6",

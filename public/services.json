@@ -1,12 +1,12 @@
 [
   {
-    "title": "Security System",
+    "title": "Surveillance System",
     "description": "Provide peace of mind through advanced protection and surveillance measures",
-    "description1": "At ASG Distribution, we pride ourselves on offering a comprehensive range of advanced security systems designed to safeguard your property, assets, and peace of mind. Our diverse selection includes a variety of security solutions tailored to meet your specific needs and requirements.",
+    "description1": "At ASG Distribution, we pride ourselves on offering a comprehensive range of advanced Surveillance Systems designed to safeguard your property, assets, and peace of mind. Our diverse selection includes a variety of security solutions tailored to meet your specific needs and requirements.",
     "imageUrl": "/assets/images/servicede/Security.png",
     "iconUrl": "/assets/images/resources/Security System.svg",
     "tabNumber": 1,
-    "description2": "ASG Distribution is committed to providing top-notch security solutions that combine cutting-edge technology with reliability and ease of use. Safeguard your assets and loved ones with our range of security systems, tailored to meet the demands of modern security challenges. Contact us today to find the perfect security system for your needs.",
+    "description2": "ASG Distribution is committed to providing top-notch security solutions that combine cutting-edge technology with reliability and ease of use. Safeguard your assets and loved ones with our range of Surveillance Systems, tailored to meet the demands of modern security challenges. Contact us today to find the perfect Surveillance System for your needs.",
     "points": [
       "Surveillance Cameras",
       "Intrusion Detection Systems",
@@ -42,13 +42,13 @@
     ]
   },
   {
-    "title": "Physical Security",
+    "title": "Access Control",
     "description": "Enhance communication through technologies like video conferencing and display systems",
-    "description1": "ASG Distribution offers a comprehensive range of cutting-edge physical security solutions designed to protect your assets, premises, and people. Our diverse portfolio includes a variety of security systems tailored to meet the unique needs of businesses and individuals seeking to enhance their safety and security measures.",
+    "description1": "ASG Distribution offers a comprehensive range of cutting-edge Access Control solutions designed to protect your assets, premises, and people. Our diverse portfolio includes a variety of Surveillance Systems tailored to meet the unique needs of businesses and individuals seeking to enhance their safety and security measures.",
     "imageUrl": "/assets/images/servicede/Physical.png",
-    "iconUrl": "/assets/images/resources/Physical Security.svg",
+    "iconUrl": "/assets/images/resources/Access Control.svg",
     "tabNumber": 3,
-    "description2": "ASG Distribution is committed to providing reliable, innovative, and tailored physical security solutions that offer peace of mind and protection for your property and personnel.",
+    "description2": "ASG Distribution is committed to providing reliable, innovative, and tailored Access Control solutions that offer peace of mind and protection for your property and personnel.",
     "points": [
       "Video Surveillance Systems",
       "Intrusion Detection Systems",

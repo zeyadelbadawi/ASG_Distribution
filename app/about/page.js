@@ -144,7 +144,7 @@ export default function About() {
  <Layout
             headerStyle={3} // Specify the header style
             footerStyle={1} // Specify the footer style
-            breadcrumbTitle="About ASG Distribution"
+            breadcrumbTitle="About Us"
             breadcrumbBg="/assets/images/about.jpg" // Pass the background image for Breadcrumb
         >
                 {/*About One Start */}

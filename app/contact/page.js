@@ -12,7 +12,7 @@ export default function Home() {
     company: "",
     message: "",
   })
-  const [email, setEmail] = useState("")
+  const [loading, setLoading] = useState(false)
   const [submissionStatus, setSubmissionStatus] = useState(null)
   const [errors, setErrors] = useState(null)
 
@@ -56,62 +56,38 @@ export default function Home() {
 
   const handleSubmit2 = async (e) => {
     e.preventDefault()
-    if (validateForm()) {
-      try {
-        // Prepend +20 (Egypt country code) to the phone number before submission
-        const formattedPhone = `+20${formData.phone.trim()}`
+    if (!validateForm()) return
 
-        const requestBody = {
-          name: formData.name,
-          email: formData.email,
-          campaign: {
-            campaignId: listId2,
-          },
-          customFieldValues: [
-            {
-              customFieldId: "4qvEI", // Company
-              value: [formData.company.trim()],
-            },
-            {
-              customFieldId: "4qhal",
-              value: [formattedPhone], // Use the formatted phone with +20
-            },
-            {
-              customFieldId: "4qhVW", // Comment
-              value: [formData.message.trim()],
-            },
-          ],
-        }
+    setLoading(true)
+    setSubmissionStatus(null)
 
-        const response = await fetch("http://localhost:5000/api/contacts", {
-          // Change to your backend URL
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(requestBody),
+    try {
+      const response = await fetch("/api/submit-to-sheets", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmissionStatus("Form submitted successfully! We will contact you soon.")
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
         })
-
-        if (response.ok) {
-          setSubmissionStatus("Form submitted successfully!")
-          console.log("Form data sent to GetResponse successfully!")
-          // Optionally, reset form fields here
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            company: "",
-            message: "",
-          })
-        } else {
-          const errorData = await response.json()
-          setSubmissionStatus(`Failed to submit the form: ${errorData.message}`)
-          console.error("Failed to submit form:", errorData)
-        }
-      } catch (error) {
-        setSubmissionStatus("An error occurred while submitting the form.")
-        console.error("Error:", error)
+      } else {
+        const errorData = await response.json()
+        setSubmissionStatus(`Error: ${errorData.message || "Failed to submit form"}`)
       }
+    } catch (error) {
+      setSubmissionStatus("An error occurred. Please try again later.")
+      console.error("[v0] Submission error:", error)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -119,7 +95,7 @@ export default function Home() {
     e.preventDefault()
     try {
       const requestBody = {
-        email: email,
+        email: formData.email,
         campaign: {
           campaignId: listId,
         },
@@ -136,7 +112,13 @@ export default function Home() {
       if (response.ok) {
         setSubmissionStatus("Form submitted successfully!")
         console.log("Form data sent to GetResponse successfully!")
-        setEmail("") // Reset email field after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          message: "",
+        })
       } else {
         const errorData = await response.json()
         setSubmissionStatus(`Failed to submit the form: ${errorData.message}`)
@@ -190,6 +172,10 @@ export default function Home() {
 
         @keyframes rotate {
           from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+
+        @keyframes spinner {
           to { transform: rotate(360deg); }
         }
 
@@ -526,13 +512,46 @@ export default function Home() {
           transform: translateY(-1px);
         }
 
-        .success-message {
-          color: #4ade80;
-          text-align: center;
+        .submit-button:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+          transform: none;
+        }
+
+        .form-input:disabled,
+        .form-textarea:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+
+        .spinner {
+          width: 20px;
+          height: 20px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          border-top-color: #fff;
+          animation: spinner 0.6s linear infinite;
+        }
+
+        .status-message {
           margin-top: 20px;
-          font-size: 16px;
+          padding: 15px;
+          border-radius: 12px;
           font-weight: 600;
+          text-align: center;
           animation: fadeIn 0.5s ease;
+        }
+
+        .status-success {
+          background: rgba(74, 222, 128, 0.1);
+          color: #4ade80;
+          border: 1px solid rgba(74, 222, 128, 0.2);
+        }
+
+        .status-error {
+          background: rgba(248, 113, 113, 0.1);
+          color: #f87171;
+          border: 1px solid rgba(248, 113, 113, 0.2);
         }
 
         @media (max-width: 768px) {
@@ -642,6 +661,7 @@ export default function Home() {
                           value={formData.name}
                           onChange={handleChange}
                           className="form-input"
+                          disabled={loading}
                         />
                         {errors?.name && <p className="error-message">{errors.name}</p>}
                       </div>
@@ -654,6 +674,7 @@ export default function Home() {
                           value={formData.email}
                           onChange={handleChange}
                           className="form-input"
+                          disabled={loading}
                         />
                         {errors?.email && <p className="error-message">{errors.email}</p>}
                       </div>
@@ -666,6 +687,7 @@ export default function Home() {
                           value={formData.phone}
                           onChange={handleChange}
                           className="form-input"
+                          disabled={loading}
                         />
                         {errors?.phone && <p className="error-message">{errors.phone}</p>}
                       </div>
@@ -678,6 +700,7 @@ export default function Home() {
                           value={formData.company}
                           onChange={handleChange}
                           className="form-input"
+                          disabled={loading}
                         />
                         {errors?.company && <p className="error-message">{errors.company}</p>}
                       </div>
@@ -689,16 +712,32 @@ export default function Home() {
                           value={formData.message}
                           onChange={handleChange}
                           className="form-textarea"
+                          disabled={loading}
                         />
                         {errors?.message && <p className="error-message">{errors.message}</p>}
                       </div>
 
-                      <button type="submit" className="submit-button">
-                        Send Message
-                        <span className="icon-arrow-right"></span>
+                      <button type="submit" className="submit-button" disabled={loading}>
+                        {loading ? (
+                          <>
+                            <div className="spinner"></div>
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            Send Message
+                            <span className="icon-arrow-right"></span>
+                          </>
+                        )}
                       </button>
 
-                      {submissionStatus && <p className="success-message">{submissionStatus}</p>}
+                      {submissionStatus && (
+                        <div
+                          className={`status-message ${submissionStatus.startsWith("Error") ? "status-error" : "status-success"}`}
+                        >
+                          {submissionStatus}
+                        </div>
+                      )}
                     </form>
                   </div>
                 </div>

@@ -190,7 +190,7 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                 >
                   <li>
                     <Link href="/services-details?tab=1" style={linkStyle} className="mobile-menu-link">
-                      Security System
+                    Surveillance System
                     </Link>
                   </li>
                   <li>
@@ -200,7 +200,7 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                   </li>
                   <li>
                     <Link href="/services-details?tab=3" style={linkStyle} className="mobile-menu-link">
-                      Physical Security
+                      Access Control
                     </Link>
                   </li>
                   <li>
@@ -415,7 +415,7 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
               >
                 <li>
                   <Link href="/services-details?tab=1" style={linkStyle} className="mobile-menu-link">
-                    Security System
+                  Surveillance System
                   </Link>
                 </li>
                 <li>
@@ -425,7 +425,7 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                 </li>
                 <li>
                   <Link href="/services-details?tab=3" style={linkStyle} className="mobile-menu-link">
-                    Physical Security
+                    Access Control
                   </Link>
                 </li>
                 <li>

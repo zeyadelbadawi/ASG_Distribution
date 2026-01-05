@@ -265,7 +265,7 @@ export default function Home() {
       <Layout
         headerStyle={3}
         footerStyle={1}
-        breadcrumbTitle="Service Details"
+        breadcrumbTitle="Solution Details"
         breadcrumbBg="/assets/ServicesHeader.png" // Pass the background image for Breadcrumb
       >
         <div>

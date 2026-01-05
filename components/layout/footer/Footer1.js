@@ -47,7 +47,7 @@ export default function Footer1() {
                   <ul className="footer-widget__services-list list-unstyled">
                     <li>
                       <Link href="/services-details?tab=1">
-                        <span className="icon-angle-left"></span>Security System
+                        <span className="icon-angle-left"></span>Surveillance System
                       </Link>
                     </li>
                     <li>
@@ -57,7 +57,7 @@ export default function Footer1() {
                     </li>
                     <li>
                       <Link href="/services-details?tab=3">
-                        <span className="icon-angle-left"></span>Physical Security
+                        <span className="icon-angle-left"></span>Access Control
                       </Link>
                     </li>
                     <li>

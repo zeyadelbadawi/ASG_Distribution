@@ -3,41 +3,59 @@ import { useState } from "react"
 
 export default function Cta() {
   const [email, setEmail] = useState("")
-  const [submissionStatus, setSubmissionStatus] = useState(null)
-  const [errors, setErrors] = useState(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState(null)
 
-  const listId = "kVfvu"
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      )
+  }
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    try {
-      const requestBody = {
-        email: email,
-        campaign: {
-          campaignId: listId,
-        },
-      }
+    setIsSubmitting(true)
+    setStatus(null)
 
-      const response = await fetch("http://localhost:5000/api/contacts", {
+    if (!isValidEmail(email)) {
+      setStatus({ type: "error", message: "Please enter a valid email address." })
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      const response = await fetch("/api/submit-to-sheets", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(requestBody),
+        body: JSON.stringify({
+          email: email,
+          type: "newsletter",
+        }),
       })
 
       if (response.ok) {
-        setSubmissionStatus("Form submitted successfully!")
-        console.log("Form data sent to GetResponse successfully!")
-        setEmail("") // Reset email field after successful submission
+        setStatus({ type: "success", message: "Thank you for subscribing!" })
+        setEmail("")
+        setTimeout(() => {
+          window.open('/company-profile', '_blank')
+        }, 500)
       } else {
         const errorData = await response.json()
-        setSubmissionStatus(`Failed to submit the form: ${errorData.message}`)
-        console.error("Failed to submit form:", errorData)
+        setStatus({ type: "error", message: errorData.error || "Failed to subscribe." })
       }
     } catch (error) {
-      setSubmissionStatus("An error occurred while submitting the form.")
-      console.error("Error:", error)
+      setStatus({ type: "error", message: "An error occurred. Please try again." })
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -89,11 +107,13 @@ export default function Cta() {
                     Stay updated with the latest products, offers, and smart solutions delivered straight to your inbox!
                   </p>
                   <form className="cta-one__form mc-form" onSubmit={handleSubmit}>
-                    <div className="cta-one__form-input-box">
+                    <div className="cta-one__form-input-box" style={{ position: "relative" }}>
                       <input
                         type="email"
                         placeholder="Your email..."
                         name="email"
+                        required
+                        disabled={isSubmitting}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         style={{
@@ -106,15 +126,72 @@ export default function Cta() {
                           boxSizing: "border-box",
                           border: "2px solid #FFFFFF",
                           alignItems: "center",
+                          opacity: isSubmitting ? 0.7 : 1,
                         }}
                       />
-                      <button type="submit" className="cta-one__btn thm-btn">
-                        Submit
+                      <button
+                        type="submit"
+                        className="cta-one__btn thm-btn"
+                        disabled={isSubmitting}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          gap: "10px",
+                          minWidth: "120px",
+                        }}
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <span
+                              className="spinner-border spinner-border-sm"
+                              role="status"
+                              aria-hidden="true"
+                              style={{
+                                width: "1rem",
+                                height: "1rem",
+                                border: "2px solid currentColor",
+                                borderRightColor: "transparent",
+                                borderRadius: "50%",
+                                display: "inline-block",
+                                animation: "spin 1s linear infinite",
+                              }}
+                            ></span>
+                            <span>Sending...</span>
+                          </>
+                        ) : (
+                          "Submit"
+                        )}
                       </button>
                     </div>
-                    {errors && <p style={{ color: "red" }}>{errors}</p>}
                   </form>
-                  {submissionStatus && <p>{submissionStatus}</p>} {/* Show submission status */}
+                  {status && (
+                    <div
+                      style={{
+                        marginTop: "15px",
+                        padding: "12px 20px",
+                        borderRadius: "8px",
+                        backgroundColor:
+                          status.type === "success" ? "rgba(76, 175, 80, 0.15)" : "rgba(244, 67, 54, 0.15)",
+                        color: status.type === "success" ? "#4caf50" : "#f44336",
+                        borderLeft: `4px solid ${status.type === "success" ? "#4caf50" : "#f44336"}`,
+                        animation: "fadeInDown 0.4s ease-out",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                      }}
+                    >
+                      {status.message}
+                    </div>
+                  )}
+                  <style jsx>{`
+                    @keyframes spin {
+                      to { transform: rotate(360deg); }
+                    }
+                    @keyframes fadeInDown {
+                      from { opacity: 0; transform: translateY(-10px); }
+                      to { opacity: 1; transform: translateY(0); }
+                    }
+                  `}</style>
                 </div>
               </div>
             </div>

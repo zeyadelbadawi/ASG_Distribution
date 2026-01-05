@@ -447,7 +447,7 @@
     "tagline": "Our Solutions",
     "items": [
       {
-        "title": "Security System",
+        "title": "Surveillance System",
         "imagePath": "/assets/images/resources/security-system.jpg",
         "iconPath": "/assets/images/resources/Security System.svg",
         "link": "/services-details?tab=1",
@@ -461,9 +461,9 @@
         "description": "Enables seamless communication and collaboration by connecting devices and systems"
       },
       {
-        "title": "Physical Security",
+        "title": "Access Control",
         "imagePath": "/assets/images/resources/Phisycal-Security.jpg",
-        "iconPath": "/assets/images/resources/Physical Security.svg",
+        "iconPath": "/assets/images/resources/Access Control.svg",
         "link": "/services-details?tab=3",
         "description": "Enhance communication through technologies like video conferencing and display systems"
       },

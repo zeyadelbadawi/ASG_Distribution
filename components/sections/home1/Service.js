@@ -1,10 +1,13 @@
 "use client"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 
 export default function Service() {
   const [servicesContent, setServicesContent] = useState({ title: "", tagline: "", items: [] })
   const [loading, setLoading] = useState(true)
+  const [visibleItems, setVisibleItems] = useState(6)
+  const [animatingItems, setAnimatingItems] = useState([])
+  const newCardsRef = useRef(null)
 
   useEffect(() => {
     fetch("/api/getContent")
@@ -18,6 +21,39 @@ export default function Service() {
         setLoading(false)
       })
   }, [])
+
+  const handleShowMore = () => {
+    const currentVisible = visibleItems
+    const newVisible = currentVisible + 6
+    const newItems = []
+    for (let i = currentVisible; i < Math.min(newVisible, servicesContent.items.length); i++) {
+      newItems.push(i)
+    }
+    setAnimatingItems(newItems)
+    setVisibleItems(newVisible)
+
+    setTimeout(() => {
+      if (newCardsRef.current) {
+        newCardsRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+      }
+    }, 100)
+
+    setTimeout(() => {
+      setAnimatingItems([])
+    }, 600)
+  }
+
+  const handleShowLess = () => {
+    setVisibleItems(6)
+    const servicesSection = document.querySelector(".services-one")
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
+  const displayedItems = servicesContent.items.slice(0, visibleItems)
+  const hasMoreItems = servicesContent.items.length > visibleItems
+  const canShowLess = visibleItems > 6
 
   return (
     <>
@@ -69,12 +105,13 @@ export default function Service() {
                     </div>
                   </div>
                 ))
-              : servicesContent.items.map((service, index) => (
+              : displayedItems.map((service, index) => (
                   <div
                     key={index}
-                    className={`col-xl-4 col-lg-4 col-md-6 wow fadeIn${
-                      index % 3 === 0 ? "Left" : index % 3 === 1 ? "Up" : "Right"
-                    }`}
+                    ref={index === visibleItems - 6 && index > 0 ? newCardsRef : null}
+                    className={`col-xl-4 col-lg-4 col-md-6 service-item ${
+                      animatingItems.includes(index) ? "service-item-animate" : ""
+                    } wow fadeIn${index % 3 === 0 ? "Left" : index % 3 === 1 ? "Up" : "Right"}`}
                     data-wow-delay={`${100 * ((index % 3) + 1)}ms`}
                   >
                     <div className="services-one__single">
@@ -105,18 +142,76 @@ export default function Service() {
                   </div>
                 ))}
           </div>
+          {!loading && hasMoreItems && (
+            <div className="text-center button-container" style={{ marginTop: "40px" }}>
+              <button onClick={handleShowMore} className="thm-btn show-more-btn" style={{ cursor: "pointer" }}>
+                Show More<span className="icon-plus"></span>
+              </button>
+            </div>
+          )}
+          {!loading && canShowLess && (
+            <div className="text-center button-container" style={{ marginTop: hasMoreItems ? "20px" : "40px" }}>
+              <button onClick={handleShowLess} className="thm-btn show-less-btn" style={{ cursor: "pointer" }}>
+                Show Less<span className="icon-minus"></span>
+              </button>
+            </div>
+          )}
         </div>
         <style jsx>{`
-                    .skeleton-tagline, .skeleton-title, .skeleton-line, .skeleton-image {
-                        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-                        background-size: 200% 100%;
-                        animation: loading-pulse 1.5s infinite;
-                    }
-                    @keyframes loading-pulse {
-                        0% { background-position: 200% 0; }
-                        100% { background-position: -200% 0; }
-                    }
-                `}</style>
+          .skeleton-tagline, .skeleton-title, .skeleton-line, .skeleton-image {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading-pulse 1.5s infinite;
+          }
+          @keyframes loading-pulse {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+          }
+
+          .service-item {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+
+          .service-item-animate {
+            animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+          }
+
+          @keyframes slideInUp {
+            0% {
+              opacity: 0;
+              transform: translateY(30px) scale(0.95);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+          }
+
+          .button-container {
+            transition: all 0.3s ease;
+          }
+
+          .show-more-btn, .show-less-btn {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .show-more-btn:hover, .show-less-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+
+          .show-more-btn:active, .show-less-btn:active {
+            transform: translateY(0);
+          }
+
+          html {
+            scroll-behavior: smooth;
+          }
+        `}</style>
       </section>
     </>
   )
