@@ -215,7 +215,7 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                   </li>
                   <li>
                     <Link href="/services-details?tab=6" style={linkStyle} className="mobile-menu-link">
-                      Parking Solutions
+                      Parking Management
                     </Link>
                   </li>
                 </ul>
@@ -440,7 +440,7 @@ const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }) => {
                 </li>
                 <li>
                   <Link href="/services-details?tab=6" style={linkStyle} className="mobile-menu-link">
-                    Parking Solutions
+                    Parking Management
                   </Link>
                 </li>
               </ul>

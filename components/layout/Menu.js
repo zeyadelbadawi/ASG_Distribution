@@ -52,7 +52,7 @@ export default function Menu() {
                             <Link href="/services-details?tab=5">Automations</Link>
                         </li>
                         <li className="dropdown">
-                            <Link href="/services-details?tab=6">Parking Solutions</Link>
+                            <Link href="/services-details?tab=6">Parking Management</Link>
                         </li>
                     </ul>
                 </li>

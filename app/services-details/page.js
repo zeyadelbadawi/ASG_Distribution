@@ -374,7 +374,7 @@ export default function Home() {
                                     </div>
                                     <div className="services-details__popular-services-content">
                                       <h3>
-                                        <Link href="/services-details?tab=2">Parking Solutions</Link>
+                                        <Link href="/services-details?tab=2">Parking Management</Link>
                                       </h3>
                                     </div>
                                   </li>

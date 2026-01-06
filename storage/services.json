@@ -136,8 +136,8 @@
     },
     {
       "id": 6,
-      "title": "Parking Solutions",
-      "content": "ASG Distribution offers a range of advanced parking solutions designed to optimize parking management, improve efficiency, and enhance the overall parking experience.",
+      "title": "Parking Management",
+      "content": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience.",
       "imageUrl": "assets/images/servicede/Parking.jpg",
       "points": [
         "Automated Parking Systems",
@@ -145,7 +145,7 @@
         "License Plate Recognition",
         "Payment and Ticketing Solutions"
       ],
-      "description2": "ASG Distribution is dedicated to providing cutting-edge parking solutions that transform parking management and elevate user experience.",
+      "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
       "benefits": [
         {
           "name": "Optimized Space Utilization",

@@ -17,7 +17,6 @@ export default function Home() {
   const [errors, setErrors] = useState(null)
 
   const listId = "kVfvu"
-  const listId2 = "FZGec"
   const phonePattern = /^01[0-9]{9}$/ // Matches 11-digit Egyptian numbers starting with 01
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ // ... existing code ...
 

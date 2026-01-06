@@ -165,7 +165,7 @@
           },
           {
             "iconClass": "icon-backup-power",
-            "title": "Parking Solutions",
+            "title": "Parking Management",
             "iconPath": "/assets/images/resources/parking.svg",
             "hoverIconPath": "/assets/12.svg"
           }
@@ -703,7 +703,7 @@
         "title": "Skidata",
         "imagePath": "/assets/images/storage/3.png",
         "link": "partners/skidata",
-        "description": "Smart access and parking solutions that move people smoothly. Designed for airports, cities, and destinations where efficiency and experience matter."
+        "description": "Smart access and Parking Management that move people smoothly. Designed for airports, cities, and destinations where efficiency and experience matter."
       },
       {
         "title": "Kstar",
@@ -748,17 +748,18 @@
         "link": "/services-details?tab=1",
         "description": "Provide peace of mind through advanced protection and surveile measures"
       },
+
       {
         "title": "Networking",
-        "imagePath": "/assets/images/resources/net.jpg",
-        "iconPath": "assets/images/resources/sitemap.svg",
+        "imagePath": "/assets/images/Home/net.png",
+        "iconPath": "assets/images/home2/net.svg",
         "link": "/services-details?tab=2",
         "description": "Enables seamless communication and collaboration by connecting devices and systems"
       },
       {
         "title": "Access Control",
-        "imagePath": "/assets/images/resources/ps.jpg",
-        "iconPath": "/assets/images/resources/Access Control.svg",
+        "imagePath": "/assets/images/Home/ac.png",
+        "iconPath": "/assets/images/home2/ac.svg",
         "link": "/services-details?tab=3",
         "description": "Enhance communication through technologies like video conferencing and display systems"
       },
@@ -777,18 +778,89 @@
         "description": "Optimize parking management through technologies like sensors and smart parking systems"
       },
       {
-        "title": "Parking Solutions",
+        "title": "Parking Management",
         "imagePath": "/assets/images/resources/Parking.jpg",
         "iconPath": "/assets/images/resources/parking-circle.svg",
         "link": "/services-details?tab=6",
         "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
       },
       {
-        "title": "Parking ",
-        "imagePath": "/assets/images/resources/Parking.jpg",
-        "iconPath": "/assets/images/resources/parking-circle.svg",
-        "link": "/services-details?tab=6",
+        "title": "Queue Management",
+        "imagePath": "/assets/images/Home/q.png",
+        "iconPath": "/assets/images/home2/q.svg",
+        "link": "/services-details?tab=7",
         "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+
+      {
+        "title": "Walk through & X-Ray",
+        "imagePath": "/assets/images/Home/walk.png",
+        "iconPath": "/assets/images/home2/walk.svg",
+        "link": "/services-details?tab=8",
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+      {
+        "title": "Nurse Calling",
+        "imagePath": "/assets/images/Home/nurse.png",
+        "iconPath": "/assets/images/home2/nurse.svg",
+        "link": "/services-details?tab=9",
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+      {
+        "title": "Parking Gudiance",
+        "imagePath": "/assets/images/Home/parkingg.png",
+        "iconPath": "/assets/images/home2/parkingg.svg",
+        "link": "/services-details?tab=10",
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+      {
+        "title": "Access Automation",
+        "imagePath": "/assets/images/Home/access.png",
+        "iconPath": "/assets/images/home2/access.svg",
+        "link": "/services-details?tab=11",
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+      {
+        "title": "Fire Alarm",
+        "imagePath": "/assets/images/Home/fire.png",
+        "iconPath": "/assets/images/home2/fire.svg",
+        "link": "/services-details?tab=12",
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+      {
+        "title": "Intercom",
+        "imagePath": "/assets/images/Home/intercom.png",
+        "iconPath": "/assets/images/home2/intercom.svg",
+        "link": "/services-details?tab=13",
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+      {
+        "title": "IP Address",
+        "imagePath": "/assets/images/Home/ip.png",
+        "iconPath": "/assets/images/home2/ip.svg",
+        "link": "/services-details?tab=14",
+        "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
+      },
+      {
+        "title" : "Mobile Solutions",
+        "imagePath": "/assets/images/Home/mobile.png",
+        "iconPath": "/assets/images/home2/mobile.svg",
+        "link": "/services-details?tab=15",
+        "description": "Provide peace of mind through advanced protection and surveile measures"
+      },
+      {
+        "title" : "Intrusion",
+        "imagePath": "/assets/images/Home/intru.png",
+        "iconPath": "/assets/images/home2/intru.svg",
+        "link": "/services-details?tab=16",
+        "description": "Provide peace of mind through advanced protection and surveile measures"
+      },
+      {
+        "title" : "Interactive Board",
+        "imagePath": "/assets/images/Home/inter.png",
+        "iconPath": "/assets/images/resources/inter.svg",
+        "link": "/services-details?tab=17",
+        "description": "Provide peace of mind through advanced protection and surveile measures"
       }
     ]
   },

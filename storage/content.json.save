@@ -142,7 +142,7 @@
           },
           {
             "iconClass": "icon-backup-power",
-            "title": "Parking Solutions",
+            "title": "Parking Management",
             "iconPath": "/assets/images/resources/parking.svg"
           }
         ]
@@ -482,7 +482,7 @@
         "description": "Optimize parking management through technologies like sensors and smart parking systems"
       },
       {
-        "title": "Parking Solutions",
+        "title": "Parking Management",
         "imagePath": "/assets/images/resources/Parking.jpg",
         "iconPath": "/assets/images/resources/parking-circle.svg",
         "link": "/services-details?tab=6",
