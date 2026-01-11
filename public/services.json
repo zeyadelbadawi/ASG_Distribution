@@ -128,85 +128,85 @@
   {
     "title": "Queue Management",
     "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description1": "The Queue Management System by ASG Distribution streamlines customer flow, reducing wait times and improving service efficiency. It offers real-time monitoring, advanced analytics, and customizable service counters for any business environment.",
       "imageUrl": "/assets/images/home2/q.png",
     "iconUrl": "/assets/images/home2/q.svg",
     "tabNumber": 7,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "This system enhances customer experience by providing digital ticketing, SMS notifications, and priority management, helping organizations optimize operations and boost satisfaction. It integrates seamlessly with existing IT infrastructure and supports scalable solutions for growing businesses.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Real-time queue monitoring and reporting",
+      "Digital ticketing and SMS alerts",
+      "Integration with existing systems",
+      "Priority and appointment management"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Reduces customer wait times ",
+      "Improves staff efficiency",
+      "Enhances overall customer experience",
+      "Provides actionable insights"
     ]
   },
   {
     "title": "Walk through & X-Ray",
     "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description1": "The Walk-Through & X-Ray System by ASG Distribution ensures high-security screening with advanced detection technology for airports, offices, and public facilities. It features accurate metal detection, high-resolution imaging, and fast processing for smooth entry flow.",
       "imageUrl": "/assets/images/home2/walk.png",
     "iconUrl": "/assets/images/home2/walk.svg",
     "tabNumber": 8,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "This system enhances safety with threat detection, dual scanning modes, and real-time alerts, providing reliable monitoring while minimizing delays. Its scalable design supports various environments and integrates seamlessly with existing security infrastructure.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "High-precision metal and contraband detection",
+      "Real-time alerts and monitoring",
+      "Scalable design for any facility",
+      "Dual-mode X-ray and walk-through scanning"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Enhances overall security and threat prevention",
+      "Reduces inspection time ",
+      "Supports safe and efficient entry management",
+      "Provides reliable, high-accuracy detection for all visitors"
     ]
   },
   {
     "title": "Nurse Calling",
     "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description1": "Nurse Calling Solution at ASG Distribution provides hospitals and healthcare facilities with fast, reliable communication between patients and medical staff, ensuring immediate response when it matters most. These systems are designed to streamline workflows, enhance patient safety, and improve overall care quality.",
       "imageUrl":  "/assets/images/home2/nurse.png",
     "iconUrl": "/assets/images/home2/nurse.svg",
     "tabNumber": 9,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "Available at ASG Distribution, the Nurse Calling Solution integrates smart alerts, centralized monitoring, and intuitive interfaces to help caregivers respond quickly and efficiently to patient needs, reducing delays and enhancing operational effectiveness.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Centralized monitoring and control",
+      "Real-time alerts for patient calls",
+      "Easy-to-use interfaces for staff",
+      "Integration with hospital management systems"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Faster response",
+      "Improved patient safety ",
+      "Streamlined workflow",
+      "Enhanced efficiency and operational control"
     ]
   },
   {
     "title": "Parking Gudiance",
     "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description1": "The Parking Guidance Solution by ASG Distribution optimizes parking management by directing drivers to available spaces in real time. It features smart sensors, LED indicators, and intuitive display systems for efficient traffic flow.",
       "imageUrl": "/assets/images/home2/parkingg.png",
     "iconUrl": "/assets/images/home2/parkingg.svg",
     "tabNumber": 10,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "This system reduces congestion, saves time, and enhances user experience with mobile integration, analytics reporting, and scalable configurations suitable for malls, offices, and public parking areas. Its intelligent design supports seamless monitoring and management.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Real-time space availability detection",
+      "LED indicators and digital signage",
+      "Mobile app integration and notifications",
+      "Scalable design for any parking facility"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Reduces traffic congestion",
+      "Saves drivers’ time ",
+      "Enhances overall parking efficiency and user experience",
+      "Provides actionable data "
     ]
   },
   {
@@ -232,128 +232,128 @@
   },
   {
     "title": "Fire Alarm",
-    "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description": "Provide early detection and real-time alerts to protect lives and property in homes, offices, and commercial buildings. Equipped with advanced sensors and reliable monitoring, they ensure rapid response to fire emergencies.",
+    "description1": "Fire alarm system: The Fire Alarm System by ASG Distribution provides reliable fire detection and alert solutions for homes, offices, and commercial buildings. It features smoke and heat sensors, audible alarms, and real-time monitoring for early threat detection.",
       "imageUrl": "/assets/images/home2/fire.png",
     "iconUrl": "/assets/images/home2/fire.svg",
     "tabNumber": 12,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "This system enhances safety with automated alerts, emergency notifications, and integration with building management systems, ensuring rapid response and minimizing fire risks. Its scalable design suits small installations to large facilities.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Smoke and heat detection sensors",
+      "Audible and visual alarms",
+      "Real-time alerts and notifications",
+      "Integration with building management systems"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Provides early fire detection ",
+      "Ensures fast response and emergency management",
+      "Enhances safety for occupants and assets",
+      "Offers scalable solutions for any building type"
     ]
   },
   {
     "title": "Intercom",
-    "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description": "Enable seamless communication and access control for homes, offices, and commercial buildings. With audio and video capabilities, these systems enhance security, convenience, and real-time connectivity.",
+    "description1": "The Intercom System by ASG Distribution delivers seamless communication for homes, offices, and commercial facilities, connecting multiple points with clear audio and video. It features easy installation, user-friendly controls, and reliable connectivity for efficient interaction",
       "imageUrl": "/assets/images/home2/intercom.png",
     "iconUrl": "/assets/images/home2/intercom.svg",
     "tabNumber": 13,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "This system enhances security and convenience with two-way communication, access control integration, and remote monitoring via mobile devices, supporting both small and large-scale deployments. Its scalable design adapts to any environment for effective communication management.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Clear audio and video communication",
+      "Two-way communication for instant interaction",
+      "Integration with access control systems",
+      "Remote monitoring via mobile app"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Improves internal communication ",
+      "Enhances security and visitor management",
+      "Provides remote access and control",
+      "Supports scalable solutions "
     ]
   },
   {
-    "title": "IP Address",
-    "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "title": "Public Address",
+    "description": "Enhance communication across your facility with our Public Address Solutions, delivering clear and reliable audio for announcements, alerts, and background music. These systems ensure effective sound coverage and improved audience engagement.",
+    "description1": "The Public Address System by ASG Distribution provides clear and powerful audio communication for schools, offices, and large venues. It features easy-to-use controls, high-quality speakers, and reliable amplification for seamless announcements.",
       "imageUrl": "/assets/images/home2/ip.png",
     "iconUrl": "/assets/images/home2/ip.svg",
     "tabNumber": 14,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "This system enhances information delivery with zone control, wireless connectivity, and emergency alert capabilities, making it ideal for both daily operations and critical situations. Its scalable design adapts to any environment, ensuring effective coverage and audience engagement.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Zone-based audio control for targeted announcements",
+      "High-quality speakers with clear sound projection",
+      "Wireless connectivity and easy integration",
+      "Emergency alert and notification support"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Improves audience awareness",
+      "Ensures clear communication ",
+      "Simplifies management of announcements",
+      "Provides reliable performance"
     ]
   },
   {
     "title" : "Mobile Solutions",
-    "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description": "Deliver flexible, real-time security wherever your operations go. Designed for vehicles and mobile sites, they provide live monitoring, GPS tracking, and reliable video recording to enhance safety and operational control",
+    "description1": "Mobile Solution at ASG Distribution provides advanced surveillance and security for vehicles, buses, and mobile sites, delivering real-time monitoring and reliable video recording on the move. These solutions are designed to enhance safety, operational efficiency, and seamless connectivity for businesses and public transportation systems.",
       "imageUrl": "/assets/images/resources/mobile.png",
     "iconUrl": "/assets/images/home2/mobile.svg",
     "tabNumber": 15,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "Available now at ASG Distribution, Mobile Solutions feature smart integration and cloud-based management, allowing remote access, GPS tracking, and intelligent alerts to ensure your mobile assets are always protected and monitored.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Real-time video monitoring on mobile devices",
+      "GPS tracking and route management",
+      "High-definition video recording and storage",
+      "Cloud-based centralized control and management"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Enhanced security ",
+      "Improved operational efficiency ",
+      "Quick response to incidents",
+      "Seamless connectivity"
     ]
   },
   {
     "title" : "Intrusion",
     "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description1": "The Intrusion System by ASG Distribution provides advanced security monitoring to protect homes, offices, and commercial facilities from unauthorized access. It features motion sensors, door/window contacts, and 24/7 monitoring for reliable protection.",
       "imageUrl": "/assets/images/resources/intru.png",
     "iconUrl": "/assets/images/home2/intru.svg",
     "tabNumber": 16,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "Protect your property with real-time alerts and intelligent monitoring for homes, offices, and commercial buildings. Designed to prevent unauthorized access, these systems enhance security and provide peace of mind.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Motion detection and door/window sensors",
+      "24/7 monitoring with real-time alerts",
+      "Remote access via mobile app or web",
+      "Integration with CCTV and smart devices"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Prevents unauthorized access and intrusions",
+      "Provides immediate alerts",
+      "Supports scalable security solutions for any facility",
+      "Enhances overall safety"
     ]
   },
   {
     "title" : "Interactive Board",
-    "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description": "Transform classrooms and meeting spaces with touch-enabled displays for engaging presentations and collaborative learning. Designed for schools and businesses, they enhance interactivity, productivity, and visual communication.",
+    "description1": "The Interactive Board by ASG Distribution transforms classrooms and meeting rooms into dynamic, collaborative environments with touch-sensitive displays and intuitive controls. It features multi-touch functionality, high-resolution visuals, and seamless device connectivity for enhanced learning and presentations.",
       "imageUrl": "/assets/images/resources/inter.png",
     "iconUrl": "/assets/images/home2/inter.svg",
     "tabNumber": 17,
     "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
     "points": [
       "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "High-resolution visuals for clear presentations",
+      "Digital annotation and content sharing",
+      "Seamless device and software integration"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Enhances engagement",
+      "Improves collaboration and interaction",
+      "Supports modern digital teaching and presentations",
+      "Provides scalable and versatile solutions for any environment"
     ]
   }
 
