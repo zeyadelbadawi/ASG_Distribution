@@ -816,7 +816,7 @@
       {
         "title": "Access Automation",
         "imagePath": "/assets/images/Home/access.png",
-        "iconPath": "/assets/images/home2/access.svg",
+        "iconPath": "/assets/images/brandsheader/entrance.svg",
         "link": "/services-details?tab=11",
         "description": "streamlines entry control for homes, offices, and commercial buildings, providing secure and convenient access management. It enhances security, efficiency, and operational control"
       },
@@ -844,7 +844,7 @@
       {
         "title" : "Mobile Solutions",
         "imagePath": "/assets/images/Home/mobile.png",
-        "iconPath": "/assets/images/home2/mobile.svg",
+        "iconPath": "/assets/images/brandsheader/mobile.svg",
         "link": "/services-details?tab=15",
         "description": "Deliver flexible, real-time security wherever your operations go. Designed for vehicles and mobile sites, they provide live monitoring, GPS tracking, and reliable video recording to enhance safety and operational control"
       },
@@ -858,7 +858,7 @@
       {
         "title" : "Interactive Board",
         "imagePath": "/assets/images/Home/inter.png",
-        "iconPath": "/assets/images/resources/inter.svg",
+        "iconPath": "/assets/images/brandsheader/interactive.svg",
         "link": "/services-details?tab=17",
         "description": "Transform classrooms and meeting spaces with touch-enabled displays for engaging presentations and collaborative learning. Designed for schools and businesses, they enhance interactivity, productivity, and visual communication."
       }

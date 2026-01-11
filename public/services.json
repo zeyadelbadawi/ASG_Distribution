@@ -214,7 +214,7 @@
     "description": "A specialized military unit tasked with gathering information",
     "description1": "The Access Automation System by ASG Distribution delivers secure and efficient entry management for residential, commercial, and industrial environments. It supports smart authentication technologies and centralized control to manage access points with high accuracy.",
       "imageUrl": "/assets/images/home2/access.png",
-    "iconUrl": "/assets/images/resources/parking-circle.svg",
+    "iconUrl": "/assets/images/brandsheader/entrance.svg",
     "tabNumber": 11,
     "description2": "This system enhances safety and convenience through automated doors, gates, and barriers integrated with access control and monitoring platforms. Its scalable architecture allows seamless deployment across buildings, communities, and large facilities.",
     "points": [
@@ -298,7 +298,7 @@
     "description": "Deliver flexible, real-time security wherever your operations go. Designed for vehicles and mobile sites, they provide live monitoring, GPS tracking, and reliable video recording to enhance safety and operational control",
     "description1": "Mobile Solution at ASG Distribution provides advanced surveillance and security for vehicles, buses, and mobile sites, delivering real-time monitoring and reliable video recording on the move. These solutions are designed to enhance safety, operational efficiency, and seamless connectivity for businesses and public transportation systems.",
       "imageUrl": "/assets/images/resources/mobile.png",
-    "iconUrl": "/assets/images/home2/mobile.svg",
+    "iconUrl": "/assets/images/brandsheader/mobile.svg",
     "tabNumber": 15,
     "description2": "Available now at ASG Distribution, Mobile Solutions feature smart integration and cloud-based management, allowing remote access, GPS tracking, and intelligent alerts to ensure your mobile assets are always protected and monitored.",
     "points": [
@@ -340,7 +340,7 @@
     "description": "Transform classrooms and meeting spaces with touch-enabled displays for engaging presentations and collaborative learning. Designed for schools and businesses, they enhance interactivity, productivity, and visual communication.",
     "description1": "The Interactive Board by ASG Distribution transforms classrooms and meeting rooms into dynamic, collaborative environments with touch-sensitive displays and intuitive controls. It features multi-touch functionality, high-resolution visuals, and seamless device connectivity for enhanced learning and presentations.",
       "imageUrl": "/assets/images/resources/inter.png",
-    "iconUrl": "/assets/images/home2/inter.svg",
+    "iconUrl": "/assets/images/brandsheader/interactive.svg",
     "tabNumber": 17,
     "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
     "points": [
