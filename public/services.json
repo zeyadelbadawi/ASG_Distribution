@@ -212,22 +212,22 @@
   {
     "title": "Access Automation",
     "description": "A specialized military unit tasked with gathering information",
-    "description1": "ASG Distribution offers a range of advanced Parking Management designed to optimize parking management, improve efficiency, and enhance the overall parking experience for businesses, municipalities, and facilities of all sizes. Our innovative parking technologies cater to the diverse needs of modern environments seeking to revolutionize their parking operations.",
+    "description1": "The Access Automation System by ASG Distribution delivers secure and efficient entry management for residential, commercial, and industrial environments. It supports smart authentication technologies and centralized control to manage access points with high accuracy.",
       "imageUrl": "/assets/images/home2/access.png",
     "iconUrl": "/assets/images/resources/parking-circle.svg",
     "tabNumber": 11,
-    "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
+    "description2": "This system enhances safety and convenience through automated doors, gates, and barriers integrated with access control and monitoring platforms. Its scalable architecture allows seamless deployment across buildings, communities, and large facilities.",
     "points": [
-      "Automated Parking Systems",
-      "Parking Guidance Systems",
-      "License Plate Recognition",
-      "Payment and Ticketing Solutions"
+      "Automated doors, gates, and barriers",
+      "Smart access authentication technologies",
+      "Centralized access control management",
+      "Seamless integration with security systems"
     ],
     "benefits": [
-      "Optimized Space Utilization",
-      "Improved User Experience",
-      "Enhanced Security",
-      "Increased Revenue"
+      "Enhances security and access control",
+      "Improves traffic flow ",
+      "Reduces manual operation and errors",
+      "Scales easily for projects of any size"
     ]
   },
   {

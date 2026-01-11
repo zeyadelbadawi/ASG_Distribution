@@ -544,7 +544,7 @@ export default function CompanyProfile() {
 
     <Layout
     headerStyle={3} // Specify the header style
-    breadcrumbBg="/assets/images/resources/CPH.png" // Pass the background image for Breadcrumb
+    breadcrumbBg="/assets/images/resources/Company.png" // Pass the background image for Breadcrumb
     breadcrumbTitle=" "
     >
 
