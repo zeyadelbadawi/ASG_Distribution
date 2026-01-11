@@ -223,6 +223,395 @@ export default function Home() {
         <path d="M16 7H21V12" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
+    "Reduces customer wait times": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M12 6V12L16 16" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Improves staff efficiency": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    "Enhances overall customer experience": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="9" cy="9" r="1" fill="#FF6600" />
+        <circle cx="15" cy="9" r="1" fill="#FF6600" />
+      </svg>
+    ),
+    "Provides actionable insights": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 17L9 11L13 15L21 7" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M16 7H21V12" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Enhances overall security and threat prevention": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M9 12L11 14L15 10" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Reduces inspection time": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M12 6V12L16 16" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Supports safe and efficient entry management": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="11" width="14" height="11" rx="2" stroke="#FF6600" strokeWidth="2" />
+        <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="#FF6600" strokeWidth="2" />
+        <circle cx="12" cy="16" r="1" fill="#FF6600" />
+      </svg>
+    ),
+    "Provides reliable, high-accuracy detection for all visitors": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M9 12L11 14L15 10" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Faster response": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    "Improved patient safety": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M9 12L11 14L15 10" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Streamlined workflow": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M7 10L12 14L17 10" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Enhanced efficiency and operational control": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M12 6V12L16 16" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Reduces traffic congestion": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="8" width="8" height="10" rx="1" stroke="#FF6600" strokeWidth="2" />
+        <path d="M6 8V6M10 8V6" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="5" cy="15" r="1" fill="#FF6600" />
+        <circle cx="9" cy="15" r="1" fill="#FF6600" />
+        <path d="M13 10L21 10C21.5 10 22 10.5 22 11V17C22 17.5 21.5 18 21 18H13" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Saves drivers' time": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M12 6V12L16 16" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Enhances overall parking efficiency and user experience": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M8 14C8 14 9.5 16 12 16C14.5 16 16 14 16 14" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="9" cy="9" r="1" fill="#FF6600" />
+        <circle cx="15" cy="9" r="1" fill="#FF6600" />
+      </svg>
+    ),
+    "Provides actionable data": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 17L9 11L13 15L21 7" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M16 7H21V12" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Enhances security and access control": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <circle cx="12" cy="11" r="3" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Improves traffic flow": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M3 9L12 3L21 9V15C21 19.4183 17.4183 23 12 23C6.58172 23 3 19.4183 3 15V9Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M12 11V18" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Reduces manual operation and errors": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M8 12H16M12 8V16" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Scales easily for projects of any size": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="14" y="3" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="3" y="14" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="14" y="14" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Provides early fire detection": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    "Ensures fast response and emergency management": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M12 6L15 11H9L12 6Z" fill="#FF6600" />
+      </svg>
+    ),
+    "Enhances safety for occupants and assets": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M9 12L11 14L15 10" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Offers scalable solutions for any building type": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="14" y="3" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="3" y="14" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="14" y="14" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Improves internal communication": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2C16.75 2 21 6.25 21 11.5Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M22 22L17 17" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Enhances security and visitor management": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M9 9L15 15M15 9L9 15" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Provides remote access and control": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="3" width="20" height="14" rx="2" stroke="#FF6600" strokeWidth="2" />
+        <path d="M8 21H16M12 17V21" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="12" cy="10" r="3" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Supports scalable solutions": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M7 10L12 14L17 10" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Improves audience awareness": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M8.5 8.5C10.3 6.7 13.7 6.7 15.5 8.5M5 5C8.9 1.1 15.1 1.1 19 5M12 19V15"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <circle cx="12" cy="12" r="2" fill="#FF6600" />
+      </svg>
+    ),
+    "Ensures clear communication": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2C16.75 2 21 6.25 21 11.5Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M22 22L17 17" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Simplifies management of announcements": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M14 2V8H20M16 13H8M16 17H8M10 9H8" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Provides reliable performance": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M9 12L11 14L15 10" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Enhanced security": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <circle cx="12" cy="11" r="3" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Improved operational efficiency": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    "Quick response to incidents": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="#FF6600" strokeWidth="2" />
+        <path d="M12 6V12L16 16" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Seamless connectivity": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="2" fill="#FF6600" />
+        <path
+          d="M8.5 8.5C10.3 6.7 13.7 6.7 15.5 8.5M5 5C8.9 1.1 15.1 1.1 19 5M12 19V15"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+    "Prevents unauthorized access and intrusions": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M9 9L15 15M15 9L9 15" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+      </svg>
+    ),
+    "Provides immediate alerts": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="3" stroke="#FF6600" strokeWidth="2" />
+        <path
+          d="M12 5V3M12 21V19M19 12H21M3 12H5M17.66 17.66L19.07 19.07M4.93 4.93L6.34 6.34M17.66 6.34L19.07 4.93M4.93 19.07L6.34 17.66"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+    "Supports scalable security solutions for any facility": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="3" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="14" y="3" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="3" y="14" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+        <rect x="14" y="14" width="7" height="7" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Enhances overall safety": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z"
+          stroke="#FF6600"
+          strokeWidth="2"
+        />
+        <path d="M9 12L11 14L15 10" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    "Enhances engagement": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 21L3 13.5V7L12 2L21 7V13.5L12 21Z" stroke="#FF6600" strokeWidth="2" strokeLinejoin="round" />
+        <circle cx="12" cy="11" r="3" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Improves collaboration and interaction": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="8" r="4" stroke="#FF6600" strokeWidth="2" />
+        <path
+          d="M4 20C4 16.6863 6.68629 14 10 14H14C17.3137 14 20 16.6863 20 20"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+    "Supports modern digital teaching and presentations": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="3" width="20" height="14" rx="2" stroke="#FF6600" strokeWidth="2" />
+        <path d="M8 21H16M12 17V21" stroke="#FF6600" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="12" cy="10" r="3" stroke="#FF6600" strokeWidth="2" />
+      </svg>
+    ),
+    "Provides scalable and versatile solutions for any environment": (
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M5 9L2 12L5 15M19 9L22 12L19 15M12 3V21"
+          stroke="#FF6600"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
   }
 
   const [email, setEmail] = useState("")
@@ -436,7 +825,6 @@ export default function Home() {
             </div>
           </section>
           <Cta />
-
         </div>
       </Layout>
     </>

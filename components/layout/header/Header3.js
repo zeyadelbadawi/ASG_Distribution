@@ -4,49 +4,37 @@ import Link from "next/link"
 import Menu from "../Menu"
 import MobileMenu from "../MobileMenu"
 
-export default function Header3({ scroll, isMobileMenu, handleMobileMenu, bgImage }) {
-  console.log("Header Background Image:", bgImage)
-
+export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
   return (
     <>
-      <header
-        className="main-header-two"
-        style={{
-          backgroundImage: bgImage ? `url(${bgImage})` : "none",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <nav className="main-menu main-menu-two">
-          <div className="main-menu-two__wrapper">
-            <div className="main-menu-two__wrapper-inner">
-              <div className="main-menu-two__left">
-                <div className="main-menu-two__logo">
+      <header className={`main-header ${scroll ? "fixed-header" : ""}`}>
+        
+        <nav className="main-menu">
+          <div className="main-menu__wrapper">
+            <div className="main-menu__wrapper-inner">
+              <div className="main-menu__left">
+                <div className="main-menu__logo">
                   <Link href="/">
-                    <img src="/assets/images/resources/logo-1.png" alt="Logo" />
+                    <img src="assets/images/resources/logo-1.png" alt="" />
                   </Link>
                 </div>
               </div>
-              <Menu />
-              <div className="main-menu-two__right">
-                <div className="main-menu-two__nav-sidebar-icon">
-                  <button className="navSidebar-button" onClick={handleMobileMenu}>
-                    <span className="icon-dots-menu-one"></span>
-                    <span className="icon-dots-menu-two"></span>
-                    <span className="icon-dots-menu-three"></span>
-                  </button>
-                </div>
-                <div className="main-menu-two__call">
-                  <div className="main-menu-two__call-icon">
-                    <span className="icon-call"></span>
-                  </div>
-                  <div className="main-menu-two__call-content">
-                    <p className="main-menu-two__call-sub-title">Need help?</p>
-                    <h5 className="main-menu-two__call-number">
-                      <Link href="tel:010 50638800">010 50638800</Link>
-                    </h5>
-                  </div>
+              <div className="main-menu__main-menu-box">
+                <Link
+                  href="#"
+                  className="mobile-nav__toggler"
+                  onClick={handleMobileMenu}
+                  style={{ display: isMobileMenu ? "block" : "none" }}
+                >
+                  <i className="fa fa-bars"></i>
+                </Link>
+                <Menu />
+              </div>
+              <div className="main-menu__right">
+                <div className="main-menu__btn-box">
+                  <Link href="#product-section" className="main-menu__btn thm-btn">
+                    Let's Talk
+                  </Link>
                 </div>
               </div>
             </div>
@@ -56,37 +44,34 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu, bgImag
 
       <MobileMenu handleMobileMenu={handleMobileMenu} />
 
-      <div className={`stricky-header stricked-menu main-menu main-menu-three ${scroll ? "stricky-fixed" : ""}`}>
+      <div className={`stricky-header stricked-menu main-menu ${scroll ? "stricky-fixed" : ""}`}>
         <div className="sticky-header__content">
-          <nav className="main-menu main-menu-two">
-            <div className="main-menu-two__wrapper">
-              <div className="main-menu-two__wrapper-inner">
-                <div className="main-menu-two__left">
-                  <div className="main-menu-two__logo">
+          <nav className="main-menu">
+            <div className="main-menu__wrapper">
+              <div className="main-menu__wrapper-inner">
+                <div className="main-menu__left">
+                  <div className="main-menu__logo">
                     <Link href="/">
-                      <img src="/assets/images/resources/logo-1.png" alt="Logo" />
+                      <img src="assets/images/resources/logo-1.png" alt="" />
                     </Link>
                   </div>
                 </div>
-                <Menu />
-                <div className="main-menu-two__right">
-                  <div className="main-menu-two__nav-sidebar-icon">
-                    <button className="navSidebar-button" onClick={handleMobileMenu}>
-                      <span className="icon-dots-menu-one"></span>
-                      <span className="icon-dots-menu-two"></span>
-                      <span className="icon-dots-menu-three"></span>
-                    </button>
-                  </div>
-                  <div className="main-menu-two__call">
-                    <div className="main-menu-two__call-icon">
-                      <span className="icon-call"></span>
-                    </div>
-                    <div className="main-menu-two__call-content">
-                      <p className="main-menu-two__call-sub-title">Need help?</p>
-                      <h5 className="main-menu-two__call-number">
-                        <Link href="tel:010 50638800">010 50638800</Link>
-                      </h5>
-                    </div>
+                <div className="main-menu__main-menu-box">
+                  <Link
+                    href="#"
+                    className="mobile-nav__toggler"
+                    onClick={handleMobileMenu}
+                    style={{ display: isMobileMenu ? "block" : "none" }}
+                  >
+                    <i className="fa fa-bars"></i>
+                  </Link>
+                  <Menu />
+                </div>
+                <div className="main-menu__right">
+                  <div className="main-menu__btn-box">
+                    <Link href="#product-section" className="main-menu__btn thm-btn">
+                      Let's Talk
+                    </Link>
                   </div>
                 </div>
               </div>
