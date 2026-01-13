@@ -149,13 +149,7 @@ export default function Service() {
               </button>
             </div>
           )}
-          {!loading && canShowLess && (
-            <div className="text-center button-container" style={{ marginTop: hasMoreItems ? "20px" : "40px" }}>
-              <button onClick={handleShowLess} className="thm-btn show-less-btn" style={{ cursor: "pointer" }}>
-                Show Less<span className="icon-minus"></span>
-              </button>
-            </div>
-          )}
+          
         </div>
         <style jsx>{`
           .skeleton-tagline, .skeleton-title, .skeleton-line, .skeleton-image {

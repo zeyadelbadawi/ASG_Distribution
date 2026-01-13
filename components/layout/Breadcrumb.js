@@ -7,12 +7,12 @@ export default function Breadcrumb({ breadcrumbTitle, bgImage }) {
       <section
         className="page-header"
         style={{
-          backgroundImage: bgImage ? `url(${bgImage})` : "url(/assets/images/default-bg.png)", // Fallback background image
-          backgroundSize: "100% 100%", // Updated sizing to exactly match the image aspect ratio and fit without cropping
+          backgroundImage: bgImage ? `url(${bgImage})` : "url(/assets/images/default-bg.png)",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundColor: "#111827", // Updated background color
-          aspectRatio: "1374 / 326", // Using aspect-ratio to match the Partner Header image (1374x326)
+          backgroundColor: "#111827",
+          aspectRatio: "clamp(1, 1374 / 326, 4)",
           width: "100%",
           display: "flex",
           flexDirection: "column",
@@ -20,7 +20,8 @@ export default function Breadcrumb({ breadcrumbTitle, bgImage }) {
           alignItems: "center",
           position: "relative",
           overflow: "hidden",
-          padding: "20px 0", // Reduced padding to let aspect-ratio control the height
+          padding: "20px 0",
+          minHeight: "clamp(300px, 40vh, 400px)",
         }}
       >
         <div
@@ -31,7 +32,7 @@ export default function Breadcrumb({ breadcrumbTitle, bgImage }) {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: "rgba(0,0,0,0.3)", // Slightly lighter overlay to show logos better
+            backgroundColor: "rgba(0,0,0,0.3)",
             zIndex: 1,
           }}
         ></div>

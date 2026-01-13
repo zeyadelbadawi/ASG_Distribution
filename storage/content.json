@@ -793,11 +793,11 @@
       },
 
       {
-        "title": "Walk through & X-Ray",
+        "title": "Inspection Systems & X-Ray",
         "imagePath": "/assets/images/Home/walk.png",
         "iconPath": "/assets/images/home2/walk.svg",
         "link": "/services-details?tab=8",
-        "description": "Ensure maximum security with our Walkthrough and X-Ray Solutions, designed for airports, government buildings, and high-risk facilities. These systems provide fast, accurate detection of prohibited items while maintaining smooth access for visitors."
+        "description": "Ensure maximum security with our Inspection Systems and X-Ray Solutions, designed for airports, government buildings, and high-risk facilities. These systems provide fast, accurate detection of prohibited items while maintaining smooth access for visitors."
       },
       {
         "title": "Nurse Calling",
@@ -816,7 +816,7 @@
       {
         "title": "Access Automation",
         "imagePath": "/assets/images/Home/access.png",
-        "iconPath": "/assets/images/home2/access.svg",
+        "iconPath": "/assets/images/1.svg",
         "link": "/services-details?tab=11",
         "description": "streamlines entry control for homes, offices, and commercial buildings, providing secure and convenient access management. It enhances security, efficiency, and operational control"
       },
@@ -844,21 +844,21 @@
       {
         "title" : "Mobile Solutions",
         "imagePath": "/assets/images/Home/mobile.png",
-        "iconPath": "/assets/images/home2/mobile.svg",
+        "iconPath": "/assets/images/3.svg",
         "link": "/services-details?tab=15",
         "description": "Deliver flexible, real-time security wherever your operations go. Designed for vehicles and mobile sites, they provide live monitoring, GPS tracking, and reliable video recording to enhance safety and operational control"
       },
       {
         "title" : "Intrusion",
         "imagePath": "/assets/images/Home/intru.png",
-        "iconPath": "/assets/images/home2/intru.svg",
+        "iconPath": "/assets/images/4.svg",
         "link": "/services-details?tab=16",
         "description": "Protect your property with real-time alerts and intelligent monitoring for homes, offices, and commercial buildings. Designed to prevent unauthorized access, these systems enhance security and provide peace of mind."
       },
       {
         "title" : "Interactive Board",
         "imagePath": "/assets/images/Home/inter.png",
-        "iconPath": "/assets/images/resources/inter.svg",
+        "iconPath": "/assets/images/2.svg",
         "link": "/services-details?tab=17",
         "description": "Transform classrooms and meeting spaces with touch-enabled displays for engaging presentations and collaborative learning. Designed for schools and businesses, they enhance interactivity, productivity, and visual communication."
       }
