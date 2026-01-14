@@ -1,1 +1,10 @@
 node_modules
+
+# build / junk
+.next/
+node_modules/
+.DS_Store
+*.zip
+
+# block accidental windows absolute paths (safety)
+C:\
