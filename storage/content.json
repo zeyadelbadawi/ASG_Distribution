@@ -622,7 +622,7 @@
     "items": [
       {
         "title": "Surveillance System",
-        "imagePath": "/assets/images/resources/sec.jpg",
+        "imagePath": "/assets/images/Home/ss.png",
         "iconPath": "/assets/images/resources/Security System.svg",
         "link": "/services-details?tab=1",
         "description": "Provide peace of mind through advanced protection and surveile measures"
@@ -643,7 +643,7 @@
       },
       {
         "title": "Audio Visual Solutions",
-        "imagePath": "/assets/images/resources/AV.jpg",
+        "imagePath": "/assets/images/Home/av.png",
         "iconPath": "/assets/images/resources/Audio.svg",
         "link": "/services-details?tab=4",
         "description": "Streamline processes by automating tasks and workflows for increased efficiency"
@@ -657,28 +657,28 @@
       },
       {
         "title": "Parking Management",
-        "imagePath": "/assets/images/resources/Parking.jpg",
+        "imagePath": "/assets/images/Home/pm.png",
         "iconPath": "/assets/images/resources/parking-circle.svg",
         "link": "/services-details?tab=6",
         "description": "A specialized military unit with gathering information, conducting reconnaissance, and intelligence."
       },
       {
         "title": "Queue Management",
-        "imagePath": "/assets/images/Home/q.png",
+        "imagePath": "/assets/images/Home/q1.png",
         "iconPath": "/assets/images/home2/q.svg",
         "link": "/services-details?tab=7",
         "description": "Organize customer flow efficiently, reducing waiting times and improving service experiences across different environments. With smart ticketing and real-time monitoring, businesses can optimize operations and enhance customer satisfaction."
       },
       {
-        "title": "Walk through & X-Ray",
+        "title": "Inspection System & X-Ray",
         "imagePath": "/assets/images/Home/walk.png",
         "iconPath": "/assets/images/home2/walk.svg",
         "link": "/services-details?tab=8",
-        "description": "Ensure maximum security with our Walkthrough and X-Ray Solutions, designed for airports, government buildings, and high-risk facilities. These systems provide fast, accurate detection of prohibited items while maintaining smooth access for visitors."
+        "description": "Ensure maximum security with our Inspection System and X-Ray Solutions, designed for airports, government buildings, and high-risk facilities. These systems provide fast, accurate detection of prohibited items while maintaining smooth access for visitors."
       },
       {
         "title": "Nurse Calling",
-        "imagePath": "/assets/images/Home/nurse.png",
+        "imagePath": "/assets/images/Home/nursee.png",
         "iconPath": "/assets/images/home2/nurse.svg",
         "link": "/services-details?tab=9",
         "description": "Enable fast and reliable communication between patients and medical staff, ensuring immediate response when it matters most. Designed for hospitals and healthcare facilities, these systems improve workflow efficiency, patient safety, and quality of care."
@@ -699,7 +699,7 @@
       },
       {
         "title": "Fire Alarm",
-        "imagePath": "/assets/images/Home/fire.png",
+        "imagePath": "/assets/images/Home/firee.png",
         "iconPath": "/assets/images/home2/fire.svg",
         "link": "/services-details?tab=12",
         "description": "Provide early detection and real-time alerts to protect lives and property in homes, offices, and commercial buildings. Equipped with advanced sensors and reliable monitoring, they ensure rapid response to fire emergencies."
@@ -713,7 +713,7 @@
       },
       {
         "title": "Public Address",
-        "imagePath": "/assets/images/Home/ip.png",
+        "imagePath": "/assets/images/Home/ipp.png",
         "iconPath": "/assets/images/home2/ip.svg",
         "link": "/services-details?tab=14",
         "description": "Enhance communication across your facility with our Public Address Solutions, delivering clear and reliable audio for announcements, alerts, and background music. These systems ensure effective sound coverage and improved audience engagement."
@@ -728,13 +728,13 @@
       {
         "title": "Intrusion",
         "imagePath": "/assets/images/Home/intru.png",
-        "iconPath": "/assets/images/home2/intru.svg",
+        "iconPath": "/assets/images/home2/Intru.svg",
         "link": "/services-details?tab=16",
         "description": "Protect your property with real-time alerts and intelligent monitoring for homes, offices, and commercial buildings. Designed to prevent unauthorized access, these systems enhance security and provide peace of mind."
       },
       {
         "title": "Interactive Board",
-        "imagePath": "/assets/images/Home/inter.png",
+        "imagePath": "/assets/images/Home/interr.png",
         "iconPath": "/assets/images/brandsheader/interactive.svg",
         "link": "/services-details?tab=17",
         "description": "Transform classrooms and meeting spaces with touch-enabled displays for engaging presentations and collaborative learning. Designed for schools and businesses, they enhance interactivity, productivity, and visual communication."

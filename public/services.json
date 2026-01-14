@@ -129,7 +129,7 @@
     "title": "Queue Management",
     "description": "A specialized military unit tasked with gathering information",
     "description1": "The Queue Management System by ASG Distribution streamlines customer flow, reducing wait times and improving service efficiency. It offers real-time monitoring, advanced analytics, and customizable service counters for any business environment.",
-      "imageUrl": "/assets/images/home2/q.png",
+      "imageUrl": "/assets/images/Home/q2.png",
     "iconUrl": "/assets/images/home2/q.svg",
     "tabNumber": 7,
     "description2": "This system enhances customer experience by providing digital ticketing, SMS notifications, and priority management, helping organizations optimize operations and boost satisfaction. It integrates seamlessly with existing IT infrastructure and supports scalable solutions for growing businesses.",
@@ -147,9 +147,9 @@
     ]
   },
   {
-    "title": "Walk through & X-Ray",
+    "title": "Inspection System & X-Ray",
     "description": "A specialized military unit tasked with gathering information",
-    "description1": "The Walk-Through & X-Ray System by ASG Distribution ensures high-security screening with advanced detection technology for airports, offices, and public facilities. It features accurate metal detection, high-resolution imaging, and fast processing for smooth entry flow.",
+    "description1": "The Inspection System & X-Ray System by ASG Distribution ensures high-security screening with advanced detection technology for airports, offices, and public facilities. It features accurate metal detection, high-resolution imaging, and fast processing for smooth entry flow.",
       "imageUrl": "/assets/images/home2/walk.png",
     "iconUrl": "/assets/images/home2/walk.svg",
     "tabNumber": 8,
@@ -158,7 +158,7 @@
       "High-precision metal and contraband detection",
       "Real-time alerts and monitoring",
       "Scalable design for any facility",
-      "Dual-mode X-ray and walk-through scanning"
+      "Dual-mode X-ray and Inspection Systems scanning"
     ],
     "benefits": [
       "Enhances overall security and threat prevention",
@@ -319,7 +319,7 @@
     "description": "A specialized military unit tasked with gathering information",
     "description1": "The Intrusion System by ASG Distribution provides advanced security monitoring to protect homes, offices, and commercial facilities from unauthorized access. It features motion sensors, door/window contacts, and 24/7 monitoring for reliable protection.",
       "imageUrl": "/assets/images/resources/intru.png",
-    "iconUrl": "/assets/images/home2/intru.svg",
+    "iconUrl": "/assets/images/home2/Intru.svg",
     "tabNumber": 16,
     "description2": "Protect your property with real-time alerts and intelligent monitoring for homes, offices, and commercial buildings. Designed to prevent unauthorized access, these systems enhance security and provide peace of mind.",
     "points": [
