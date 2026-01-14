@@ -8,3 +8,12 @@ node_modules/
 
 # block accidental windows absolute paths (safety)
 C:\
+
+# macOS junk
+.DS_Store
+public/assets/.DS_Store
+public/assets/images/.DS_Store
+
+# archives
+*.zip
+
