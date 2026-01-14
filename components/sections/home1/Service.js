@@ -7,6 +7,7 @@ export default function Service() {
   const [loading, setLoading] = useState(true)
   const [visibleItems, setVisibleItems] = useState(6)
   const [animatingItems, setAnimatingItems] = useState([])
+  const [loadingImages, setLoadingImages] = useState(new Set())
   const newCardsRef = useRef(null)
 
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function Service() {
       .then((data) => {
         setServicesContent(data.services)
         setLoading(false)
+        preloadImages(data.services.items.slice(0, 6))
       })
       .catch((error) => {
         console.error("Error fetching services content:", error)
@@ -22,13 +24,32 @@ export default function Service() {
       })
   }, [])
 
+  const preloadImages = (items) => {
+    items.forEach((service) => {
+      if (service.imagePath) {
+        const img = new Image()
+        img.src = service.imagePath
+      }
+      if (service.iconPath) {
+        const icon = new Image()
+        icon.src = service.iconPath
+      }
+    })
+  }
+
   const handleShowMore = () => {
     const currentVisible = visibleItems
     const newVisible = currentVisible + 6
     const newItems = []
+
     for (let i = currentVisible; i < Math.min(newVisible, servicesContent.items.length); i++) {
       newItems.push(i)
+      setLoadingImages((prev) => new Set(prev).add(i))
     }
+
+    const nextBatch = servicesContent.items.slice(currentVisible, newVisible)
+    preloadImages(nextBatch)
+
     setAnimatingItems(newItems)
     setVisibleItems(newVisible)
 
@@ -41,6 +62,14 @@ export default function Service() {
     setTimeout(() => {
       setAnimatingItems([])
     }, 600)
+  }
+
+  const handleImageLoad = (index) => {
+    setLoadingImages((prev) => {
+      const next = new Set(prev)
+      next.delete(index)
+      return next
+    })
   }
 
   const handleShowLess = () => {
@@ -116,15 +145,52 @@ export default function Service() {
                   >
                     <div className="services-one__single">
                       <div className="services-one__img-box">
-                        <div className="services-one__img">
-                          <img src={service.imagePath || "/placeholder.svg"} alt={service.title} />
+                        <div className="services-one__img" style={{ position: "relative" }}>
+                          {loadingImages.has(index) && (
+                            <div
+                              className="skeleton-image"
+                              style={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                                borderRadius: "20px 20px 0 0",
+                                zIndex: 1,
+                              }}
+                            ></div>
+                          )}
+                          <img
+                            src={service.imagePath || "/placeholder.svg"}
+                            alt={service.title}
+                            loading="lazy"
+                            onLoad={() => handleImageLoad(index)}
+                            onError={() => handleImageLoad(index)}
+                            style={{
+                              display: loadingImages.has(index) ? "none" : "block",
+                              width: "100%",
+                              height: "auto",
+                            }}
+                          />
                         </div>
                         <div className="services-one__icon">
-                          <img
-                            src={service.iconPath || "/placeholder.svg"}
-                            style={{ width: "50px", height: "50px" }}
-                            alt="icon"
-                          />
+                          {loadingImages.has(index) ? (
+                            <div
+                              className="skeleton-icon"
+                              style={{
+                                width: "50px",
+                                height: "50px",
+                                borderRadius: "50%",
+                              }}
+                            ></div>
+                          ) : (
+                            <img
+                              src={service.iconPath || "/placeholder.svg"}
+                              style={{ width: "50px", height: "50px" }}
+                              alt="icon"
+                              loading="lazy"
+                            />
+                          )}
                         </div>
                       </div>
                       <div className="services-one__content">
@@ -144,21 +210,18 @@ export default function Service() {
           </div>
           {!loading && hasMoreItems && (
             <div className="text-center button-container" style={{ marginTop: "40px" }}>
-              <button onClick={handleShowMore} className="thm-btn show-more-btn" style={{ cursor: "pointer" }}>
+              <button
+                onClick={handleShowMore}
+                className="thm-btn show-more-btn"
+                style={{ cursor: "pointer", border: "none", outline: "none" }}
+              >
                 Show More<span className="icon-plus"></span>
-              </button>
-            </div>
-          )}
-          {!loading && canShowLess && (
-            <div className="text-center button-container" style={{ marginTop: hasMoreItems ? "20px" : "40px" }}>
-              <button onClick={handleShowLess} className="thm-btn show-less-btn" style={{ cursor: "pointer" }}>
-                Show Less<span className="icon-minus"></span>
               </button>
             </div>
           )}
         </div>
         <style jsx>{`
-          .skeleton-tagline, .skeleton-title, .skeleton-line, .skeleton-image {
+          .skeleton-tagline, .skeleton-title, .skeleton-line, .skeleton-image, .skeleton-icon {
             background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
             background-size: 200% 100%;
             animation: loading-pulse 1.5s infinite;

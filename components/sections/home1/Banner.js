@@ -1,51 +1,67 @@
 "use client"
 
 import Link from "next/link"
-
+import Image from "next/image"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
-
 import { Swiper, SwiperSlide } from "swiper/react"
-
 import { useState, useEffect } from "react"
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
-
   slidesPerView: 1,
-
   spaceBetween: 0,
-
   loop: true,
-
-  // Navigation
-
   navigation: {
     nextEl: ".h1n",
-
     prevEl: ".h1p",
   },
-
-  // Pagination
-
   pagination: {
     el: ".swiper-pagination",
-
     clickable: true,
   },
 }
 
 export default function Banner() {
   const [bannerData, setBannerData] = useState(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  const fixImagePath = (path) => {
+    if (!path) return "/placeholder.svg"
+    if (path.startsWith("http://") || path.startsWith("https://") || path.startsWith("/")) {
+      return path
+    }
+    return `/${path}`
+  }
 
   useEffect(() => {
-    fetch("/api/getContent")
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
 
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+
+    const controller = new AbortController()
+
+    fetch("/api/getContent", { signal: controller.signal })
       .then((response) => response.json())
+      .then((data) => setBannerData(data.banner))
+      .catch((error) => {
+        if (error.name !== "AbortError") {
+          console.error("Error fetching banner content:", error)
+        }
+      })
 
-      .then((data) => setBannerData(data.banner)) // Assuming `banner` is a key in the JSON file
-
-      .catch((error) => console.error("Error fetching banner content:", error))
+    return () => {
+      controller.abort()
+      window.removeEventListener("resize", checkMobile)
+    }
   }, [])
+
+  const optimizedSwiperOptions = {
+    ...swiperOptions,
+    autoplay: !isMobile ? { delay: 3000, disableOnInteraction: false } : false,
+  }
 
   if (!bannerData) {
     return (
@@ -73,16 +89,16 @@ export default function Banner() {
           </div>
         </div>
         <style jsx>{`
-                .skeleton-text, .skeleton-btn {
-                    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-                    background-size: 200% 100%;
-                    animation: skeleton-loading 1.5s infinite;
-                }
-                @keyframes skeleton-loading {
-                    0% { background-position: 200% 0; }
-                    100% { background-position: -200% 0; }
-                }
-            `}</style>
+          .skeleton-text, .skeleton-btn {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: skeleton-loading 1.5s infinite;
+          }
+          @keyframes skeleton-loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+          }
+        `}</style>
       </section>
     )
   }
@@ -90,7 +106,7 @@ export default function Banner() {
   return (
     <>
       <section className="main-slider">
-        <Swiper {...swiperOptions} className="main-slider__carousel owl-carousel owl-theme thm-owl__carousel">
+        <Swiper {...optimizedSwiperOptions} className="main-slider__carousel owl-carousel owl-theme thm-owl__carousel">
           {bannerData.slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div className="item main-slider__slide-1">
@@ -98,54 +114,50 @@ export default function Banner() {
                   className="main-slider__bg"
                   style={{
                     backgroundImage: `url(${slide.backgroundImage})`,
-
                     backgroundSize: "cover",
-
                     backgroundPosition: "center",
-
-                    width: "100%", // Full width of the slider
-
-                    height: "100%", // Full height of the slider
-
-                    clipPath: "none", // Removes the angled shape
+                    width: "100%",
+                    height: "100%",
+                    clipPath: "none",
                   }}
                 ></div>
-
-                {/* Shape Images */}
-
                 <div className="main-slider__shape-2">
-                  <img src={slide.shape2 || "/placeholder.svg"} alt="" />
+                  <Image
+                    src={fixImagePath(slide.shape2) || "/placeholder.svg"}
+                    alt="Shape decoration"
+                    width={100}
+                    height={100}
+                    style={{ width: "auto", height: "auto" }}
+                    priority
+                  />
                 </div>
-
                 <div className="main-slider__shape-3">
-                  <img src={slide.shape3 || "/placeholder.svg"} alt="" />
+                  <Image
+                    src={fixImagePath(slide.shape3) || "/placeholder.svg"}
+                    alt="Shape decoration"
+                    width={100}
+                    height={100}
+                    style={{ width: "auto", height: "auto" }}
+                    priority
+                  />
                 </div>
-
-                {/* Text Content */}
-
                 <div className="container">
                   <div className="main-slider__content">
                     <p className="main-slider__sub-title">{slide.subTitle}</p>
-
                     <h2 className="main-slider__title" dangerouslySetInnerHTML={{ __html: slide.title }}></h2>
-
                     <p className="main-slider__text" dangerouslySetInnerHTML={{ __html: slide.text }}></p>
-
                     <div className="main-slider__btn-and-call-box">
                       <div className="main-slider__btn-box">
                         <Link href={slide.buttonLink} className="main-slider__btn thm-btn">
                           {slide.buttonText}
                         </Link>
                       </div>
-
                       <div className="main-slider__call">
                         <div className="main-slider__call-icon">
                           <span className="icon-call"></span>
                         </div>
-
                         <div className="main-slider__call-content">
                           <p className="main-slider__call-sub-title">Need help?</p>
-
                           <h5 className="main-slider__call-number">
                             <Link href={`tel:${slide.phoneNumber}`}>{slide.phoneNumber}</Link>
                           </h5>
@@ -159,18 +171,11 @@ export default function Banner() {
           ))}
         </Swiper>
       </section>
-
       <style jsx>{`
-
-/* Override .main-slider__bg:before to remove the gradient */
-
-.main-slider__bg:before {
-
-display: none;
-
-}
-
-`}</style>
+        .main-slider__bg:before {
+          display: none;
+        }
+      `}</style>
     </>
   )
 }

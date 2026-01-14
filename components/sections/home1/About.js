@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function About() {
   const [aboutData, setAboutData] = useState(null)
@@ -89,7 +90,14 @@ export default function About() {
             <div className="about-one__left">
               <div className="about-one__img-box">
                 <div className="about-one__img">
-                  <img src={aboutData.image || "/placeholder.svg"} alt="About Us" />
+                  <Image
+                    src={aboutData.image || "/placeholder.svg"}
+                    alt="About Us"
+                    width={600}
+                    height={550}
+                    style={{ width: "100%", height: "auto" }}
+                    priority
+                  />
                 </div>
                 <div className="about-one__happy-client">
                   <div className="about-one__happy-client-inner">

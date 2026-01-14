@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import Menu from "../Menu"
 import MobileMenu from "../MobileMenu"
@@ -55,7 +56,6 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                 <Link href="https://www.linkedin.com/company/asg-distribution/">
                   <i className="fab fa-linkedin"></i>
                 </Link>
-                
               </div>
             </div>
           </div>
@@ -66,7 +66,14 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
               <div className="main-menu__left">
                 <div className="main-menu__logo">
                   <Link href="/">
-                    <img src="assets/images/resources/logo-1.png" alt="" />
+                    <Image
+                      src="/assets/images/resources/logo-1.png"
+                      alt="ASG Distribution Logo"
+                      width={180}
+                      height={60}
+                      style={{ width: "auto", height: "auto" }}
+                      priority
+                    />
                   </Link>
                 </div>
               </div>
@@ -103,7 +110,14 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
                 <div className="main-menu__left">
                   <div className="main-menu__logo">
                     <Link href="/">
-                      <img src="assets/images/resources/logo-1.png" alt="" />
+                      <Image
+                        src="/assets/images/resources/logo-1.png"
+                        alt="ASG Distribution Logo"
+                        width={180}
+                        height={60}
+                        style={{ width: "auto", height: "auto" }}
+                        priority
+                      />
                     </Link>
                   </div>
                 </div>

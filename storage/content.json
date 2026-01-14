@@ -182,7 +182,7 @@
     },
     {
       "clientName": "Trade House",
-      "text": "We express sincere appreciation to ASG Distribution for consistently providing the best prices and maintaining continuous trading opportunities in the market. Your dedication to delivering value and fostering enduring relationships is truly commendable. It is a privilege to collaborate with a company that prioritizes customer satisfaction and reliability above all else. Thank you for being a trusted partner that upholds high standards of service and excellence. Looking forward to further prosperous ventures together!",
+      "text": "We express sincere appreciation to ASG Distribution for consistently providing the best prices and maintaining continuous trading opportunities in the market. Your dedication to delivering value and fostering enduring relationships is truly commendable. It is a privilege to collaborate with a company that prioritizes customer satisfaction and reliability above all else.",
       "imagePath": "/assets/images/resources/4.png",
       "rating": 5
     },
@@ -207,7 +207,7 @@
     {
       "clientName": "Egypt Security",
       "text": "Egypt Security company extends heartfelt appreciation to ASG Distribution for their product fulfillment and consistent trading services. Their efficiency in meeting our demands promptly has been instrumental in maintaining our operational effectiveness. Thank you for your exceptional support and dedication to our success.",
-      "imagePath": "/assets/images/resources/2 (1).png",
+      "imagePath": "/assets/images/team/10.png",
       "rating": "5"
     }
   ],
@@ -221,12 +221,8 @@
         "link": " ",
         "modalData": {
           "name": "ASG Smart",
-          "number": [
-            "16653"
-          ],
-          "address": [
-            "53 ميدان الفلكي - شارع التحرير، باب اللوق - عابدين - القاهرة"
-          ]
+          "number": ["16653"],
+          "address": ["53 ميدان الفلكي - شارع التحرير، باب اللوق - عابدين - القاهرة"]
         }
       },
       {
@@ -235,12 +231,8 @@
         "link": " ",
         "modalData": {
           "name": "Wave Tech",
-          "number": [
-            "0 1003720852"
-          ],
-          "address": [
-            "8 شارع سعيد - قسم ثاني طنطا - محافظة الغربية"
-          ]
+          "number": ["0 1003720852"],
+          "address": ["8 شارع سعيد - قسم ثاني طنطا - محافظة الغربية"]
         }
       },
       {
@@ -249,12 +241,8 @@
         "link": " ",
         "modalData": {
           "name": "Egypt Laptop",
-          "number": [
-            "15240"
-          ],
-          "address": [
-            "مول تكنولوجي، مدينة نصر"
-          ]
+          "number": ["15240"],
+          "address": ["مول تكنولوجي، مدينة نصر"]
         }
       },
       {
@@ -263,12 +251,8 @@
         "link": " ",
         "modalData": {
           "name": "MAKKA Technology & Surveillance Systems",
-          "number": [
-            " 0106907666"
-          ],
-          "address": [
-            "الحي الثالث شارع ابو الخير - المجاورة ١٤ قطعة ٢١٤ - دمياط الجديدة"
-          ]
+          "number": [" 0106907666"],
+          "address": ["الحي الثالث شارع ابو الخير - المجاورة ١٤ قطعة ٢١٤ - دمياط الجديدة"]
         }
       },
       {
@@ -277,12 +261,8 @@
         "link": " ",
         "modalData": {
           "name": "IT Shop",
-          "number": [
-            "01097050505"
-          ],
-          "address": [
-            "شارع عمارات ٤٧ بجوار حضان شرابي للأطفال , Kafr el Sheikh, Egypt"
-          ]
+          "number": ["01097050505"],
+          "address": ["شارع عمارات ٤٢ بجوار حضان شرابي للأطفال , Kafr el Sheikh, Egypt"]
         }
       },
       {
@@ -291,12 +271,8 @@
         "link": " ",
         "modalData": {
           "name": "Technology Valley",
-          "number": [
-            "01005791880"
-          ],
-          "address": [
-            "هيليوبوليس، 7 شارع سخاوي - كمبيوتر مول 1 - محل رقم 11"
-          ]
+          "number": ["01005791880"],
+          "address": ["هيليوبوليس، 7 شارع سخاوي - كمبيوتر مول 1 - محل رقم 11"]
         }
       },
       {
@@ -305,9 +281,7 @@
         "link": " ",
         "modalData": {
           "name": "Wi-Fi Networking",
-          "number": [
-            "01115222293"
-          ],
+          "number": ["01115222293"],
           "address": [
             "المقر الرئيسي: 8 شارع نجاتي سراج، المنطة الثامنة، مدينة نصر، الدور الثاني، شقة 202، امام البنك الوطني فرع السراج مول"
           ]
@@ -319,12 +293,8 @@
         "link": " ",
         "modalData": {
           "name": "Express",
-          "number": [
-            "01002323774"
-          ],
-          "address": [
-            "مول البستان - الدور الاول - باب اللوق "
-          ]
+          "number": ["01002323774"],
+          "address": ["مول البستان - الدور الاول - باب اللوق "]
         }
       },
       {
@@ -333,12 +303,8 @@
         "link": " ",
         "modalData": {
           "name": "MultiMedia House",
-          "number": [
-            "01097266697"
-          ],
-          "address": [
-            "Amaaer Bukding - Naser City - Cairo - Egypt, Cairo, Egypt"
-          ]
+          "number": ["01097266697"],
+          "address": ["Amaaer Bukding - Naser City - Cairo - Egypt, Cairo, Egypt"]
         }
       },
       {
@@ -347,9 +313,7 @@
         "link": " ",
         "modalData": {
           "name": "Egypt Security & Smart",
-          "number": [
-            "01092239103"
-          ],
+          "number": ["01092239103"],
           "address": [
             "فرع دمياط: سوق الحسبة - بجوار ألبان نظيم ",
             "فرع المنصورة: شارع أولاد ربيع - متفرع من شارع جيهان - أمام بوابة الجامعة"
@@ -362,12 +326,8 @@
         "link": " ",
         "modalData": {
           "name": "Smart Link",
-          "number": [
-            "01066222918"
-          ],
-          "address": [
-            " 28 شارع محمود حسنين - متفرع من شارع عبد السلام على - المنصورة - محافظة الدقهلية"
-          ]
+          "number": ["01066222918"],
+          "address": [" 28 شارع محمود حسنين - متفرع من شارع عبد السلام على - المنصورة - محافظة الدقهلية"]
         }
       },
       {
@@ -376,12 +336,8 @@
         "link": " ",
         "modalData": {
           "name": "Karama",
-          "number": [
-            "01014913092"
-          ],
-          "address": [
-            "شارع جيهان - أمام بوابة كلية التربية - خلف مسجد الجوهرة - المنصورة - محافظة الدقهلية"
-          ]
+          "number": ["01014913092"],
+          "address": ["شارع جيهان - أمام بوابة كلية التربية - خلف مسجد الجوهرة - المنصورة - محافظة الدقهلية"]
         }
       },
       {
@@ -390,12 +346,8 @@
         "link": " ",
         "modalData": {
           "name": "الشركة المصرية الاوروبية ",
-          "number": [
-            "1024202553"
-          ],
-          "address": [
-            "شارع الأمين - أمام إستوديو منير - شبين الكوم - محافظة المنوفي��"
-          ]
+          "number": ["1024202553"],
+          "address": ["شارع الأمين - أمام إستوديو منير - شبين الكوم - محافظة المنوفي"]
         }
       },
       {
@@ -404,12 +356,8 @@
         "link": " ",
         "modalData": {
           "name": "ElMothda Group",
-          "number": [
-            "01000108875"
-          ],
-          "address": [
-            "النعناعيه - طريق القناطر الخيريه - سنتريس - اشمون - المنوفيه"
-          ]
+          "number": ["01000108875"],
+          "address": ["النعناعيه - طريق القناطر الخيريه - سنتريس - اشمون - المنوفيه"]
         }
       },
       {
@@ -418,12 +366,8 @@
         "link": " ",
         "modalData": {
           "name": "Safety Life",
-          "number": [
-            "01065607080"
-          ],
-          "address": [
-            "17 شارع البستان - أمام مول البستان - الدور السادس - القاهرة"
-          ]
+          "number": ["01065607080"],
+          "address": ["17 شارع البستان - أمام مول البستان - الدور السادس - القاهرة"]
         }
       },
       {
@@ -432,12 +376,8 @@
         "link": " ",
         "modalData": {
           "name": "Eagle Eye",
-          "number": [
-            "01005327851"
-          ],
-          "address": [
-            "٣ شارع الجبرتي - منشية البكري - مصر الجديدة - القاهرة"
-          ]
+          "number": ["01005327851"],
+          "address": ["٣ شارع الجبرتي - منشية البكري - مصر الجديدة - القاهرة"]
         }
       },
       {
@@ -446,12 +386,8 @@
         "link": " ",
         "modalData": {
           "name": "Compusat Security Solutions",
-          "number": [
-            "01007445123"
-          ],
-          "address": [
-            "4 شارع مصطفى أبو هيف - باب اللوق - عابدين - القاهرة"
-          ]
+          "number": ["01007445123"],
+          "address": ["4 شارع مصطفى أبو هيف - باب اللوق - عابدين - القاهرة"]
         }
       },
       {
@@ -460,9 +396,7 @@
         "link": " ",
         "modalData": {
           "name": "Future System",
-          "number": [
-            "01271084842"
-          ],
+          "number": ["01271084842"],
           "address": [
             "فرع أسوان: شارع البركة - متفرع من شارع عباس العقاد",
             "فرع الأقصر: إسنا - بجوار السجل المدني الجديد"
@@ -475,13 +409,8 @@
         "link": " ",
         "modalData": {
           "name": "Elicon Tech",
-          "number": [
-            "01012220253",
-            "01012220254"
-          ],
-          "address": [
-            "عماره ٩ بلوك ١٤، شارع الدعوه، حي السفارات - مدينة نصر - القاهرة"
-          ]
+          "number": ["01012220253", "01012220254"],
+          "address": ["عماره ٩ بلوك ١٤، شارع الدعوه، حي السفارات - مدينة نصر - القاهرة"]
         }
       },
       {
@@ -490,12 +419,8 @@
         "link": " ",
         "modalData": {
           "name": "Elbatal Surveillance Systems",
-          "number": [
-            "01200551813"
-          ],
-          "address": [
-            "محافظة قنا مركز قوص شارع طريق النصر بجوار فرع وي"
-          ]
+          "number": ["01200551813"],
+          "address": ["محافظة قنا مركز قوص شارع طريق النصر بجوار فرع وي"]
         }
       },
       {
@@ -504,12 +429,8 @@
         "link": " ",
         "modalData": {
           "name": "الهرم",
-          "number": [
-            "01032359991"
-          ],
-          "address": [
-            "شربين - بجوارشارع المركز - محافظة الدقهلية"
-          ]
+          "number": ["01032359991"],
+          "address": ["شربين - بجوارشارع المركز - محافظة الدقهلية"]
         }
       },
       {
@@ -518,12 +439,8 @@
         "link": " ",
         "modalData": {
           "name": "V Tech",
-          "number": [
-            "01090013622"
-          ],
-          "address": [
-            "شارع أبو الفرج - أمام برج الإيمان - محافظة بني سويف"
-          ]
+          "number": ["01090013622"],
+          "address": ["شارع أبو الفرج - أمام برج الإيمان - محافظة بني سويف"]
         }
       },
       {
@@ -532,12 +449,8 @@
         "link": " ",
         "modalData": {
           "name": "El Swifey",
-          "number": [
-            "01001653199"
-          ],
-          "address": [
-            "3 شارع مجمع المصالح الحكومية أمام سوق اللؤلؤه"
-          ]
+          "number": ["01001653199"],
+          "address": ["3 شارع مجمع المصالح الحكومية أمام سوق اللؤلؤه"]
         }
       },
       {
@@ -546,9 +459,7 @@
         "link": " ",
         "modalData": {
           "name": "Town Tech",
-          "number": [
-            "01001916212"
-          ],
+          "number": ["01001916212"],
           "address": [
             "فرع الإسكندرية: شارع ملك حفني ناصف - أمام ماركت فتح الله - فيكتوريا",
             "فرع دمنهور: شارع الصفا والمروة - خلف مدرسة الملك فيصل",
@@ -562,12 +473,8 @@
         "link": " ",
         "modalData": {
           "name": "الهندسية للانظمة الامنية",
-          "number": [
-            "01020966688"
-          ],
-          "address": [
-            "شارع عبد الحليم مع شارع هدايه - طنطا - محافظة الغربية"
-          ]
+          "number": ["01020966688"],
+          "address": ["شارع عبد الحليم مع شارع هدايه - طنطا - محافظة الغربية"]
         }
       },
       {
@@ -576,12 +483,8 @@
         "link": " ",
         "modalData": {
           "name": "شركة المهندس لكاميرات المراقبة",
-          "number": [
-            "01282724126"
-          ],
-          "address": [
-            "الاسماعيليه - حي السلام - ش العصفوري محلات المهندس"
-          ]
+          "number": ["01282724126"],
+          "address": ["الاسماعيليه - حي السلام - ش العصفوري محلات المهندس"]
         }
       },
       {
@@ -590,12 +493,8 @@
         "link": " ",
         "modalData": {
           "name": "Elziny Electronics",
-          "number": [
-            "01007138061"
-          ],
-          "address": [
-            "شارع مجمع المحاكم - محلات الزيني - المنزله - محافظة الدقهلية"
-          ]
+          "number": ["01007138061"],
+          "address": ["شارع مجمع المحاكم - محلات الزيني - المنزله - محافظة الدقهلية"]
         }
       },
       {
@@ -604,12 +503,8 @@
         "link": " ",
         "modalData": {
           "name": "Zoom Technology Solutions ",
-          "number": [
-            "01099592502"
-          ],
-          "address": [
-            "شارع أوجينا والسواحل - حي الشرق - محافظة بورسعيد"
-          ]
+          "number": ["01099592502"],
+          "address": ["شارع أوجينا والسواحل - حي الشرق - محافظة بورسعيد"]
         }
       },
       {
@@ -618,12 +513,8 @@
         "link": " ",
         "modalData": {
           "name": "Emerson Tech",
-          "number": [
-            "01116343434"
-          ],
-          "address": [
-            "15 شارع البستان - باب الللوق - القاهرة"
-          ]
+          "number": ["01116343434"],
+          "address": ["15 شارع البستان - باب الللوق - القاهرة"]
         }
       },
       {
@@ -632,12 +523,8 @@
         "link": " ",
         "modalData": {
           "name": "HIVISION",
-          "number": [
-            "01229830507"
-          ],
-          "address": [
-            "عمارة ستراند الدور الثانى - شارع التحرير - باب اللوق - عابدين - القاهرة"
-          ]
+          "number": ["01229830507"],
+          "address": ["عمارة ستراند الدور الثانى - شارع التحرير - باب اللوق - عابدين - القاهرة"]
         }
       },
       {
@@ -646,12 +533,8 @@
         "link": " ",
         "modalData": {
           "name": "El-Kayan Systems Integration",
-          "number": [
-            "01004330123"
-          ],
-          "address": [
-            "حي البنفسج 2 - التجمع الأول - القاهرة"
-          ]
+          "number": ["01004330123"],
+          "address": ["حي البنفسج 2 - التجمع الأول - القاهرة"]
         }
       },
       {
@@ -660,12 +543,8 @@
         "link": " ",
         "modalData": {
           "name": "Trade House Electronic Systems",
-          "number": [
-            "01220110258"
-          ],
-          "address": [
-            "15 شارع البستان - أمام سنتر البستان - باب اللوق - القاهرة"
-          ]
+          "number": ["01220110258"],
+          "address": ["15 شارع البستان - أمام سنتر البستان - باب اللوق - القاهرة"]
         }
       }
     ]
@@ -748,7 +627,6 @@
         "link": "/services-details?tab=1",
         "description": "Provide peace of mind through advanced protection and surveile measures"
       },
-
       {
         "title": "Networking",
         "imagePath": "/assets/images/Home/net.png",
@@ -791,7 +669,6 @@
         "link": "/services-details?tab=7",
         "description": "Organize customer flow efficiently, reducing waiting times and improving service experiences across different environments. With smart ticketing and real-time monitoring, businesses can optimize operations and enhance customer satisfaction."
       },
-
       {
         "title": "Walk through & X-Ray",
         "imagePath": "/assets/images/Home/walk.png",
@@ -842,21 +719,21 @@
         "description": "Enhance communication across your facility with our Public Address Solutions, delivering clear and reliable audio for announcements, alerts, and background music. These systems ensure effective sound coverage and improved audience engagement."
       },
       {
-        "title" : "Mobile Solutions",
+        "title": "Mobile Solutions",
         "imagePath": "/assets/images/Home/mobile.png",
         "iconPath": "/assets/images/brandsheader/mobile.svg",
         "link": "/services-details?tab=15",
         "description": "Deliver flexible, real-time security wherever your operations go. Designed for vehicles and mobile sites, they provide live monitoring, GPS tracking, and reliable video recording to enhance safety and operational control"
       },
       {
-        "title" : "Intrusion",
+        "title": "Intrusion",
         "imagePath": "/assets/images/Home/intru.png",
         "iconPath": "/assets/images/home2/intru.svg",
         "link": "/services-details?tab=16",
         "description": "Protect your property with real-time alerts and intelligent monitoring for homes, offices, and commercial buildings. Designed to prevent unauthorized access, these systems enhance security and provide peace of mind."
       },
       {
-        "title" : "Interactive Board",
+        "title": "Interactive Board",
         "imagePath": "/assets/images/Home/inter.png",
         "iconPath": "/assets/images/brandsheader/interactive.svg",
         "link": "/services-details?tab=17",
@@ -868,15 +745,15 @@
     "slides": [
       {
         "backgroundImage": "/assets/images/resources/2394-x-820.jpg",
-        "backgroundImageTwo": "assets/images/backgrounds/1.jpg",
-        "shape1": "assets/images/shapes/main-slider-shape-1.png",
-        "shape2": "assets/images/shapes/main-slider-shape-2.png",
-        "shape3": "assets/images/shapes/main-slider-shape-3.png",
-        "shape4": "assets/images/shapes/main-slider-shape-4.png",
+        "backgroundImageTwo": "/assets/images/backgrounds/1.jpg",
+        "shape1": "/assets/images/shapes/main-slider-shape-1.png",
+        "shape2": "/assets/images/shapes/main-slider-shape-2.png",
+        "shape3": "/assets/images/shapes/main-slider-shape-3.png",
+        "shape4": "/assets/images/shapes/main-slider-shape-4.png",
         "subTitle": "ASG Distribution",
         "title": "Where <span class='icon-camera'></span> Value <br/> Meets Excellence",
         "text": "Partnering with ASG Distribution means gaining access to <br/> not only top-notch products but also a dedicated team ready to <br/> support you to achieve your goals.",
-        "buttonLink": "about",
+        "buttonLink": "contact",
         "buttonText": "Learn More",
         "phoneNumber": "010 50638800"
       }
@@ -884,21 +761,21 @@
   },
   "blogs": [
     {
-      "image": "assets/images/news/blog-1-1.jpg",
+      "image": "/assets/images/news/blog-1-1.jpg",
       "author": "admin",
       "date": "October 19, 2022",
       "title": "A security solution that brings peace of mind",
       "link": "blog-details"
     },
     {
-      "image": "assets/images/news/blog-1-2.jpg",
+      "image": "/assets/images/news/blog-1-2.jpg",
       "author": "admin",
       "date": "October 19, 2022",
       "title": "Provides robust defense mechanisms to",
       "link": "blog-details"
     },
     {
-      "image": "assets/images/news/blog-1-3.jpg",
+      "image": "/assets/images/news/blog-1-3.jpg",
       "author": "admin",
       "date": "October 19, 2022",
       "title": "Builds a strong fortress around your",

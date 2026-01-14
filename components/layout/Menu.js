@@ -33,6 +33,9 @@ export default function Menu() {
                         <li><Link href="/partners/magnetic">Magnetic</Link></li>
                     </ul>
                 </li>
+                <li>
+                    <Link href="/Service">Services</Link>
+                </li>
                 <li className="dropdown">
                     <Link href="/services">Solutions</Link>
                     <ul>
@@ -62,9 +65,7 @@ export default function Menu() {
                 <li>
                     <Link href="/contact">Contact</Link>
                 </li>
-<li>
-                    <Link href="/gallery">Gallery</Link>
-                </li>
+
                 <li>
                     <Link href="/blog">Blog</Link>
 

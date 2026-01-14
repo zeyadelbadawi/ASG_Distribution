@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 export default function Product() {
   // Form state
@@ -124,7 +125,14 @@ export default function Product() {
                   Unlock a world of opportunities for growth and prosperity in the distribution industry.{" "}
                 </p>
                 <div className="product-one__img">
-                  <img src="assets/images/resources/product-one-img-1.jpg" alt="" />
+                  <Image
+                    src="/assets/images/resources/product-one-img-1.jpg"
+                    alt="Success partners"
+                    width={600}
+                    height={400}
+                    style={{ width: "100%", height: "auto" }}
+                    priority
+                  />
                 </div>
               </div>
             </div>

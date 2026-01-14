@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react"
 import Layout from "@/components/layout/Layout"
-import Breadcrumb from "@/components/layout/Breadcrumb"
 import Link from "next/link"
 import Cta from "@/components/sections/home1/Cta"
 
@@ -29,8 +28,6 @@ export default function CompanyProfile() {
 
   const phonePattern = /^01[0-9]{9}$/ // Matches 11-digit Egyptian numbers starting with 01
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ // ... existing code ...
-
-
 
   const validateForm = () => {
     const formErrors = {}
@@ -97,11 +94,9 @@ export default function CompanyProfile() {
     }
   }
 
-
   return (
     <>
-
-    <style jsx>{`
+      <style jsx>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(5deg); }
@@ -542,53 +537,51 @@ export default function CompanyProfile() {
         }
       `}</style>
 
-    <Layout
-    headerStyle={3} // Specify the header style
-    breadcrumbBg="/assets/images/resources/Company.png" // Pass the background image for Breadcrumb
-    breadcrumbTitle=" "
-    >
-
-
-      <section className="company-profile-section" style={{ padding: "80px 0", background: "#f8f9fa" }}>
-        <div className="container">
-          {/* Embedded Canva Presentation */}
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "0",
-              paddingTop: "56.25%",
-              paddingBottom: "0",
-              boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
-              marginBottom: "60px",
-              overflow: "hidden",
-              borderRadius: "16px",
-              willChange: "transform",
-              background: "#ffffff",
-            }}
-          >
-            <iframe
-              loading="lazy"
+      <Layout
+        headerStyle={3} // Specify the header style
+        breadcrumbBg="/assets/images/resources/Company.png" // Pass the background image for Breadcrumb
+        breadcrumbTitle=" "
+        hideHomeBreadcrumb={true} // Hide the home breadcrumb for this page only
+      >
+        <section className="company-profile-section" style={{ padding: "80px 0", background: "#f8f9fa" }}>
+          <div className="container">
+            {/* Embedded Canva Presentation */}
+            <div
               style={{
-                position: "absolute",
+                position: "relative",
                 width: "100%",
-                height: "100%",
-                top: "0",
-                left: "0",
-                border: "none",
-                padding: "0",
-                margin: "0",
+                height: "0",
+                paddingTop: "56.25%",
+                paddingBottom: "0",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
+                marginBottom: "60px",
+                overflow: "hidden",
+                borderRadius: "16px",
+                willChange: "transform",
+                background: "#ffffff",
               }}
-              src="https://www.canva.com/design/DAGQP8PiMmI/KMBNORba1XK6GMFVE-nA7A/view?embed"
-              allowFullScreen
-            ></iframe>
-          </div>
+            >
+              <iframe
+                loading="lazy"
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  top: "0",
+                  left: "0",
+                  border: "none",
+                  padding: "0",
+                  margin: "0",
+                }}
+                src="https://www.canva.com/design/DAGQP8PiMmI/KMBNORba1XK6GMFVE-nA7A/view?embed"
+                allowFullScreen
+              ></iframe>
+            </div>
 
-          {/* Contact Form */}
-       
-        </div>
-      </section>
-      <section className="contact-enhanced-section">
+            {/* Contact Form */}
+          </div>
+        </section>
+        <section className="contact-enhanced-section">
           <div className="shape-decoration shape-circle-1"></div>
           <div className="shape-decoration shape-circle-2"></div>
           <div className="shape-decoration shape-square"></div>
@@ -641,7 +634,6 @@ export default function CompanyProfile() {
                     </div>
                   </div>
                 </div>
-
               </div>
 
               <div className="contact-right">
@@ -746,9 +738,7 @@ export default function CompanyProfile() {
           </div>
         </section>
         <Cta />
-
-    </Layout>
+      </Layout>
     </>
-
   )
 }

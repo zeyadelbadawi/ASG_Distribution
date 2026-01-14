@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image"
 import { useState } from "react"
 
 export default function Cta() {
@@ -46,7 +47,7 @@ export default function Cta() {
         setStatus({ type: "success", message: "Thank you for subscribing!" })
         setEmail("")
         setTimeout(() => {
-          window.open('/company-profile', '_blank')
+          window.open("/company-profile", "_blank")
         }, 500)
       } else {
         const errorData = await response.json()
@@ -63,6 +64,72 @@ export default function Cta() {
     <>
       {/*CTA One Start */}
       <section className="cta-one" style={{ marginTop: "100px" }}>
+        <style jsx>{`
+          @media (max-width: 991px) {
+            .cta-one__inner {
+              position: relative !important;
+              overflow: visible !important;
+            }
+
+            .cta-one__image-container {
+              display: none !important;
+            }
+
+            .cta-one-mobile-col {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              padding: 40px 20px;
+            }
+
+            .cta-one__right {
+              width: 100%;
+              padding: 20px;
+            }
+          }
+
+          @media (max-width: 576px) {
+            .cta-one-mobile-col {
+              padding: 30px 15px;
+            }
+
+            .cta-one__title {
+              font-size: 24px;
+            }
+
+            .cta-one__form-input-box {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+            }
+
+            .cta-one__form-input-box input {
+              width: 100% !important;
+            }
+
+            .cta-one__btn {
+              width: 100% !important;
+            }
+          }
+
+          @keyframes spin {
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes fadeInDown {
+            from {
+              opacity: 0;
+              transform: translateY(-10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}</style>
         <div className="container">
           <div className="cta-one__inner" style={{ position: "relative", overflow: "visible" }}>
             <div
@@ -70,8 +137,8 @@ export default function Cta() {
               style={{ backgroundImage: "url(/assets/images/backgrounds/cta-one-bg.jpg)" }}
             ></div>
             <div className="row">
-              {/* Left Column with Image */}
-              <div className="col-xl-6 col-lg-6">
+              {/* Left Column with Image - Hidden on Mobile */}
+              <div className="col-xl-6 col-lg-6 d-none d-lg-block">
                 <div
                   className="cta-one__image-container"
                   style={{
@@ -83,10 +150,12 @@ export default function Cta() {
                     zIndex: "20",
                   }}
                 >
-                  <img
+                  <Image
                     src="/assets/images/resources/cta-one-bg.png"
                     alt="Company Profile"
                     className="cta-one__image"
+                    width={500}
+                    height={600}
                     style={{
                       width: "100%",
                       height: "auto",
@@ -95,19 +164,24 @@ export default function Cta() {
                       paddingBottom: "20px",
                       zIndex: "21",
                     }}
+                    loading="lazy"
+                    priority={false}
                   />
                 </div>
               </div>
 
-              {/* Right Column with Form */}
-              <div className="col-xl-6 col-lg-6">
+              {/* Right Column with Form - Full Width on Mobile */}
+              <div className="col-xl-6 col-lg-6 col-12 cta-one-mobile-col">
                 <div className="cta-one__right">
                   <h3 className="cta-one__title">Subscribe to Our Newsletter</h3>
                   <p className="cta-one__text">
                     Stay updated with the latest products, offers, and smart solutions delivered straight to your inbox!
                   </p>
                   <form className="cta-one__form mc-form" onSubmit={handleSubmit}>
-                    <div className="cta-one__form-input-box" style={{ position: "relative" }}>
+                    <div
+                      className="cta-one__form-input-box"
+                      style={{ position: "relative", display: "flex", alignItems: "center", gap: "10px" }}
+                    >
                       <input
                         type="email"
                         placeholder="Your email..."
@@ -127,6 +201,7 @@ export default function Cta() {
                           border: "2px solid #FFFFFF",
                           alignItems: "center",
                           opacity: isSubmitting ? 0.7 : 1,
+                          flex: 1,
                         }}
                       />
                       <button
@@ -139,6 +214,7 @@ export default function Cta() {
                           justifyContent: "center",
                           gap: "10px",
                           minWidth: "120px",
+                          whiteSpace: "nowrap",
                         }}
                       >
                         {isSubmitting ? (
@@ -183,15 +259,6 @@ export default function Cta() {
                       {status.message}
                     </div>
                   )}
-                  <style jsx>{`
-                    @keyframes spin {
-                      to { transform: rotate(360deg); }
-                    }
-                    @keyframes fadeInDown {
-                      from { opacity: 0; transform: translateY(-10px); }
-                      to { opacity: 1; transform: translateY(0); }
-                    }
-                  `}</style>
                 </div>
               </div>
             </div>

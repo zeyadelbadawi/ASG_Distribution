@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Footer1() {
@@ -12,7 +13,14 @@ export default function Footer1() {
                 <div className="footer-widget__column footer-widget__about">
                   <div className="footer-widget__logo">
                     <Link href="/">
-                      <img src="/assets/images/resources/footer-logo-1.png" alt="" />
+                      <Image
+                        src="/assets/images/resources/footer-logo-1.png"
+                        alt="ASG Distribution"
+                        width={180}
+                        height={60}
+                        style={{ width: "auto", height: "auto" }}
+                        loading="lazy"
+                      />
                     </Link>
                   </div>
                   <p className="footer-widget__about-text">

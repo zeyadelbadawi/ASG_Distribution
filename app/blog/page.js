@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import Cta from "@/components/sections/home1/Cta"
@@ -15,6 +16,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState("") // State for the search term
   const [suggestions, setSuggestions] = useState([]) // State for suggestions
+  const [imageLoadStates, setImageLoadStates] = useState({})
 
   const listId = "kVfvu"
 
@@ -128,6 +130,10 @@ export default function Home() {
     }
   }
 
+  const handleImageLoad = (postId) => {
+    setImageLoadStates((prev) => ({ ...prev, [postId]: true }))
+  }
+
   return (
     <>
       <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Blog" breadcrumbBg="/assets/images/blog.jpg">
@@ -138,13 +144,52 @@ export default function Home() {
                 <div className="blog-page__left">
                   <div className="blog-page__left-content">
                     {isLoading ? (
-                      <p>Loading blogs...</p>
+                      <div>
+                        {[1, 2, 3].map((item) => (
+                          <div key={item} className="blog-page__single" style={{ marginBottom: "30px" }}>
+                            <div
+                              className="skeleton-box"
+                              style={{
+                                width: "100%",
+                                height: "400px",
+                                backgroundColor: "#f0f0f0",
+                                borderRadius: "8px",
+                                animation: "pulse 1.5s ease-in-out infinite",
+                              }}
+                            ></div>
+                          </div>
+                        ))}
+                      </div>
                     ) : filteredBlogs.length > 0 ? (
                       filteredBlogs.map((post) => (
                         <div className="blog-page__single" key={post.id}>
                           <div className="blog-page__img-box">
                             <div className="blog-page__img">
-                              <img src={post.imageUrl || "/placeholder.svg"} alt={post.title} />
+                              {!imageLoadStates[post.id] && (
+                                <div
+                                  className="skeleton-box"
+                                  style={{
+                                    width: "100%",
+                                    height: "400px",
+                                    backgroundColor: "#f0f0f0",
+                                    borderRadius: "8px",
+                                    animation: "pulse 1.5s ease-in-out infinite",
+                                  }}
+                                ></div>
+                              )}
+                              <Image
+                                src={post.imageUrl || "/placeholder.svg"}
+                                alt={post.title}
+                                width={800}
+                                height={500}
+                                style={{
+                                  width: "100%",
+                                  height: "auto",
+                                  display: imageLoadStates[post.id] ? "block" : "none",
+                                }}
+                                onLoad={() => handleImageLoad(post.id)}
+                                loading="lazy"
+                              />
                             </div>
                             <ul className="blog-page__meta list-unstyled">
                               <li>
@@ -261,7 +306,14 @@ export default function Home() {
                     <ul className="sidebar__post-list list-unstyled">
                       <li>
                         <div className="sidebar__post-image">
-                          <img src="assets/images/news/lp-1.jpg" alt="" />
+                          <Image
+                            src="/assets/images/news/lp-1.jpg"
+                            alt="Popular post"
+                            width={100}
+                            height={100}
+                            style={{ width: "100%", height: "auto" }}
+                            loading="lazy"
+                          />
                         </div>
                         <div className="sidebar__post-content">
                           <p className="sidebar__post-date">
@@ -299,6 +351,18 @@ export default function Home() {
 
         {/* CTA Section */}
         <Cta />
+
+        <style jsx>{`
+          @keyframes pulse {
+            0%,
+            100% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0.5;
+            }
+          }
+        `}</style>
       </Layout>
     </>
   )

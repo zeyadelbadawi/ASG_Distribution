@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Importing & Logistics",
+    "description": "Managing global importing and logistics to ensure fast, secure, and reliable product delivery.",
+    "imageUrl": "1.png"
+  },
+  {
+    "title": "Ware Housing",
+    "description": "Providing secure warehousing solutions with efficient storage, inventory control, and product availability.",
+    "imageUrl": "5.png"
+  },
+  {
+    "title": "Contracting",
+    "description": "Delivering turnkey contracting services, managing projects efficiently from planning to execution.",
+    "imageUrl": "3.png"  },
+  {
+    "title": "Supplying",
+    "description": "Supplying high-quality technology solutions with consistent availability for diverse project needs.",
+    "imageUrl": "4.png"
+  },
+  {
+    "title": "Training",
+    "description": " Offering professional training programs to enhance technical expertise and product knowledge.",
+    "imageUrl": "6.png"
+  },
+  {
+    "title": "Designing",
+    "description": "Designing customized technology solutions aligned with project requirements and business objectives.",
+    "imageUrl": "2.png",
+    "slug": "centurion"
+  },
+  {
+    "title": "Installations",
+    "description": "Ensuring professional installations that deliver seamless setup and optimal system performance.",
+    "imageUrl": "7.png",
+    "slug": "faac"
+  },
+  {
+    "title": "Integrations",
+    "description": "Integrating multiple systems smoothly to ensure compatibility, efficiency, and unified operations.",
+    "imageUrl": "8.png",
+    "slug": "magnetic"
+  },
+
+  {
+    "title": "Operations",
+    "description": " Supporting daily operations to ensure systems run efficiently, securely, and without disruption.",
+    "imageUrl": "10.png",
+    "slug": "aruba"
+
+  },
+  {
+    "title": "Supporting",
+    "description": "Providing dedicated technical support with fast response and continuous system reliability.",
+    "imageUrl": "11.png"
+  },
+  {
+    "title": "Consulting",
+    "description": "Delivering expert consulting services to guide technology decisions and strategic planning.",
+    "imageUrl": "11.png"
+  },
+  {
+    "title": "Maintenance",
+    "description": "Offering proactive maintenance services to ensure long-term system performance and reliability.",
+    "imageUrl": "11.png"
+  }
+]
