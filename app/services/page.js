@@ -66,7 +66,7 @@ export default function Home() {
         headerStyle={3}
         footerStyle={1}
         breadcrumbTitle="Our Solutions"
-        breadcrumbBg="/assets/images/solution.jpg" // Pass the background image for Breadcrumb
+        breadcrumbBg="/assets/images/sss.jpg" // Pass the background image for Breadcrumb
       >
         <div>
           <br></br> <br></br>
