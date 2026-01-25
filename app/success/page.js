@@ -539,7 +539,7 @@ export default function CompanyProfile() {
 
       <Layout
         headerStyle={3} // Specify the header style
-        breadcrumbBg="/assets/images/resources/Company.png" // Pass the background image for Breadcrumb
+        breadcrumbBg="/assets/images/sc.jpg" // Pass the background image for Breadcrumb
         breadcrumbTitle="Success Cases" // Pass the title for Breadcrumb
         hideHomeBreadcrumb={true} // Hide the home breadcrumb for this page only
       >
