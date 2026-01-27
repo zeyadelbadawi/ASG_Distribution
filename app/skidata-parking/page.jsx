@@ -1166,7 +1166,7 @@ export default function SkidataPage() {
               playsInline
               controlsList="nodownload"
             >
-              <source src="/assets/images/parking-video.mp4" type="video/mp4" />
+              <source src="/assets/images/Skidata.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
