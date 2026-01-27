@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Layout from "@/components/layout/Layout"
+import Storage from "@/components/sections/home1/Storage"
 
 import {
   Zap,
@@ -17,7 +18,6 @@ import {
   ChevronRight,
   Instagram,
 } from 'lucide-react'
-import Gallery from "@/components/sections/home1/Gallery"
 
 
 export default function SkidataPage() {
@@ -25,6 +25,55 @@ export default function SkidataPage() {
   const [scrollY, setScrollY] = useState(0)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const sectionRefs = useRef({})
+  const testimonialsRef = useRef(null)
+  useEffect(() => {
+    const slider = testimonialsRef.current
+    if (!slider) return
+  
+    let isDown = false
+    let startX
+    let scrollLeft
+  
+    const startDragging = (e) => {
+      isDown = true
+      slider.classList.add('dragging')
+      startX = e.pageX || e.touches[0].pageX
+      scrollLeft = slider.scrollLeft
+    }
+  
+    const stopDragging = () => {
+      isDown = false
+      slider.classList.remove('dragging')
+    }
+  
+    const move = (e) => {
+      if (!isDown) return
+      e.preventDefault()
+      const x = e.pageX || e.touches[0].pageX
+      const walk = (x - startX) * 1.2
+      slider.scrollLeft = scrollLeft - walk
+    }
+  
+    slider.addEventListener('mousedown', startDragging)
+    slider.addEventListener('mouseleave', stopDragging)
+    slider.addEventListener('mouseup', stopDragging)
+    slider.addEventListener('mousemove', move)
+  
+    slider.addEventListener('touchstart', startDragging)
+    slider.addEventListener('touchend', stopDragging)
+    slider.addEventListener('touchmove', move)
+  
+    return () => {
+      slider.removeEventListener('mousedown', startDragging)
+      slider.removeEventListener('mouseleave', stopDragging)
+      slider.removeEventListener('mouseup', stopDragging)
+      slider.removeEventListener('mousemove', move)
+  
+      slider.removeEventListener('touchstart', startDragging)
+      slider.removeEventListener('touchend', stopDragging)
+      slider.removeEventListener('touchmove', move)
+    }
+  }, [])
   
   // Critical CSS to prevent FOUC
   useEffect(() => {
@@ -53,6 +102,11 @@ export default function SkidataPage() {
       quote: "Best investment for our parking operations. The system is reliable, scalable, and user-friendly.",
       author: "Hassan Al-Zaidi",
       role: "IT Manager, Riyadh Development Authority"
+    },
+    {
+      quote: "Arab Security Group delivered exceptional service and quality when implementing the commercial parking solution from SKIDATA at Capital Walk in the New Administration Capital. Their professional team executed the project seamlessly and efficiently, providing us with a comprehensive solution that perfectly met our needs. We commend their dedication and hard work in delivering results that exceeded our expectations. It was a pleasure working with Arab Security Group, and we look forward to collaborating with them again in the future.",
+      author: "The New Administration Capital",
+      //role: "IT Manager, Riyadh Development Authority"
     }
   ]
   
@@ -155,12 +209,17 @@ export default function SkidataPage() {
           align-items: center;
           justify-content: center;
           text-align: center;
-          background-image: url('/assets/images/parking-hero.jpg');
-          background-size: cover;
-          background-position: center;
-          background-attachment: fixed;
           overflow: hidden;
         }
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  background: black;
+}
 
         .section-hero::before {
           content: '';
@@ -601,13 +660,28 @@ export default function SkidataPage() {
           margin: 0 auto;
         }
 
-        .testimonials-carousel {
-          position: relative;
-          margin-top: 3rem;
-          perspective: 1000px;
-        }
+.testimonials-carousel {
+  overflow-x: auto;
+  cursor: grab;
+    scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+.testimonials-carousel.dragging {
+  cursor: grabbing;
+}
+
+.testimonials-carousel::-webkit-scrollbar {
+  display: none;
+}
 
         .testimonial-card {
+          flex: 0 0 100%;
+  max-width: 100%;
+
           background: white;
           padding: clamp(2.5rem, 5vw, 4rem);
           border-radius: 16px;
@@ -620,7 +694,13 @@ export default function SkidataPage() {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+            scroll-snap-align: start;
+
         }
+          .testimonials-track {
+  display: flex;
+  gap: 2rem;
+}
 
         .testimonial-quote {
           font-size: clamp(1rem, 2vw, 1.25rem);
@@ -895,17 +975,34 @@ export default function SkidataPage() {
       `}</style>
 
       {/* SECTION 1: HERO */}
-      <section className="section-hero" ref={(el) => (sectionRefs.current.hero = el)} id="hero">
-        <div className="hero-content">
-          <div className="hero-tagline">More Professional, More Reliable Solutions</div>
-          <h1 className="hero-title">SKIDATA Parking Solutions</h1>
-          <h2 className="hero-subtitle">Smart, Secure & Future-Ready Parking Systems</h2>
-          <p className="hero-description">
-            SKIDATA delivers world-class smart parking solutions designed to streamline operations, enhance user
-            experience, and maximize efficiency across modern urban environments.
-          </p>
-        </div>
-      </section>
+      <section
+  className="section-hero section-video"
+  ref={(el) => (sectionRefs.current.hero = el)}
+  id="hero"
+>
+  <video
+    className="hero-video"
+    muted
+    loop
+    autoPlay
+    playsInline
+    preload="auto"
+  >
+    <source src="/assets/images/parking-video.mp4" type="video/mp4" />
+  </video>
+
+  <div className="hero-content">
+    <div className="hero-tagline">More Professional, More Reliable Solutions</div>
+    <h1 className="hero-title">SKIDATA Parking Solutions</h1>
+    <h2 className="hero-subtitle">
+      Smart, Secure & Future-Ready Parking Systems
+    </h2>
+    <p className="hero-description">
+      SKIDATA delivers world-class smart parking solutions designed to streamline operations,
+      enhance user experience, and maximize efficiency.
+    </p>
+  </div>
+</section>
 
       {/* SECTION 2: INTRO */}
       <section
@@ -1134,47 +1231,32 @@ export default function SkidataPage() {
           <h2 className="section-heading"style={{ textAlign: 'center' }}>Customer Testimonials</h2>
           <h3 className="section-subheading"style={{   textAlign: 'center' }}>What Our Clients Say About SKIDATA Solutions</h3>
 
-          <div className="testimonials-carousel">
-            <div className="testimonial-card">
-              <p className="testimonial-quote">
-                "{testimonials[currentTestimonial].quote}"
-              </p>
-              <div className="testimonial-footer">
-                <div className="testimonial-avatar">
-                  {testimonials[currentTestimonial].author.charAt(0)}
-                </div>
-                <div>
-                  <div className="testimonial-author">{testimonials[currentTestimonial].author}</div>
-                  <div className="testimonial-role">{testimonials[currentTestimonial].role}</div>
-                </div>
-              </div>
-            </div>
+          <div
+  className="testimonials-carousel"
+  ref={testimonialsRef}
+>
+  <div className="testimonials-track">
+    {testimonials.map((item, index) => (
+      <div key={index} className="testimonial-card">
+        <p className="testimonial-quote">"{item.quote}"</p>
 
-            <div className="testimonial-nav">
-              <button 
-                className="carousel-button"
-                onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-              >
-                ←
-              </button>
-              {testimonials.map((_, index) => (
-                <div
-                  key={index}
-                  className={`testimonial-dot ${index === currentTestimonial ? 'active' : ''}`}
-                  onClick={() => setCurrentTestimonial(index)}
-                />
-              ))}
-              <button 
-                className="carousel-button"
-                onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
-              >
-                →
-              </button>
-            </div>
+        <div className="testimonial-footer">
+          <div className="testimonial-avatar">
+            {item.author.charAt(0)}
+          </div>
+          <div>
+            <div className="testimonial-author">{item.author}</div>
+            <div className="testimonial-role">{item.role}</div>
           </div>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+        </div>
       </section>
-      <Gallery />
+      <Storage />
 
       {/* SECTION 8: INSTAGRAM FEED */}
       <section
