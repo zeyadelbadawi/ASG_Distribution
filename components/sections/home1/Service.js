@@ -210,12 +210,15 @@ export default function Service() {
           </div>
           {!loading && hasMoreItems && (
             <div className="text-center button-container" style={{ marginTop: "40px" }}>
-              <button
-                onClick={handleShowMore}
-                className="thm-btn show-more-btn"
-                style={{ cursor: "pointer", border: "none", outline: "none" }}
-              >
+              <button onClick={handleShowMore} className="thm-btn show-more-btn" style={{ cursor: "pointer" }}>
                 Show More<span className="icon-plus"></span>
+              </button>
+            </div>
+          )}
+          {!loading && canShowLess && (
+            <div className="text-center button-container" style={{ marginTop: hasMoreItems ? "20px" : "40px" }}>
+              <button onClick={handleShowLess} className="thm-btn show-less-btn" style={{ cursor: "pointer" }}>
+                Show Less<span className="icon-minus"></span>
               </button>
             </div>
           )}

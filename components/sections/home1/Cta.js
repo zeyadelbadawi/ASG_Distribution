@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image"
 import { useState } from "react"
 
 export default function Cta() {
@@ -70,11 +69,11 @@ export default function Cta() {
               position: relative !important;
               overflow: visible !important;
             }
-
+            
             .cta-one__image-container {
               display: none !important;
             }
-
+            
             .cta-one-mobile-col {
               display: flex;
               flex-direction: column;
@@ -83,51 +82,43 @@ export default function Cta() {
               text-align: center;
               padding: 40px 20px;
             }
-
+            
             .cta-one__right {
               width: 100%;
               padding: 20px;
             }
           }
-
+          
           @media (max-width: 576px) {
             .cta-one-mobile-col {
               padding: 30px 15px;
             }
-
+            
             .cta-one__title {
               font-size: 24px;
             }
-
+            
             .cta-one__form-input-box {
               display: flex;
               flex-direction: column;
               gap: 12px;
             }
-
+            
             .cta-one__form-input-box input {
               width: 100% !important;
             }
-
+            
             .cta-one__btn {
               width: 100% !important;
             }
           }
-
+          
           @keyframes spin {
-            to {
-              transform: rotate(360deg);
-            }
+            to { transform: rotate(360deg); }
           }
           @keyframes fadeInDown {
-            from {
-              opacity: 0;
-              transform: translateY(-10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
           }
         `}</style>
         <div className="container">
@@ -150,12 +141,10 @@ export default function Cta() {
                     zIndex: "20",
                   }}
                 >
-                  <Image
+                  <img
                     src="/assets/images/resources/cta-one-bg.png"
                     alt="Company Profile"
                     className="cta-one__image"
-                    width={500}
-                    height={600}
                     style={{
                       width: "100%",
                       height: "auto",
@@ -164,8 +153,6 @@ export default function Cta() {
                       paddingBottom: "20px",
                       zIndex: "21",
                     }}
-                    loading="lazy"
-                    priority={false}
                   />
                 </div>
               </div>

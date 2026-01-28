@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react"
-import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import { Autoplay } from "swiper/modules"
@@ -10,7 +9,6 @@ export default function Gallery() {
   const [activeModal, setActiveModal] = useState(null)
   const [isMobile, setIsMobile] = useState(false)
   const [disableHover, setDisableHover] = useState(false)
-  const [modalPosition, setModalPosition] = useState("center")
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,44 +48,21 @@ export default function Gallery() {
     setActiveModal(index)
   }
 
-  const handleHover = (index, event) => {
+  const handleHover = (index) => {
     if (!isMobile && !disableHover) {
       setActiveModal(index)
-      const element = event.currentTarget
-      const rect = element.getBoundingClientRect()
-      const viewportHeight = window.innerHeight
-
-      // If item is in top 40% of viewport, position modal below
-      if (rect.top < viewportHeight * 0.4) {
-        setModalPosition("bottom")
-      }
-      // If item is in bottom 40% of viewport, position modal above
-      else if (rect.bottom > viewportHeight * 0.6) {
-        setModalPosition("top")
-      }
-      // Otherwise center it
-      else {
-        setModalPosition("center")
-      }
     }
   }
 
   const handleMouseLeave = () => {
     if (!isMobile) {
       setActiveModal(null)
-      setModalPosition("center")
     }
   }
 
   const swiperConfig = {
     spaceBetween: isMobile ? 10 : 20,
-    speed: isMobile ? 1000 : 600,
-    autoplay: {
-      delay: isMobile ? 4000 : 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: !isMobile,
-    },
-    loop: true,
+    autoplay: !isMobile ? { delay: 3000, disableOnInteraction: false } : false,
     modules: [Autoplay],
     breakpoints: {
       320: { slidesPerView: 1 },
@@ -116,17 +91,16 @@ export default function Gallery() {
                 <SwiperSlide key={index}>
                   <div
                     className="project-one__single"
-                    onMouseEnter={(e) => handleHover(index, e)}
+                    onMouseEnter={() => handleHover(index)}
                     onMouseLeave={handleMouseLeave}
                     onClick={() => isMobile && handleItemAction(index)}
                   >
                     <div className="project-one__img-box">
                       <div className="project-one__img">
-                        <Image
+                        <img
                           src={item.imagePath || "/placeholder.svg"}
                           alt={item.title}
-                          width={338}
-                          height={420}
+                          loading="lazy"
                           style={{
                             width: "100%",
                             maxWidth: "338px",
@@ -134,14 +108,10 @@ export default function Gallery() {
                             maxHeight: "420px",
                             objectFit: "contain",
                           }}
-                          loading="lazy"
                         />
                       </div>
                       {activeModal === index && (
-                        <div
-                          className={`modal-overlay show position-${modalPosition}`}
-                          onClick={(e) => e.stopPropagation()}
-                        >
+                        <div className="modal-overlay show" onClick={(e) => e.stopPropagation()}>
                           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                             <button className="close-modal" onClick={closeModal}>
                               &times;
@@ -187,31 +157,15 @@ export default function Gallery() {
       <style jsx>{`
         .modal-overlay {
           position: absolute;
-          top: -2px;
-          left: -2px;
-          right: -2px;
-          bottom: -2px;
-          width: calc(100% + 4px);
-          height: calc(100% + 4px);
-          background: rgba(255, 255, 255, 0.98);
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
           justify-content: center;
-          z-index: 9999999999999999;
-          border-radius: 16px;
-        }
-
-        /* Added dynamic positioning classes */
-        .modal-overlay.position-top {
-          align-items: flex-start;
-          padding-top: 10px;
-        }
-
-        .modal-overlay.position-center {
           align-items: center;
-        }
-
-        .modal-overlay.position-bottom {
-          align-items: flex-end;
-          padding-bottom: 10px;
+          z-index: 9999;
+          border-radius: 16px;
         }
 
         .modal-content {
@@ -302,17 +256,6 @@ export default function Gallery() {
             opacity: 1;
             transform: scale(1);
           }
-        }
-
-        /* Added z-index to project-one__single on hover to ensure modal appears above all cards */
-        .project-one__single {
-          position: relative;
-          z-index: 1;
-          transition: z-index 0s;
-        }
-
-        .project-one__single:hover {
-          z-index: 10000;
         }
       `}</style>
     </>
