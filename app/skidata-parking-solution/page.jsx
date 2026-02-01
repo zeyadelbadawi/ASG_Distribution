@@ -1305,7 +1305,7 @@ export default function SkidataPage() {
   </div>
 </section>
 
-          {/* SECTION 7: EXPERIENCE + FORM */}
+          {/* SECTION 7: EXPERIENCEw + FORM */}
 
           <section
             className="section-intro"
