@@ -29,23 +29,23 @@ export default function SkidataPage() {
   useEffect(() => {
     const slider = testimonialsRef.current
     if (!slider) return
-  
+
     let isDown = false
     let startX
     let scrollLeft
-  
+
     const startDragging = (e) => {
       isDown = true
       slider.classList.add('dragging')
       startX = e.pageX || e.touches[0].pageX
       scrollLeft = slider.scrollLeft
     }
-  
+
     const stopDragging = () => {
       isDown = false
       slider.classList.remove('dragging')
     }
-  
+
     const move = (e) => {
       if (!isDown) return
       e.preventDefault()
@@ -53,28 +53,28 @@ export default function SkidataPage() {
       const walk = (x - startX) * 1.2
       slider.scrollLeft = scrollLeft - walk
     }
-  
+
     slider.addEventListener('mousedown', startDragging)
     slider.addEventListener('mouseleave', stopDragging)
     slider.addEventListener('mouseup', stopDragging)
     slider.addEventListener('mousemove', move)
-  
+
     slider.addEventListener('touchstart', startDragging)
     slider.addEventListener('touchend', stopDragging)
     slider.addEventListener('touchmove', move)
-  
+
     return () => {
       slider.removeEventListener('mousedown', startDragging)
       slider.removeEventListener('mouseleave', stopDragging)
       slider.removeEventListener('mouseup', stopDragging)
       slider.removeEventListener('mousemove', move)
-  
+
       slider.removeEventListener('touchstart', startDragging)
       slider.removeEventListener('touchend', stopDragging)
       slider.removeEventListener('touchmove', move)
     }
   }, [])
-  
+
   // Critical CSS to prevent FOUC
   useEffect(() => {
     const style = document.createElement('style')
@@ -85,7 +85,7 @@ export default function SkidataPage() {
     `
     document.head.insertBefore(style, document.head.firstChild)
   }, [])
-  
+
   // Testimonials carousel
   const testimonials = [
     {
@@ -109,7 +109,7 @@ export default function SkidataPage() {
       //role: "IT Manager, Riyadh Development Authority"
     }
   ]
-  
+
   // Carousel auto-advance
   useEffect(() => {
     const interval = setInterval(() => {
@@ -158,7 +158,7 @@ export default function SkidataPage() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.play().catch(() => {})
+            entry.target.play().catch(() => { })
           } else {
             entry.target.pause()
           }
@@ -173,12 +173,12 @@ export default function SkidataPage() {
 
   return (
     <>
-    <Layout
-    headerStyle={3}
-    footerStyle={1}
-  >
-    <div className="skidata-container">
-      <style jsx>{`
+      <Layout
+        headerStyle={3}
+        footerStyle={1}
+      >
+        <div className="skidata-container">
+          <style jsx>{`
         * {
           margin: 0;
           padding: 0;
@@ -334,6 +334,29 @@ export default function SkidataPage() {
           transition: all 0.8s ease-out 0.1s;
         }
 
+        .intro-title2 {
+          font-size: clamp(2rem, 5vw, 3.5rem);
+          color: #0f2e5c;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+          line-height: 1.2;
+          opacity: ${visibleSections['intro'] ? 1 : 0};
+          transform: ${visibleSections['intro'] ? 'translateY(0)' : 'translateY(20px)'};
+          transition: all 0.8s ease-out 0.1s;
+        }
+
+
+        .intro-title3 {
+          font-size: clamp(1rem, 3vw, 3.5rem);
+          color: #0f2e5c;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+          line-height: 1.2;
+          opacity: ${visibleSections['intro'] ? 1 : 0};
+          transform: ${visibleSections['intro'] ? 'translateY(0)' : 'translateY(20px)'};
+          transition: all 0.8s ease-out 0.1s;
+        }
+
         .intro-subtitle {
           font-size: clamp(1rem, 2vw, 1.3rem);
           color: #1ec8c8;
@@ -344,7 +367,7 @@ export default function SkidataPage() {
         }
 
         .intro-paragraph {
-          font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+          font-size: clamp(0.95rem, 1.0vw, 1.1rem);
           color: #555;
           line-height: 1.8;
           max-width: 900px;
@@ -803,6 +826,36 @@ export default function SkidataPage() {
           margin-bottom: 1rem;
         }
 
+
+/* ===== FULL WIDTH IMAGE SECTION ===== */
+.section-full-image {
+  width: 100%;
+  text-align: center;
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: #ffffff; /* or any background color */
+}
+
+.full-image-content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.full-image-title {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  font-weight: 800;
+  color: #0f2e5c;
+  margin-bottom: 2rem;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+
         .instagram-subheading {
           text-align: center;
           font-size: clamp(0.95rem, 1.8vw, 1.1rem);
@@ -974,318 +1027,505 @@ export default function SkidataPage() {
         }
       `}</style>
 
-      {/* SECTION 1: HERO */}
-      <section
-  className="section-hero section-video"
-  ref={(el) => (sectionRefs.current.hero = el)}
-  id="hero"
->
-  <video
-    className="hero-video"
-    muted
-    loop
-    autoPlay
-    playsInline
-    preload="auto"
-  >
-    <source src="/assets/images/parking-video.mp4" type="video/mp4" />
-  </video>
-
-  <div className="hero-content">
-    <div className="hero-tagline">More Professional, More Reliable Solutions</div>
-    <h1 className="hero-title">SKIDATA Parking Solutions</h1>
-    <h2 className="hero-subtitle">
-      Smart, Secure & Future-Ready Parking Systems
-    </h2>
-    <p className="hero-description">
-      SKIDATA delivers world-class smart parking solutions designed to streamline operations,
-      enhance user experience, and maximize efficiency.
-    </p>
-  </div>
-</section>
-
-      {/* SECTION 2: INTRO */}
-      <section
-        className="section-intro"
-        ref={(el) => (sectionRefs.current.intro = el)}
-        id="intro"
-      >
-       <div className="intro-layout">
-  <div className="intro-text">
-    <div className="intro-letter-spaced">S K I D A T A</div>
-    <h2 className="intro-title">Car Smart Parking Solutions</h2>
-    <h3 className="intro-subtitle">
-      Revolutionizing Parking: SKIDATA's Smart Car Parking Solutions in Egypt
-    </h3>
-    <p className="intro-paragraph">
-      As urbanization continues to rise in Egypt, the demand for efficient and intelligent parking solutions has
-      never been greater. SKIDATA, a global leader in smart parking technology, provides innovative systems
-      designed to streamline parking operations, reduce congestion, and enhance the overall experience for both
-      drivers and operators.
-    </p>
-  </div>
-
-  <div className="intro-image">
-    <img
-      src="/assets/images/traffic-congestion.png"
-      alt="SKIDATA Parking Equipment Solutions"
-    />
-  </div>
-</div>
-
-      </section>
-
-      {/* SECTION 3: EXPERIENCE + FORM */}
-      <section
-        className="section-experience"
-        ref={(el) => (sectionRefs.current.experience = el)}
-        id="experience"
-      >
-        <div className="experience-container">
-          <h2 className="section-heading">Our Experience</h2>
-          <h3 className="section-subheading">Top 5 Reasons to Choose ASG Distribution</h3>
-
-          <div className="experience-content">
-
-            <div>
-              <ul className="experience-list">
-                <li className="experience-item">
-                  <strong>15+ Years of Excellence</strong>
-                  <span>Over 15 years of experience in security and surveillance solutions across the Middle East and Gulf region.</span>
-                </li>
-                <li className="experience-item">
-                  <strong>Diverse Portfolio</strong>
-                  <span>A large and diverse portfolio of successful projects in both government and private sectors.</span>
-                </li>
-                <li className="experience-item">
-                  <strong>Ministry of Defense Partner</strong>
-                  <span>Official solution provider for the Egyptian Ministry of Defense in road blockers and traffic barrier systems.</span>
-                </li>
-                <li className="experience-item">
-                  <strong>Ministry of Interior Provider</strong>
-                  <span>Official provider for the Egyptian Ministry of Interior in safety, surveillance, and ITS.</span>
-                </li>
-                <li className="experience-item">
-                  <strong>Integrated Support</strong>
-                  <span>High-quality integrated solutions with competitive pricing, long warranties, and full technical support.</span>
-                </li>
-              </ul>
-            </div>
-
-            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-              <div className="form-group">
-                <label htmlFor="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required />
-              </div>
-              <div className="form-group">
-                <label htmlFor="company">Company</label>
-                <input type="text" id="company" name="company" placeholder="Your Company" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell us about your parking solution needs..." required />
-              </div>
-              <button type="submit" className="form-submit">
-                Request Information
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: SOLUTIONS */}
-      <section
-        className="section-solutions"
-        ref={(el) => (sectionRefs.current.solutions = el)}
-        id="solutions"
-      >
-        <div className="solutions-container">
-          <h2 className="section-heading">ASG Distribution Smart Car Parking Solutions</h2>
-
-          <div className="solutions-grid">
-            <div className="solution-card">
-              <div className="solution-icon"><Zap size={32} /></div>
-              <h3 className="solution-title">Intuitive Design</h3>
-              <p className="solution-text">High usability and user-friendly interfaces for seamless parking management.</p>
-            </div>
-            <div className="solution-card">
-              <div className="solution-icon"><BarChart3 size={32} /></div>
-              <h3 className="solution-title">Flexible Payment</h3>
-              <p className="solution-text">Multiple payment options tailored to modern parking scenarios.</p>
-            </div>
-            <div className="solution-card">
-              <div className="solution-icon"><BarChart3 size={32} /></div>
-              <h3 className="solution-title">Revenue Optimization</h3>
-              <p className="solution-text">Maximize parking revenue with intelligent pricing algorithms.</p>
-            </div>
-            <div className="solution-card">
-              <div className="solution-icon"><Clock size={32} /></div>
-              <h3 className="solution-title">Versatile Ticketing</h3>
-              <p className="solution-text">Flexible ticketing systems for all parking scenarios and durations.</p>
-            </div>
-            <div className="solution-card">
-              <div className="solution-icon"><Smartphone size={32} /></div>
-              <h3 className="solution-title">Online Reservation</h3>
-              <p className="solution-text">Reserve parking slots in advance with real-time availability updates.</p>
-            </div>
-            <div className="solution-card">
-              <div className="solution-icon"><Lock size={32} /></div>
-              <h3 className="solution-title">Mobile Payment</h3>
-              <p className="solution-text">Contactless payment without requiring dedicated apps.</p>
-            </div>
-            <div className="solution-card">
-              <div className="solution-icon"><Cpu size={32} /></div>
-              <h3 className="solution-title">EV Charging</h3>
-              <p className="solution-text">Integrated EV charging with combined parking and charging payment.</p>
-            </div>
-            <div className="solution-card">
-              <div className="solution-icon"><Globe size={32} /></div>
-              <h3 className="solution-title">Cloud Integration</h3>
-              <p className="solution-text">Seamless cloud-based integration for centralized parking management.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: VIDEO */}
-      <section
-        className="section-video"
-        ref={(el) => (sectionRefs.current.video = el)}
-        id="video"
-      >
-        <div className="video-wrapper-container">
-          <div className="video-wrapper">
+          {/* SECTION 1: HERO */}
+          <section
+            className="section-hero section-video"
+            ref={(el) => (sectionRefs.current.hero = el)}
+            id="hero"
+          >
             <video
+              className="hero-video"
               muted
               loop
               autoPlay
               playsInline
-              controlsList="nodownload"
+              preload="auto"
             >
-              <source src="/assets/images/Skidata.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              <source src="/assets/images/parking-video.mp4" type="video/mp4" />
             </video>
-          </div>
-        </div>
-      </section>
 
-      {/* SECTION 6: CANVA */}
-      <section
-        className="section-canva"
-        ref={(el) => (sectionRefs.current.canva = el)}
-        id="canva"
-      >
-        <div className="canva-container">
-          <h2 className="section-heading"style={{ marginTop: '1.5rem', marginBottom: '1.5rem', textAlign: 'center' }}>Success Cases</h2>
-          <p style={{ marginTop: '1.5rem', marginBottom: '1.5rem',color: '#666', fontSize: 'clamp(0.95rem, 1.8vw, 1.1rem)', textAlign: 'center'  }}>
-              View our latest parking solutions case studies and successful implementations:
-            </p>
-          <div className="canva-content">
-           
-            <div
-              style={{
-                position: "relative",
-                width: "100%",
-                height: "0",
-                paddingTop: "56.25%",
-                paddingBottom: "0",
-                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
-                marginBottom: "60px",
-                overflow: "hidden",
-                borderRadius: "16px",
-                willChange: "transform",
-                background: "#ffffff",
-              }}
-            >
-              <iframe
-                loading="lazy"
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  height: "100%",
-                  top: "0",
-                  left: "0",
-                  border: "none",
-                  padding: "0",
-                  margin: "0",
-                }}
-                src="https://www.canva.com/design/DAGQP8PiMmI/KMBNORba1XK6GMFVE-nA7A/view?embed"
-                allowFullScreen
-              ></iframe>
+            <div className="hero-content">
+              <div className="hero-tagline">More Professional, More Reliable Solutions</div>
+              <h1 className="hero-title">SKIDATA Parking Solutions</h1>
+              <h2 className="hero-subtitle">
+                Smart, Secure & Future-Ready Parking Systems
+              </h2>
+              <p className="hero-description">
+                SKIDATA delivers world-class smart parking solutions designed to streamline operations,
+                enhance user experience, and maximize efficiency.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* SECTION 7: TESTIMONIALS */}
-      <section
-        className="section-testimonials"
-        ref={(el) => (sectionRefs.current.testimonials = el)}
-        id="testimonials"
-      >
-        <div className="testimonials-container">
-          <h2 className="section-heading"style={{ textAlign: 'center' }}>Customer Testimonials</h2>
-          <h3 className="section-subheading"style={{   textAlign: 'center' }}>What Our Clients Say About SKIDATA Solutions</h3>
+          {/* SECTION 2: INTRO */}
+          <section
+            className="section-intro"
+            ref={(el) => (sectionRefs.current.intro = el)}
+            id="intro"
+          >
+            <div className="intro-layout">
+              <div className="intro-text">
+                <div className="intro-letter-spaced">S K I D A T A</div>
+                <h2 className="intro-title">Car Smart Parking Solutions</h2>
+                <h3 className="intro-subtitle">
+                  Revolutionizing Parking: SKIDATA's Smart Car Parking Solutions in Egypt
+                </h3>
+                <p className="intro-paragraph">
+                The parking system by is the ideal based solution that offers a broad variety of value adding services for you and your customers. It can get flexibly designed to meet your targets for revenue generation, high customer convenience, extra security standards and maximum automation of operational processes.
+                </p>
+              </div>
 
-          <div
-  className="testimonials-carousel"
-  ref={testimonialsRef}
->
-  <div className="testimonials-track">
-    {testimonials.map((item, index) => (
-      <div key={index} className="testimonial-card">
-        <p className="testimonial-quote">"{item.quote}"</p>
-
-        <div className="testimonial-footer">
-          <div className="testimonial-avatar">
-            {item.author.charAt(0)}
-          </div>
-          <div>
-            <div className="testimonial-author">{item.author}</div>
-            <div className="testimonial-role">{item.role}</div>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-
-        </div>
-      </section>
-      <Storage />
-
-      {/* SECTION 8: INSTAGRAM FEED */}
-      <section
-        className="section-instagram"
-        ref={(el) => (sectionRefs.current.instagram = el)}
-        id="instagram"
-      >
-        <div className="instagram-container">
-          <h2 className="section-heading instagram-heading">Instagram Feed</h2>
-          <p className="instagram-subheading">Follow our Instagram account @ArabSecurityDisty</p>
-
-          <div className="instagram-grid">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="instagram-item">
+              <div className="intro-image">
                 <img
-                  src={`https://picsum.photos/300/300?random=${item}`}
-                  alt={`Instagram post ${item}`}
+                  src="/assets/images/traffic-congestion.png"
+                  alt="SKIDATA Parking Equipment Solutions"
                 />
-                <div className="instagram-overlay">
-                  <div className="instagram-icon"><Instagram size={48} color="white" fill="white" /></div>
+              </div>
+            </div>
+
+          </section>
+
+
+          {/* SECTION 3: EXPERIENCE + FORM */}
+
+          <section
+            className="section-intro"
+            ref={(el) => (sectionRefs.current.intro = el)}
+            id="intro"
+          >
+            <div className="intro-layout">
+              <div className="intro-text">
+                <h2 className="intro-title2">The comprehensive high-end smart parking system                </h2>
+                <h3 className="intro-subtitle">
+                  Perfectly tailored to your customers’ needs
+                </h3>
+                <p className="intro-paragraph">
+                 
+                 <li> Not only do typical short-term parkers enjoy smooth access by issuing a paper ticket, also contract parkers can also easily enter your car park with their employee or customer cards.
+                 </li> <br />
+                 <li>  Add Parking Guidance to your system, an easy-to-follow guidance solution with integrated single-space monitoring that directs your parking customers to the next empty stall in a quick, secure fashion.
+                 </li> <br />
+                  
+                 <li>   With an added sweb Validate option your parking customers can also have their parking validated at nearby shops.
+                  The innovative web mobile Pay offers your customers a cashless and touchless payment experience with their own mobile phone (no App, no registration required).
+                  </li>
+
+                </p>
+              </div>
+
+              <div className="intro-image">
+                <img
+                  src="/assets/images/comprehensive.png"
+                  alt="SKIDATA Parking Equipment Solutions"
+                />
+              </div>
+            </div>
+
+          </section>
+
+
+
+
+
+          {/* SECTION 4: EXPERIENCE + FORM */}
+
+
+
+          <section
+            className="section-experience"
+            ref={(el) => (sectionRefs.current.experience = el)}
+            id="experience"
+          >
+            <div className="experience-container">
+              <h2 className="section-heading">Our Experience</h2>
+              <h3 className="section-subheading">Top 5 Reasons to Choose ASG Distribution</h3>
+
+              <div className="experience-content">
+
+                <div>
+                  <ul className="experience-list">
+                    <li className="experience-item">
+                      <strong>15+ Years of Excellence</strong>
+                      <span>Over 15 years of experience in security and surveillance solutions across the Middle East and Gulf region.</span>
+                    </li>
+                    <li className="experience-item">
+                      <strong>Diverse Portfolio</strong>
+                      <span>A large and diverse portfolio of successful projects in both government and private sectors.</span>
+                    </li>
+                    <li className="experience-item">
+                      <strong>Ministry of Defense Partner</strong>
+                      <span>Official solution provider for the Egyptian Ministry of Defense in road blockers and traffic barrier systems.</span>
+                    </li>
+                    <li className="experience-item">
+                      <strong>Ministry of Interior Provider</strong>
+                      <span>Official provider for the Egyptian Ministry of Interior in safety, surveillance, and ITS.</span>
+                    </li>
+                    <li className="experience-item">
+                      <strong>Integrated Support</strong>
+                      <span>High-quality integrated solutions with competitive pricing, long warranties, and full technical support.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+                  <div className="form-group">
+                    <label htmlFor="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company" />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your parking solution needs..." required />
+                  </div>
+                  <button type="submit" className="form-submit">
+                    Request Information
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+
+
+          {/* SECTION 5: EXPERIENCE + FORM */}
+
+          <section
+            className="section-intro"
+            ref={(el) => (sectionRefs.current.intro = el)}
+            id="intro"
+          >
+            <div className="intro-layout">
+              <div className="intro-text">
+                <h2 className="intro-title2">Meeting your requirements
+                </h2>
+                <h3 className="intro-subtitle">
+                Perfectly tailored to your customers’ needs
+
+                </h3>
+                <p className="intro-paragraph">
+                 
+
+                <li>   The Ticket Advanced Solution adjusts readily to your requirements. It allows you to add on all the services you need or want for your business, allowing you to fully custom-tailor the system to your requirements.
+                </li> <br />
+
+                <li> Whether with integrated marketing channels or facility controls, data analysis, or support of a wide range of data carriers the Ticket Advanced Solution ensures the highest possible added value for you.
+</li> <br />
+
+<li> What is more, its visual appearance lets it blend in perfectly with any modern environment. SKIDATA Automated Payment Machines are easy to use and come in a high-quality design. They support a wide range of payment options, and they provide a high cash and ticket storage capacity in addition to a long overall product life cycle.
+</li> <br />
+
+<li> The license plate recognition system allows you to raise the level of security and ticket fraud prevention or reduce the sources required for handling instances of ticket loss.
+</li> <br />
+
+
+                
+
+                </p>
+              </div>
+
+              <div className="intro-image">
+                <img
+                  src="/assets/images/meet.png"
+                  alt="SKIDATA Parking Equipment Solutions"
+                />
+              </div>
+            </div>
+
+          </section>
+
+
+          {/* SECTION 6: EXPERIENCE + FORM */}
+
+
+          <section
+            className="section-intro"
+            ref={(el) => (sectionRefs.current.intro = el)}
+            id="intro"
+          >
+            <div className="intro-layout">
+              <div className="intro-text">
+                <h2 className="intro-title2">Ticket Advanced Solution
+                </h2>
+                <h3 className="intro-subtitle">
+                Perfect Car Parking Management Solution from Skidata
+
+                </h3>
+                <p className="intro-paragraph">
+                 
+
+                The Ticket Advanced parking system by SKIDATA is the ideal ticket-based solution that offers a broad variety of value-adding services for you and your customers. It can be flexibly designed to meet your targets for revenue generation, high customer convenience, extra security standards, and maximum automation of operational processes.
+
+
+                <li>Our comprehensive ticket-based solution provides added value to all your customer groups, fully flexible to meet all of your and your customer’s needs.
+</li> <br />
+
+<li> Supports license plate recognition in combination with tickets for maximum security, parking   guidance systems and single-space monitoring for customer convenience.
+</li> <br />
+
+<li> Enables complementary services, such as validated parking or central operations control.
+</li> <br />
+
+<li> Ideal for city garages, airports, convention centers, stadiums and shopping malls.
+</li> <br />
+                
+
+                </p>
+              </div>
+
+              <div className="intro-image">
+                <img
+                  src="/assets/images/parking.png"
+                  alt="SKIDATA Parking Equipment Solutions"
+                />
+              </div>
+            </div>
+
+          </section>
+
+
+          <section
+  className="section-full-image"
+  ref={(el) => (sectionRefs.current.fullImage = el)}
+  id="fullImage"
+>
+  <div className="full-image-content">
+    <h2 className="full-image-title">Flexible add-on services with high added value</h2>
+    <img
+      src="/assets/images/pp.png"
+      alt="Descriptive Alt Text"
+      className="full-width-image"
+    />
+  </div>
+</section>
+
+          {/* SECTION 7: EXPERIENCE + FORM */}
+
+          <section
+            className="section-intro"
+            ref={(el) => (sectionRefs.current.intro = el)}
+            id="intro"
+          >
+            <div className="intro-layout">
+              <div className="intro-text">
+                <h2 className="intro-title3">Secure cashless payment via smartphone with sweb® Mobile Pay.
+
+                </h2>
+               
+                <p className="intro-paragraph">
+                 
+                To pay before leaving, short-term parkers simply scan the QR code on their ticket using their smartphone camera. There is no need for an extra app, as sweb Mobile Pay will automatically direct them to the web page for online payments, where they are already registered. Once the payment transaction is complete, they can use the ticket to exit the parking facility. As a result, the need to wait in line at an attended or automated pay point is effectively reduced, as is your operational effort. This is because you have to spend fewer resources on things like emptying, reﬁlling, and maintaining Automated Payment Machines. Sweb Mobile Pay integrates easily and instantly into existing parking systems.
+
+                </p>
+              </div>
+
+              <div className="intro-image">
+                <img
+                  src="/assets/images/f.webp"
+                  alt="SKIDATA Parking Equipment Solutions"
+                />
+              </div>
+            </div>
+
+          </section>
+{/* NEW SECTION: FULL-WIDTH IMAGE */}
+
+
+          {/* SECTION 8: SOLUTIONS */}
+          <section
+            className="section-solutions"
+            ref={(el) => (sectionRefs.current.solutions = el)}
+            id="solutions"
+          >
+            <div className="solutions-container">
+              <h2 className="section-heading">ASG Distribution Smart Car Parking Solutions</h2>
+
+              <div className="solutions-grid">
+                <div className="solution-card">
+                  <div className="solution-icon"><Zap size={32} /></div>
+                  <h3 className="solution-title">Intuitive Design</h3>
+                  <p className="solution-text">High usability and user-friendly interfaces for seamless parking management.</p>
+                </div>
+                <div className="solution-card">
+                  <div className="solution-icon"><BarChart3 size={32} /></div>
+                  <h3 className="solution-title">Flexible Payment</h3>
+                  <p className="solution-text">Multiple payment options tailored to modern parking scenarios.</p>
+                </div>
+                <div className="solution-card">
+                  <div className="solution-icon"><BarChart3 size={32} /></div>
+                  <h3 className="solution-title">Revenue Optimization</h3>
+                  <p className="solution-text">Maximize parking revenue with intelligent pricing algorithms.</p>
+                </div>
+                <div className="solution-card">
+                  <div className="solution-icon"><Clock size={32} /></div>
+                  <h3 className="solution-title">Versatile Ticketing</h3>
+                  <p className="solution-text">Flexible ticketing systems for all parking scenarios and durations.</p>
+                </div>
+                <div className="solution-card">
+                  <div className="solution-icon"><Smartphone size={32} /></div>
+                  <h3 className="solution-title">Online Reservation</h3>
+                  <p className="solution-text">Reserve parking slots in advance with real-time availability updates.</p>
+                </div>
+                <div className="solution-card">
+                  <div className="solution-icon"><Lock size={32} /></div>
+                  <h3 className="solution-title">Mobile Payment</h3>
+                  <p className="solution-text">Contactless payment without requiring dedicated apps.</p>
+                </div>
+                <div className="solution-card">
+                  <div className="solution-icon"><Cpu size={32} /></div>
+                  <h3 className="solution-title">EV Charging</h3>
+                  <p className="solution-text">Integrated EV charging with combined parking and charging payment.</p>
+                </div>
+                <div className="solution-card">
+                  <div className="solution-icon"><Globe size={32} /></div>
+                  <h3 className="solution-title">Cloud Integration</h3>
+                  <p className="solution-text">Seamless cloud-based integration for centralized parking management.</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          </section>
+
+          {/* SECTION 9: VIDEO */}
+          <section
+            className="section-video"
+            ref={(el) => (sectionRefs.current.video = el)}
+            id="video"
+          >
+            <div className="video-wrapper-container">
+              <div className="video-wrapper">
+                <video
+                  muted
+                  loop
+                  autoPlay
+                  playsInline
+                  controlsList="nodownload"
+                >
+                  <source src="/assets/images/Skidata.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION 6: CANVA */}
+          <section
+            className="section-canva"
+            ref={(el) => (sectionRefs.current.canva = el)}
+            id="canva"
+          >
+            <div className="canva-container">
+              <h2 className="section-heading" style={{ marginTop: '1.5rem', marginBottom: '1.5rem', textAlign: 'center' }}>Success Cases</h2>
+              <p style={{ marginTop: '1.5rem', marginBottom: '1.5rem', color: '#666', fontSize: 'clamp(0.95rem, 1.8vw, 1.1rem)', textAlign: 'center' }}>
+                View our latest parking solutions case studies and successful implementations:
+              </p>
+              <div className="canva-content">
+
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    height: "0",
+                    paddingTop: "56.25%",
+                    paddingBottom: "0",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.12)",
+                    marginBottom: "60px",
+                    overflow: "hidden",
+                    borderRadius: "16px",
+                    willChange: "transform",
+                    background: "#ffffff",
+                  }}
+                >
+                  <iframe
+                    loading="lazy"
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                      top: "0",
+                      left: "0",
+                      border: "none",
+                      padding: "0",
+                      margin: "0",
+                    }}
+                    src="https://www.canva.com/design/DAGQP8PiMmI/KMBNORba1XK6GMFVE-nA7A/view?embed"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION 7: TESTIMONIALS */}
+          <section
+            className="section-testimonials"
+            ref={(el) => (sectionRefs.current.testimonials = el)}
+            id="testimonials"
+          >
+            <div className="testimonials-container">
+              <h2 className="section-heading" style={{ textAlign: 'center' }}>Customer Testimonials</h2>
+              <h3 className="section-subheading" style={{ textAlign: 'center' }}>What Our Clients Say About SKIDATA Solutions</h3>
+
+              <div
+                className="testimonials-carousel"
+                ref={testimonialsRef}
+              >
+                <div className="testimonials-track">
+                  {testimonials.map((item, index) => (
+                    <div key={index} className="testimonial-card">
+                      <p className="testimonial-quote">"{item.quote}"</p>
+
+                      <div className="testimonial-footer">
+                        <div className="testimonial-avatar">
+                          {item.author.charAt(0)}
+                        </div>
+                        <div>
+                          <div className="testimonial-author">{item.author}</div>
+                          <div className="testimonial-role">{item.role}</div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <Storage />
+
+          {/* SECTION 8: INSTAGRAM FEED */}
+          <section
+            className="section-instagram"
+            ref={(el) => (sectionRefs.current.instagram = el)}
+            id="instagram"
+          >
+            <div className="instagram-container">
+              <h2 className="section-heading instagram-heading">Instagram Feed</h2>
+              <p className="instagram-subheading">Follow our Instagram account @ArabSecurityDisty</p>
+
+              <div className="instagram-grid">
+                {[1, 2, 3, 4, 5, 6].map((item) => (
+                  <div key={item} className="instagram-item">
+                    <img
+                      src={`https://picsum.photos/300/300?random=${item}`}
+                      alt={`Instagram post ${item}`}
+                    />
+                    <div className="instagram-overlay">
+                      <div className="instagram-icon"><Instagram size={48} color="white" fill="white" /></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
-    </Layout>
+      </Layout>
     </>
   )
-  
+
 }

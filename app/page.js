@@ -7,6 +7,7 @@ import Service from "@/components/sections/home1/Service"
 import Process from "@/components/sections/home1/Process"
 import Gallery from "@/components/sections/home1/Gallery"
 import Product from "@/components/sections/home1/Product"
+import { SplineSceneBasic } from "@/components/ui/demo"
 
 import Testimonial from "@/components/sections/home1/Testimonial"
 import Cta from "@/components/sections/home1/Cta"
@@ -24,6 +25,8 @@ export default function Home() {
         <Gallery />
         <Product />
         <Testimonial />
+        <SplineSceneBasic />
+
         <Cta />
       </Layout>
     </>
