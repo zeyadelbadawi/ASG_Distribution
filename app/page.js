@@ -25,7 +25,6 @@ export default function Home() {
         <Gallery />
         <Product />
         <Testimonial />
-        <SplineSceneBasic />
 
         <Cta />
       </Layout>
