@@ -28,7 +28,7 @@ jobs:
             git fetch origin
             git reset --hard origin/main
 
-            npm install
+            npm install --legacy-peer-deps
             npm run build
 
             pm2 restart asg-next
