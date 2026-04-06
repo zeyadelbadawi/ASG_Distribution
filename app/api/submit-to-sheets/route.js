@@ -15,8 +15,18 @@ export async function POST(request) {
     }
 
     // Validate required environment variables
+    console.log("[v0] ========== FORM SUBMISSION DEBUG ==========")
+    console.log("[v0] Checking environment variables...")
+    console.log("[v0] All available env keys:", Object.keys(process.env).sort())
+    console.log("[v0] ---")
+    console.log("[v0] Google Sheets Env Variables:")
+    console.log("[v0] GOOGLE_SHEETS_CLIENT_EMAIL:", process.env.GOOGLE_SHEETS_CLIENT_EMAIL)
+    console.log("[v0] GOOGLE_SHEETS_PRIVATE_KEY:", process.env.GOOGLE_SHEETS_PRIVATE_KEY ? `EXISTS (${process.env.GOOGLE_SHEETS_PRIVATE_KEY.length} chars)` : "MISSING")
+    console.log("[v0] GOOGLE_SHEETS_SPREADSHEET_ID:", process.env.GOOGLE_SHEETS_SPREADSHEET_ID)
+    console.log("[v0] ==========================================")
+    
     if (!process.env.GOOGLE_SHEETS_CLIENT_EMAIL || !process.env.GOOGLE_SHEETS_PRIVATE_KEY || !process.env.GOOGLE_SHEETS_SPREADSHEET_ID) {
-      console.error("[v0] Missing required Google Sheets environment variables:", {
+      console.error("[v0] CONFIGURATION ERROR:", {
         hasClientEmail: !!process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
         hasPrivateKey: !!process.env.GOOGLE_SHEETS_PRIVATE_KEY,
         hasSpreadsheetId: !!process.env.GOOGLE_SHEETS_SPREADSHEET_ID,
