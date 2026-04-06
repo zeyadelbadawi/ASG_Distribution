@@ -1,0 +1,127 @@
+/* Mobile Performance Optimizations */
+
+/* Disable GPU-intensive animations on mobile */
+@media (max-width: 768px) {
+    * {
+      -webkit-transform: translate3d(0, 0, 0) !important;
+      transform: translate3d(0, 0, 0) !important;
+      -webkit-backface-visibility: hidden !important;
+      backface-visibility: hidden !important;
+      -webkit-perspective: 1000 !important;
+      perspective: 1000 !important;
+    }
+  
+    /* Disable all animations and transitions on mobile */
+    .wow,
+    .animated,
+    [class*="animate__"],
+    [class*="bounce"],
+    [class*="fadeIn"],
+    [class*="slideIn"],
+    [class*="zoomIn"] {
+      animation: none !important;
+      transition: none !important;
+    }
+  
+    /* Reduce image sizes for mobile */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    /* Optimize background images */
+    .main-slider__bg,
+    [style*="backgroundImage"] {
+      background-size: cover !important;
+      background-position: center !important;
+      background-attachment: scroll !important;
+    }
+  
+    /* Disable parallax effects */
+    .parallax,
+    [data-parallax] {
+      background-attachment: scroll !important;
+    }
+  
+    /* Reduce container padding on mobile */
+    .container {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+  
+    /* Optimize text rendering */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+  
+    /* Lazy load sections */
+    .project-one,
+    .service-one,
+    .testimonial-one,
+    .faq-one,
+    .blog-one,
+    .gallery-one {
+      content-visibility: auto;
+    }
+  
+    /* Reduce shadow effects on mobile */
+    .box-shadow,
+    [class*="shadow"] {
+      box-shadow: none !important;
+    }
+  
+    /* Optimize scrolling performance */
+    html {
+      scroll-behavior: auto !important;
+    }
+  
+    /* Reduce Swiper performance impact */
+    .swiper {
+      overflow: hidden;
+    }
+  
+    .swiper-wrapper {
+      display: flex;
+    }
+  
+    /* Disable autoplay animation delay */
+    .swiper-autoplay {
+      animation: none !important;
+    }
+  }
+  
+  /* Optimize images for different device sizes */
+  @media (max-width: 480px) {
+    /* Extra small devices */
+    .page-header__inner h2,
+    h1,
+    h2,
+    h3 {
+      font-size: clamp(18px, 4vw, 28px) !important;
+    }
+  
+    /* Further reduce padding */
+    .container {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+  
+    /* Optimize form elements */
+    input,
+    textarea,
+    select {
+      font-size: 16px !important;
+    }
+  }
+  
+  /* Preload critical resources */
+  @supports (content-visibility: auto) {
+    .content-lazy {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 500px;
+    }
+  }
+  

@@ -14,19 +14,6 @@ export async function POST(request) {
       return NextResponse.json({ error: "All fields are required" }, { status: 400 })
     }
 
-    // Validate required environment variables
-    if (!process.env.GOOGLE_SHEETS_CLIENT_EMAIL || !process.env.GOOGLE_SHEETS_PRIVATE_KEY || !process.env.GOOGLE_SHEETS_SPREADSHEET_ID) {
-      console.error("[v0] Missing required Google Sheets environment variables:", {
-        hasClientEmail: !!process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-        hasPrivateKey: !!process.env.GOOGLE_SHEETS_PRIVATE_KEY,
-        hasSpreadsheetId: !!process.env.GOOGLE_SHEETS_SPREADSHEET_ID,
-      })
-      return NextResponse.json(
-        { error: "Server configuration incomplete. Please contact support." },
-        { status: 500 }
-      )
-    }
-
     // Set up Google Sheets authentication
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -187,9 +174,7 @@ export async function POST(request) {
 
     return NextResponse.json({ message: "Form submitted successfully!" }, { status: 200 })
   } catch (error) {
-    console.error("[v0] Error submitting to Google Sheets:", error)
-    console.error("[v0] Error message:", error.message)
-    console.error("[v0] Error stack:", error.stack)
+    console.error("Error submitting to Google Sheets:", error)
     return NextResponse.json({ error: "Failed to submit form. Please try again." }, { status: 500 })
   }
 }
