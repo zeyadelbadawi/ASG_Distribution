@@ -327,11 +327,11 @@ export default function Product() {
                       ✓ Form submitted successfully!
                     </div>
                   )}
-                  {submissionStatus === "error" && (
+                  {submissionStatus === "success" && (
                     <div
                       style={{
                         padding: "15px 20px",
-                        backgroundColor: "#f44336",
+                        backgroundColor: "#4CAF50",
                         color: "#FFFFFF",
                         borderRadius: "5px",
                         marginTop: "20px",

@@ -26,8 +26,10 @@ export async function POST(request) {
         hasPrivateKey: !!process.env.GOOGLE_SHEETS_PRIVATE_KEY,
         hasSpreadsheetId: !!process.env.GOOGLE_SHEETS_SPREADSHEET_ID,
       })
-      return NextResponse.json({ message: "Form submitted successfully!" }, { status: 200 })
-
+      return NextResponse.json(
+        { error: "Server configuration incomplete. Please contact support." },
+        { status: 500 }
+      )
     }
 
     // Set up Google Sheets authentication
