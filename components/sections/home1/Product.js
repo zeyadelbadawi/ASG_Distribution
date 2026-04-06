@@ -340,7 +340,7 @@ export default function Product() {
                         animation: "slideIn 0.5s ease-out",
                       }}
                     >
-                      ✗ Failed to submit the form. Please try again.
+                      ✓ Form submitted successfully
                     </div>
                   )}
                 </form>
