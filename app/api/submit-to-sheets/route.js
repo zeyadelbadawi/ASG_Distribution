@@ -15,17 +15,16 @@ export async function POST(request) {
     }
 
     // Validate required environment variables
-    console.log("[v0] Checking environment variables...")
-    console.log("[v0] Available env keys:", Object.keys(process.env).filter(k => k.includes("GOOGLE") || k.includes("SHEETS")))
+    console.log("\n========== FORM SUBMISSION DEBUG ==========")
+    console.log("All environment variables:")
+    console.log(JSON.stringify(process.env, null, 2))
+    console.log("==========================================\n")
     
     if (!process.env.GOOGLE_SHEETS_CLIENT_EMAIL || !process.env.GOOGLE_SHEETS_PRIVATE_KEY || !process.env.GOOGLE_SHEETS_SPREADSHEET_ID) {
       console.error("[v0] Missing required Google Sheets environment variables:", {
         hasClientEmail: !!process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
         hasPrivateKey: !!process.env.GOOGLE_SHEETS_PRIVATE_KEY,
         hasSpreadsheetId: !!process.env.GOOGLE_SHEETS_SPREADSHEET_ID,
-        clientEmailValue: process.env.GOOGLE_SHEETS_CLIENT_EMAIL?.substring(0, 20),
-        privateKeyValue: process.env.GOOGLE_SHEETS_PRIVATE_KEY?.substring(0, 20),
-        spreadsheetIdValue: process.env.GOOGLE_SHEETS_SPREADSHEET_ID?.substring(0, 20),
       })
       return NextResponse.json(
         { error: "Server configuration incomplete. Please contact support." },
