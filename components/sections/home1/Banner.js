@@ -153,7 +153,7 @@ export default function Banner() {
   </Link>
 
   {/* Button 2 */}
-  <Link href="/success" className="main-slider__btn thm-btn">
+  <Link href="/success" className="main-slider__btn thm-btnn">
     Success Case
   </Link>
                       </div>
