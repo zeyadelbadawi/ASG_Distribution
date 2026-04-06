@@ -1,0 +1,373 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container-fluid {
+  background-image: url('/assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+
+
+}
+
+.logo {
+  height: 150px;
+  object-fit: contain;
+}
+
+.top-right-icons .icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: #1e2455;
+}
+
+.top-right-icons .icon:hover {
+  transform: scale(1.2);
+  color: #262d66;
+
+}
+
+.top-right-icons .icon.me-4 {
+  margin-right: 1.5rem; /* Adds space between icons */
+}
+
+.drawer {
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background-color: #1e2455; /* Dark background for modern feel */
+  color: #ecf0f1; /* Light text color for better contrast */
+  padding: 30px 20px;
+  transition: right 0.4s ease-in-out;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.drawer.open {
+  right: 0;
+}
+
+.modern-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid #e17843;
+  padding-bottom: 10px;
+}
+
+.modern-textarea {
+  background-color: #252b5d;
+  color: #ecf0f1;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  resize: none;
+}
+.modern-textarea::placeholder {
+  color: #95a5a6;
+}
+
+.modern-checkbox .form-check-input {
+  width: 20px;
+  height: 20px;
+  background-color: #e17843;
+  border: none;
+  border-radius: 4px;
+}
+
+.modern-checkbox .form-check-input:checked {
+  background-color: #e17843;
+}
+
+.modern-checkbox .form-check-label {
+  font-size: 1.1rem;
+  color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-success {
+  background-color: #e17843 !important; /* Default orange */
+  border-color: #e17843 !important; /* Match border color */
+  color: white !important; /* Ensure text stays white */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #ec8a60 !important; /* Lighter orange on hover */
+  border-color: #ec8a60 !important; /* Adjust border on hover */
+}
+
+.btn-success:active, 
+.btn-success:focus, 
+.btn-success:focus-visible {
+  background-color: #f0a37e !important; /* Even lighter orange when clicked */
+  border-color: #f0a37e !important; /* Border matches background */
+  outline: none;
+  box-shadow: none !important; /* Remove Bootstrap's default focus outline */
+}
+
+
+.big-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: black;
+  
+}
+
+.bigger-box {
+  width: 500px;
+  height: 150px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.result-box {
+  width: 400px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  color: white; /* Ensure text inside is white */
+}
+
+.scrolling-text-container {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.scrolling-text {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.1s ease-in-out;
+}
+
+.name-item {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 2.2rem; /* Increased for better readability */
+  font-weight: bold;
+  color: #1e2455; /* Make the text white */
+}
+
+.no-bg {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  object-fit: contain;
+}
+
+.bottom-images img {
+  height: 120px; /* Increased size for visibility */
+  weight: 120px;
+}
+
+
+
+/* Styling for the winners table */
+.winners-table-container {
+  background-color: #1e2455; /* Dark blue */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 400px; /* Increased width */
+  width: 100%; /* Make sure it adapts to the screen */
+  overflow: hidden;
+}
+
+/* Table wrapper for scrolling */
+.table-wrapper {
+  max-height: 300px;
+  overflow-y: scroll;
+  border-radius: 20px;
+  padding: 15px;
+  scrollbar-width: none; /* For Firefox */
+  border-bottom: none; /* Remove bottom border */
+}
+
+.table-wrapper::-webkit-scrollbar {
+  width: 0; /* For WebKit-based browsers (Chrome, Safari, etc.) */
+  display: none; /* Hides the scrollbar */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #e17843;
+  border-radius: 10px;
+}
+
+/* Table styling */
+.table {
+  color: white;
+  margin: 0;
+  border-collapse: separate;
+  width: 100%;
+}
+/* Remove bottom borders */
+.table thead th {
+  border-bottom: none;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+
+
+
+/* Table rows */
+.table tbody tr {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  border-bottom: none; /* Remove row bottom borders */
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.table tbody td {
+  border: none;
+  padding: 10px;
+}
+
+/* Header styling */
+.winners-table-container h2 {
+  margin-top: 20px;
+  font-size: 1.5rem; /* Slightly larger header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+
+/* Align checkboxes and icons more effectively */
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px; /* Add some space between the checkbox and label */
+  background-color: #e17843;
+  border-radius: 4px;
+  border: none;
+}
+
+.form-check-label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Ensure icons and text have even spacing */
+  font-size: 1.1rem;
+  color: #ecf0f1;
+  
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  z-index: 999;
+}
+
+.winner-animation {
+  position: absolute;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: double;
+  opacity: 0;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  user-select: none; /* Prevent text selection */
+  pointer-events: none; /* Disable pointer events */
+}
+
+
+.btn:focus-visible
+{
+  background-color: #e17843;
+
+}
+
+.custom-draw-button {
+  background-color: rgb(222, 119, 68);
+  color: white;
+  border: none;
+  border-radius: 11px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.custom-draw-button:hover {
+  background-color: rgb(214, 133, 92); /* Same color on hover */
+  color: white;
+
+}
+
+.custom-draw-button:disabled {
+  cursor: not-allowed;
+}
+
+
+/* General fullscreen container adjustments */
+.fullscreen .container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 20px; /* Space between elements */
+}
+
+/* Logo adjustments */
+.fullscreen .logo {
+  width: 500px;
+  height: 250;
+  margin: 0;
+}
+
+/* Title adjustments */
+.fullscreen .big-title {
+  font-size: 4rem;
+  margin: 20px 0;
+}
+
+/* Scrolling box adjustments */
+.fullscreen .bigger-box {
+  width: 500px;
+  height: 120px;
+}
+
+/* Draw button adjustments */
+.fullscreen .custom-draw-button {
+  font-size: 2rem;
+  padding: 10px 20px;
+}
+
+/* Adjust bottom images */
+.fullscreen .bottom-images img {
+  height: 110px;
+}
+
+
+.fullscreen .top-right-icons .icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: white;
+}

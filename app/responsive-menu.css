@@ -1,0 +1,27 @@
+/* Hide menu button on desktop, show only on mobile/tablet */
+
+/* Hide mobile nav toggler by default (desktop) */
+.mobile-nav__toggler {
+    display: none !important;
+  }
+  
+  /* Show mobile nav toggler on tablet and below (768px breakpoint) */
+  @media (max-width: 1199px) {
+    .mobile-nav__toggler {
+      display: block !important;
+    }
+  }
+  
+  /* Ensure Menu component is hidden on mobile, shown on desktop */
+  @media (max-width: 1199px) {
+    .main-menu__main-menu-box > .main-menu {
+      display: none !important;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .main-menu__main-menu-box > .main-menu {
+      display: block !important;
+    }
+  }
+  

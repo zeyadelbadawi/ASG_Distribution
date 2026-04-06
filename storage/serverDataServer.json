@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Importing & Logistics",
+    "description": "Managing global importing and logistics to ensure fast, secure, and reliable product delivery.",
+    "imageUrl": "Importing.jpg"
+  },
+  {
+    "title": "Ware Housing",
+    "description": "Providing secure warehousing solutions with efficient storage, inventory control, and product availability.",
+    "imageUrl": "w.png"
+  },
+  {
+    "title": "Contracting",
+    "description": "Delivering turnkey contracting services, managing projects efficiently from planning to execution.",
+    "imageUrl": "cont.jpg"  },
+  {
+    "title": "Supplying",
+    "description": "Supplying high-quality technology solutions with consistent availability for diverse project needs.",
+    "imageUrl": "supply.png"
+  },
+  {
+    "title": "Training",
+    "description": " Offering professional training programs to enhance technical expertise and product knowledge.",
+    "imageUrl": "t.png"
+  },
+  {
+    "title": "Designing",
+    "description": "Designing customized technology solutions aligned with project requirements and business objectives.",
+    "imageUrl": "d.png"  },
+  {
+    "title": "Installations",
+    "description": "Ensuring professional installations that deliver seamless setup and optimal system performance.",
+    "imageUrl": "install.png"
+  },
+  {
+    "title": "Integrations",
+    "description": "Integrating multiple systems smoothly to ensure compatibility, efficiency, and unified operations.",
+    "imageUrl": "i.png"
+  },
+
+  {
+    "title": "Operations",
+    "description": " Supporting daily operations to ensure systems run efficiently, securely, and without disruption.",
+    "imageUrl": "o.png"
+
+  },
+  {
+    "title": "Supporting",
+    "description": "Providing dedicated technical support with fast response and continuous system reliability.",
+    "imageUrl": "support.png"
+  },
+  {
+    "title": "Consulting",
+    "description": "Delivering expert consulting services to guide technology decisions and strategic planning.",
+    "imageUrl": "cons.png"
+  },
+  {
+    "title": "Maintenance",
+    "description": "Offering proactive maintenance services to ensure long-term system performance and reliability.",
+    "imageUrl": "m.png"
+  }
+]
