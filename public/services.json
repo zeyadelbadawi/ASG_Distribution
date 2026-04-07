@@ -319,7 +319,7 @@
     "description": "A specialized military unit tasked with gathering information",
     "description1": "The Intrusion System by ASG Distribution provides advanced security monitoring to protect homes, offices, and commercial facilities from unauthorized access. It features motion sensors, door/window contacts, and 24/7 monitoring for reliable protection.",
       "imageUrl": "/assets/images/resources/intru.png",
-    "iconUrl": "/assets/images/home2/intru.svg",
+    "iconUrl": "/assets/i.svg",
     "tabNumber": 16,
     "description2": "Protect your property with real-time alerts and intelligent monitoring for homes, offices, and commercial buildings. Designed to prevent unauthorized access, these systems enhance security and provide peace of mind.",
     "points": [
@@ -339,7 +339,7 @@
     "title" : "Interactive Board",
     "description": "Transform classrooms and meeting spaces with touch-enabled displays for engaging presentations and collaborative learning. Designed for schools and businesses, they enhance interactivity, productivity, and visual communication.",
     "description1": "The Interactive Board by ASG Distribution transforms classrooms and meeting rooms into dynamic, collaborative environments with touch-sensitive displays and intuitive controls. It features multi-touch functionality, high-resolution visuals, and seamless device connectivity for enhanced learning and presentations.",
-      "imageUrl": "/assets/images/resources/inter.png",
+      "imageUrl": "/assets/b.png",
     "iconUrl": "https://drive.google.com/uc?export=view&id=1sQ9Md-I7LNdydMyFKBKEn7gU0FZ0n-4x",
     "tabNumber": 17,
     "description2": "ASG Distribution is dedicated to providing cutting-edge Parking Management that transform parking management and elevate user experience.",
