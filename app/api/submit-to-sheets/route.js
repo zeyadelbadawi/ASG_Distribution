@@ -5,28 +5,49 @@ export async function POST(request) {
   // Hardcoded credentials
   const CLIENT_EMAIL = "website-form-submissions@asg-distry.iam.gserviceaccount.com"
   const PRIVATE_KEY = `-----BEGIN PRIVATE KEY-----
-MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+sKzRwGBc6EkG
-KQNF1dHHJSJqYGMGFmvNbk5pXJFYJkYWyLF4S4D1tPg8VD3K4GqY7a9xJB5H3JxE
-y6C4JsxT3V7gW5Q8nK0J8oN7KJqFqJz1vQ8dQ3G9YqZ4sN8pQ9rK0L9kO8mN9pR5
-sO9qR0rK1mP9lP8nM9oQ6rL2mQcNnS9oRcoLvTsN/f7U7T3x+gZ8W0WF/fZU7T1z
-+gZ8W0Wp++gR9YNqGqG7A5S9U8u2q3X2vHwRB8hU8XwEhK3O4R9rN3N2oL3sG3fX
-Y7Z2L9zX3z0z2ZqZz1PW9xBU7VxH3dPt1VBhU0EbKKqJz5K0rN2pUnJmVhN7kPKY
-a5j8aUNDAoGBAO9Ew5U8zZ0xJj5L6pYTcVBe8FvQT2nVnZsXuKc7s5j4Y0eQwL1e
-KqKXrM5eT9e+w3L8O1xL0v7FzM1G9VzR7qM2UaS7KuC6xQhA8J0L8L8Y0m/s1p1T
-xwL1Q3G8gK3bQ5vX1CQjDZ4R3FVmGd8Q5I8nD1E0rKIE9pJ4aJ1f0KZLAkEA0kDW
-8pzJ3x8pI4K5cVJ9pYzC0G7X1vwNkjI1oJ5nK5qN7vV2aU+q/dO+Z5d6W6L1pWD2
-lK0oTjVU7eV9uN8zT3G1G6k9P6B3sZ5qQ7e0+x3UkxsXxbCVPQJBAOtL+JzwBjxx
-Kq7vC0M+cX5+sK3H8r+J5Q4Y3JhZ2qO6x9Q3P5uL9U4T3E0R+OzT5qKuEsx9d0Uo
-98tYJ60CQQCz6LPLfj8xVJvU8oI8vT5Q7b8O1m9rK3R1U4aD9p+H7N0tDQxnCKFq
-EQw9+VzqKpGQ0QW2T+DZGd9Dn+uT
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDbC8XgB/PLftj
+NjQ4HB1vBWSbvavLFds3yd7EyguyXi06Vg0dmB2CEMTlGtAYyfHqJpAIl2TDqso2
+bxEDTcudRXl46zBWtQI4QuTeXmOXnc8OOLEHkEfp2Yk21KX10yKTpb0BTblO0Xq+
+Dh+stZsQJTk+J55DZaw2pTgBeF9szzs9sv3AxaGAEobf0fbGJXr+jLmk+zHj7dYt
+/2rDVFSkcfrIen2T1tgD4f4l+YLK4nTSz5SAUSMRncs92pU1aEsGsaIyCW1u1b1g
+bRhk8Zzf8kUEXv1K9JUD8xkPmxDBKGYfXDKWQ0HW27yYStR+cEDiMoaSFLywewjz
+ADQ2RsJfAgMBAAECggEASlKx0lFDR8toKYJq99ARjbDSY70OQk3MsvoOxG9HZY4V
+y3MAx/mbd2UjTTMWY+ciH3iNHQdfJl+lSnCRWt1SjDzpBwkDuGZdMsKWQtBJNlep
+cPI0ufiwsQqv+e+EMusa4maNbJp/2K8o7HF4sHndQJW3oKD2uxFHHv1VQJHkUQAQ
+Py2rsK4AGRCL2iRZxbzxyJD4nuT2aCpB4V7IdbtBgNJp10PAlTmjieXdzzntP3yk
+XwBLV5oUGe5TWQuI88VTHSZc4Kj1RMyzyWbpyeZ9VaBSmoDXD4WsZeMiQNaOQvNh
+E+IQi39PjHXCEzNkgM4/wzbD9aJdXStsLxy8KCIgeQKBgQD9qLhb8v3gu1FixtCw
++ZMolelaRvFHDaBFUmOfFnZWDNvAxzNsMxubj21E45wu01TvONnsGhEQvVx5Mn7Z
+/rSZ+8lY/xQpfaujGgsCgzYF+G66Q/EFgpBsYFT0h34dMsNcE1JF/D31nR4GJ2Il
+7D0rwXeANJv3EGe3TpF79jQ7fQKBgQDFOeC1ucFgimjdPhc+KB5EQrXo0A8u4+UM
+smUv/CknZbPMuhMBtxDIv6o6MrRL3o4Gz9f9/1e6c7MzTM4eC+vP/nRJfyYNb/U7
+lQUCaQRdtHtQDkcbjWNeZAvVYpXjoZrTw1nLwpTkvTwxNV/eElH4pwQZk+S6fxu8
+wurHMhdECwKBgAKDDjhS4rK8CCVLRLvL7Ook+eeb9j2249Rr6XKk3U0i2XZCQr8a
+jnZu6C0bd+t6ykeIL5hH9c1NosHMfzcXb6Bqvuazt/ZlOTLnSh6fQAS1HhuYGqXs
+UhPQrGazhMszOn4J7vGketSY1rhG4ZDwkvaA9vb9DmJW9j/5djVdDc1dAoGBAK4D
+wyCUJOrpNF0Ay8Er5IiV06r26G6W5SGuxVjxQ95e/aVFCEAbJdP6SFfRJQNL+kRI
+XmrdQKpiK1q4CaS5H/cEq9WtOgXhIp7PfPwDbLbA54xbDKJivaoq28YKlfWiQNlX
+I4OEy5qG3PUOAugNggXCVvu6YbWrMO37jOr0Z1LBAoGBAPJbn0j0NDbtQWJe7zMj
+deAe6IXDcHfaWhCpHMMDHU0pNrxixV9LvEVpwU2GKi1Nfne4ysfyFFES6/S7jOGd
+vPmm2sS9el97og2SoJFRBtJt3aP5Dh7wTmjx5oYtYuxVpNmDJI02eNkbgsbbZZCA
+Q7shvPdald8b7asNmRZfow0q
 -----END PRIVATE KEY-----`
   const SPREADSHEET_ID = "13M-rqUbdIsmX0uV4FhFar6_XC7gR4KoCfumiqt-GqLE"
 
   console.log("[v0] === API REQUEST STARTED ===")
-  console.log("[v0] Using hardcoded credentials")
+  console.log("[v0] Hardcoded credentials loaded")
   console.log("[v0] CLIENT_EMAIL:", CLIENT_EMAIL ? "✓ Set" : "✗ Missing")
   console.log("[v0] PRIVATE_KEY:", PRIVATE_KEY ? "✓ Set" : "✗ Missing")
   console.log("[v0] SPREADSHEET_ID:", SPREADSHEET_ID ? "✓ Set" : "✗ Missing")
+
+  // Check if required credentials are set
+  if (!CLIENT_EMAIL || !PRIVATE_KEY || !SPREADSHEET_ID) {
+    console.log("[v0] Configuration Error - Missing credentials")
+    return NextResponse.json(
+      { error: "Server configuration incomplete." },
+      { status: 500 },
+    )
+  }
 
   try {
     console.log("[v0] Parsing form data...")
@@ -46,7 +67,7 @@ EQw9+VzqKpGQ0QW2T+DZGd9Dn+uT
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: CLIENT_EMAIL,
-        private_key: PRIVATE_KEY.replace(/\\n/g, "\n"),
+        private_key: PRIVATE_KEY,
       },
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     })
