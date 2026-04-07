@@ -6,30 +6,31 @@ export async function POST(request) {
     const formData = await request.json()
     const { name, phone, email, company, message, type } = formData
 
+    // [v0] Debug: Log environment variables
+    console.log("[v0] Environment Variables Check:")
+    console.log("[v0] GOOGLE_SHEETS_CLIENT_EMAIL:", process.env.GOOGLE_SHEETS_CLIENT_EMAIL ? "✓ Set" : "✗ Missing")
+    console.log("[v0] GOOGLE_SHEETS_PRIVATE_KEY:", process.env.GOOGLE_SHEETS_PRIVATE_KEY ? "✓ Set" : "✗ Missing")
+    console.log("[v0] GOOGLE_SHEETS_SPREADSHEET_ID:", process.env.GOOGLE_SHEETS_SPREADSHEET_ID ? "✓ Set" : "✗ Missing")
+
+    // [v0] Check if required env vars are set
+    if (
+      !process.env.GOOGLE_SHEETS_CLIENT_EMAIL ||
+      !process.env.GOOGLE_SHEETS_PRIVATE_KEY ||
+      !process.env.GOOGLE_SHEETS_SPREADSHEET_ID
+    ) {
+      console.log("[v0] Configuration Error - Missing environment variables")
+      return NextResponse.json(
+        { error: "Server configuration incomplete. Please contact support." },
+        { status: 500 },
+      )
+    }
+
     if (type === "newsletter") {
       if (!email) {
         return NextResponse.json({ error: "Email is required" }, { status: 400 })
       }
     } else if (!name || !phone || !email || !company || !message) {
       return NextResponse.json({ error: "All fields are required" }, { status: 400 })
-    }
-
-    // Validate required environment variables
-    console.log("\n========== FORM SUBMISSION DEBUG ==========")
-    console.log("All environment variables:")
-    console.log(JSON.stringify(process.env, null, 2))
-    console.log("==========================================\n")
-    
-    if (!process.env.GOOGLE_SHEETS_CLIENT_EMAIL || !process.env.GOOGLE_SHEETS_PRIVATE_KEY || !process.env.GOOGLE_SHEETS_SPREADSHEET_ID) {
-      console.error("[v0] Missing required Google Sheets environment variables:", {
-        hasClientEmail: !!process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-        hasPrivateKey: !!process.env.GOOGLE_SHEETS_PRIVATE_KEY,
-        hasSpreadsheetId: !!process.env.GOOGLE_SHEETS_SPREADSHEET_ID,
-      })
-      return NextResponse.json(
-        { error: "Server configuration incomplete. Please contact support." },
-        { status: 500 }
-      )
     }
 
     // Set up Google Sheets authentication
@@ -192,9 +193,7 @@ export async function POST(request) {
 
     return NextResponse.json({ message: "Form submitted successfully!" }, { status: 200 })
   } catch (error) {
-    console.error("[v0] Error submitting to Google Sheets:", error)
-    console.error("[v0] Error message:", error.message)
-    console.error("[v0] Error stack:", error.stack)
+    console.error("Error submitting to Google Sheets:", error)
     return NextResponse.json({ error: "Failed to submit form. Please try again." }, { status: 500 })
   }
 }

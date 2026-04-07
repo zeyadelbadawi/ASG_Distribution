@@ -327,11 +327,11 @@ export default function Product() {
                       ✓ Form submitted successfully!
                     </div>
                   )}
-                  {submissionStatus === "success" && (
+                  {submissionStatus === "error" && (
                     <div
                       style={{
                         padding: "15px 20px",
-                        backgroundColor: "#4CAF50",
+                        backgroundColor: "#f44336",
                         color: "#FFFFFF",
                         borderRadius: "5px",
                         marginTop: "20px",
@@ -340,7 +340,7 @@ export default function Product() {
                         animation: "slideIn 0.5s ease-out",
                       }}
                     >
-                      ✓ Form submitted successfully
+                      ✗ Failed to submit the form. Please try again.
                     </div>
                   )}
                 </form>
