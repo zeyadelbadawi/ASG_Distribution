@@ -147,7 +147,10 @@ export default function Banner() {
                     <h2 className="main-slider__title" dangerouslySetInnerHTML={{ __html: slide.title }}></h2>
                     <p className="main-slider__text" dangerouslySetInnerHTML={{ __html: slide.text }}></p>
                     <div className="main-slider__btn-and-call-box">
-                      <div className="main-slider__btn-box">
+                     <div
+  className="main-slider__btn-box"
+  style={{ display: "flex", gap: "12px", alignItems: "center" }}
+>
                       <Link href={slide.buttonLink} className="main-slider__btn thm-btn">
     {slide.buttonText}
   </Link>
