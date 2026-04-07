@@ -2,28 +2,31 @@ import { google } from "googleapis"
 import { NextResponse } from "next/server"
 
 export async function POST(request) {
+  // [v0] Debug: Log environment variables FIRST (before try-catch)
+  console.log("[v0] === API REQUEST STARTED ===")
+  console.log("[v0] Environment Variables Check:")
+  console.log("[v0] GOOGLE_SHEETS_CLIENT_EMAIL:", process.env.GOOGLE_SHEETS_CLIENT_EMAIL ? "✓ Set" : "✗ Missing")
+  console.log("[v0] GOOGLE_SHEETS_PRIVATE_KEY:", process.env.GOOGLE_SHEETS_PRIVATE_KEY ? "✓ Set" : "✗ Missing")
+  console.log("[v0] GOOGLE_SHEETS_SPREADSHEET_ID:", process.env.GOOGLE_SHEETS_SPREADSHEET_ID ? "✓ Set" : "✗ Missing")
+
+  // [v0] Check if required env vars are set FIRST
+  if (
+    !process.env.GOOGLE_SHEETS_CLIENT_EMAIL ||
+    !process.env.GOOGLE_SHEETS_PRIVATE_KEY ||
+    !process.env.GOOGLE_SHEETS_SPREADSHEET_ID
+  ) {
+    console.log("[v0] Configuration Error - Missing environment variables")
+    return NextResponse.json(
+      { error: "Server configuration incomplete. Missing env vars. Check logs." },
+      { status: 500 },
+    )
+  }
+
   try {
+    console.log("[v0] Parsing form data...")
     const formData = await request.json()
     const { name, phone, email, company, message, type } = formData
-
-    // [v0] Debug: Log environment variables
-    console.log("[v0] Environment Variables Check:")
-    console.log("[v0] GOOGLE_SHEETS_CLIENT_EMAIL:", process.env.GOOGLE_SHEETS_CLIENT_EMAIL ? "✓ Set" : "✗ Missing")
-    console.log("[v0] GOOGLE_SHEETS_PRIVATE_KEY:", process.env.GOOGLE_SHEETS_PRIVATE_KEY ? "✓ Set" : "✗ Missing")
-    console.log("[v0] GOOGLE_SHEETS_SPREADSHEET_ID:", process.env.GOOGLE_SHEETS_SPREADSHEET_ID ? "✓ Set" : "✗ Missing")
-
-    // [v0] Check if required env vars are set
-    if (
-      !process.env.GOOGLE_SHEETS_CLIENT_EMAIL ||
-      !process.env.GOOGLE_SHEETS_PRIVATE_KEY ||
-      !process.env.GOOGLE_SHEETS_SPREADSHEET_ID
-    ) {
-      console.log("[v0] Configuration Error - Missing environment variables")
-      return NextResponse.json(
-        { error: "Server configuration incomplete. Please contact support." },
-        { status: 500 },
-      )
-    }
+    console.log("[v0] Form data received:", { name, email, type })
 
     if (type === "newsletter") {
       if (!email) {
@@ -193,7 +196,10 @@ export async function POST(request) {
 
     return NextResponse.json({ message: "Form submitted successfully!" }, { status: 200 })
   } catch (error) {
-    console.error("Error submitting to Google Sheets:", error)
-    return NextResponse.json({ error: "Failed to submit form. Please try again." }, { status: 500 })
+    console.log("[v0] === CATCH ERROR TRIGGERED ===")
+    console.error("[v0] Full Error Object:", error)
+    console.error("[v0] Error Message:", error?.message)
+    console.error("[v0] Error Stack:", error?.stack)
+    return NextResponse.json({ error: "Failed to submit form. Please check server logs." }, { status: 500 })
   }
 }
