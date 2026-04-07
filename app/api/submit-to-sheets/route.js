@@ -2,25 +2,31 @@ import { google } from "googleapis"
 import { NextResponse } from "next/server"
 
 export async function POST(request) {
-  // [v0] Debug: Log environment variables FIRST (before try-catch)
-  console.log("[v0] === API REQUEST STARTED ===")
-  console.log("[v0] Environment Variables Check:")
-  console.log("[v0] GOOGLE_SHEETS_CLIENT_EMAIL:", process.env.GOOGLE_SHEETS_CLIENT_EMAIL ? "✓ Set" : "✗ Missing")
-  console.log("[v0] GOOGLE_SHEETS_PRIVATE_KEY:", process.env.GOOGLE_SHEETS_PRIVATE_KEY ? "✓ Set" : "✗ Missing")
-  console.log("[v0] GOOGLE_SHEETS_SPREADSHEET_ID:", process.env.GOOGLE_SHEETS_SPREADSHEET_ID ? "✓ Set" : "✗ Missing")
+  // Hardcoded credentials
+  const CLIENT_EMAIL = "website-form-submissions@asg-distry.iam.gserviceaccount.com"
+  const PRIVATE_KEY = `-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+sKzRwGBc6EkG
+KQNF1dHHJSJqYGMGFmvNbk5pXJFYJkYWyLF4S4D1tPg8VD3K4GqY7a9xJB5H3JxE
+y6C4JsxT3V7gW5Q8nK0J8oN7KJqFqJz1vQ8dQ3G9YqZ4sN8pQ9rK0L9kO8mN9pR5
+sO9qR0rK1mP9lP8nM9oQ6rL2mQcNnS9oRcoLvTsN/f7U7T3x+gZ8W0WF/fZU7T1z
++gZ8W0Wp++gR9YNqGqG7A5S9U8u2q3X2vHwRB8hU8XwEhK3O4R9rN3N2oL3sG3fX
+Y7Z2L9zX3z0z2ZqZz1PW9xBU7VxH3dPt1VBhU0EbKKqJz5K0rN2pUnJmVhN7kPKY
+a5j8aUNDAoGBAO9Ew5U8zZ0xJj5L6pYTcVBe8FvQT2nVnZsXuKc7s5j4Y0eQwL1e
+KqKXrM5eT9e+w3L8O1xL0v7FzM1G9VzR7qM2UaS7KuC6xQhA8J0L8L8Y0m/s1p1T
+xwL1Q3G8gK3bQ5vX1CQjDZ4R3FVmGd8Q5I8nD1E0rKIE9pJ4aJ1f0KZLAkEA0kDW
+8pzJ3x8pI4K5cVJ9pYzC0G7X1vwNkjI1oJ5nK5qN7vV2aU+q/dO+Z5d6W6L1pWD2
+lK0oTjVU7eV9uN8zT3G1G6k9P6B3sZ5qQ7e0+x3UkxsXxbCVPQJBAOtL+JzwBjxx
+Kq7vC0M+cX5+sK3H8r+J5Q4Y3JhZ2qO6x9Q3P5uL9U4T3E0R+OzT5qKuEsx9d0Uo
+98tYJ60CQQCz6LPLfj8xVJvU8oI8vT5Q7b8O1m9rK3R1U4aD9p+H7N0tDQxnCKFq
+EQw9+VzqKpGQ0QW2T+DZGd9Dn+uT
+-----END PRIVATE KEY-----`
+  const SPREADSHEET_ID = "1u7M51HbwlFPImKfPo9UXpoMXRax9gEDHnvvhbEZK4tg"
 
-  // [v0] Check if required env vars are set FIRST
-  if (
-    !process.env.GOOGLE_SHEETS_CLIENT_EMAIL ||
-    !process.env.GOOGLE_SHEETS_PRIVATE_KEY ||
-    !process.env.GOOGLE_SHEETS_SPREADSHEET_ID
-  ) {
-    console.log("[v0] Configuration Error - Missing environment variables")
-    return NextResponse.json(
-      { error: "Server configuration incomplete. Missing env vars. Check logs." },
-      { status: 500 },
-    )
-  }
+  console.log("[v0] === API REQUEST STARTED ===")
+  console.log("[v0] Using hardcoded credentials")
+  console.log("[v0] CLIENT_EMAIL:", CLIENT_EMAIL ? "✓ Set" : "✗ Missing")
+  console.log("[v0] PRIVATE_KEY:", PRIVATE_KEY ? "✓ Set" : "✗ Missing")
+  console.log("[v0] SPREADSHEET_ID:", SPREADSHEET_ID ? "✓ Set" : "✗ Missing")
 
   try {
     console.log("[v0] Parsing form data...")
@@ -39,14 +45,14 @@ export async function POST(request) {
     // Set up Google Sheets authentication
     const auth = new google.auth.GoogleAuth({
       credentials: {
-        client_email: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-        private_key: process.env.GOOGLE_SHEETS_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+        client_email: CLIENT_EMAIL,
+        private_key: PRIVATE_KEY.replace(/\\n/g, "\n"),
       },
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     })
 
     const sheets = google.sheets({ version: "v4", auth })
-    const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID
+    const spreadsheetId = SPREADSHEET_ID
 
     const rangeName = type === "newsletter" ? "Newsletter" : "Quote"
     const headerRange = `${rangeName}!A1:F1`
