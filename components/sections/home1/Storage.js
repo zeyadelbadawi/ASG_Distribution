@@ -16,9 +16,10 @@ const swiperOptions = {
 
   autoplay: {
     delay: 0,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
     pauseOnMouseEnter: true,
     reverseDirection: false,
+    waitForTransition: true,
   },
 
   allowTouchMove: true,
@@ -73,13 +74,17 @@ export default function Storage() {
 
   const handleMouseEnter = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.autoplay.pause()
+      if (swiperRef.current.swiper.autoplay.running) {
+        swiperRef.current.swiper.autoplay.pause()
+      }
     }
   }
 
   const handleMouseLeave = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.autoplay.resume()
+      if (!swiperRef.current.swiper.autoplay.running) {
+        swiperRef.current.swiper.autoplay.resume()
+      }
     }
   }
 
