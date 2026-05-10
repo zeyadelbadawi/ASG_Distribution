@@ -24,11 +24,12 @@ export default function Menu() {
                         <li><Link href="/partners/dahua">Dahua Technology</Link></li>
                         <li><Link href="/partners/ruijiereyee">Ruijie | Reyee</Link></li>
                         <li><Link href="/partners/aruba">Aruba</Link></li>
+                                <li><Link href="/partners/faac">FAAC Technologies</Link></li>
+                        <li><Link href="/partners/magnetic">Magnetic</Link></li>
                         <li><Link href="/partners/itc">ITC</Link></li>
                         <li><Link href="/partners/skidata">Skidata</Link></li>
                         <li><Link href="/partners/kstar">Kstar</Link></li>
-                        <li><Link href="/partners/faac">FAAC Technologies</Link></li>
-                        <li><Link href="/partners/magnetic">Magnetic</Link></li>
+
                         <li><Link href="/partners/unitech">Unitech</Link></li>
                         <li><Link href="/partners/centurion">Centurion</Link></li>
 
