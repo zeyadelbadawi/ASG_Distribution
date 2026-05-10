@@ -16,10 +16,10 @@ const swiperOptions = {
 
   autoplay: {
     delay: 0,
-    disableOnInteraction: true,
+    disableOnInteraction: false,
     pauseOnMouseEnter: true,
     reverseDirection: false,
-    waitForTransition: true,
+    waitForTransition: false,
   },
 
   allowTouchMove: true,
@@ -92,6 +92,15 @@ export default function Storage() {
     swiper.autoplay.start()
   }
 
+  const handleSlideChange = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      // Ensure autoplay maintains consistent speed after any interaction
+      if (!swiperRef.current.swiper.autoplay.running) {
+        swiperRef.current.swiper.autoplay.start()
+      }
+    }
+  }
+
   return (
     <>
       <section className="storage-one">
@@ -114,6 +123,7 @@ export default function Storage() {
             <Swiper
               ref={swiperRef}
               onInit={handleSwiperInit}
+              onSlideChange={handleSlideChange}
               {...swiperOptions}
               className="storage-one__carousel owl-carousel owl-theme thm-owl__carousel"
             >
