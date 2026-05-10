@@ -60,6 +60,15 @@ export default function Storage() {
       .catch((error) => console.error("Error fetching storage content:", error))
   }, [])
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.autoplay.start()
+      }
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [])
+
   const handleMouseEnter = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.autoplay.pause()
