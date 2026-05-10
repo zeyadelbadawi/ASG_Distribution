@@ -70,10 +70,7 @@ export default function Menu() {
                     <Link href="/contact">Contact</Link>
                 </li>
 
-                <li>
-                    <Link href="/blog">Blog</Link>
-
-                </li>
+                
 
 
 
