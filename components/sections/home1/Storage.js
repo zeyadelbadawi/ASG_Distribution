@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
@@ -12,15 +12,15 @@ const swiperOptions = {
   spaceBetween: 30,
   loop: true,
   loopAdditionalSlides: 10,
-  speed: 4000,
+  speed: 5000,
 
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
-    pauseOnMouseEnter: false,
+    pauseOnMouseEnter: true,
   },
 
-  allowTouchMove: true,
+  allowTouchMove: false,
 
   navigation: {
     nextEl: ".srn",
@@ -49,6 +49,7 @@ export default function Storage() {
     items: [],
     bottomText: "",
   })
+  const swiperRef = useRef(null)
 
   useEffect(() => {
     fetch("/api/getContent")
@@ -58,6 +59,18 @@ export default function Storage() {
       })
       .catch((error) => console.error("Error fetching storage content:", error))
   }, [])
+
+  const handleMouseEnter = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.autoplay.pause()
+    }
+  }
+
+  const handleMouseLeave = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.autoplay.resume()
+    }
+  }
 
   return (
     <>
@@ -73,8 +86,13 @@ export default function Storage() {
             <h2 className="section-title__title">{storageContent.title}</h2>
           </div>
 
-          <div className="storage-one__bottom">
+          <div
+            className="storage-one__bottom"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <Swiper
+              ref={swiperRef}
               {...swiperOptions}
               className="storage-one__carousel owl-carousel owl-theme thm-owl__carousel"
             >
@@ -146,6 +164,10 @@ export default function Storage() {
       <style jsx global>{`
         .storage-one__carousel .swiper-wrapper {
           transition-timing-function: linear !important;
+        }
+
+        .storage-one__bottom {
+          position: relative;
         }
 
         .custom-storage-img {
