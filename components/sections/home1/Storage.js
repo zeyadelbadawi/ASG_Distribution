@@ -59,12 +59,16 @@ export default function Storage() {
                       <div className="storage-one__img-box">
                         <div className="storage-one__img">
                           <Image
-                            src={item.imagePath || "/placeholder.svg"}
-                            alt={item.title}
-                            width={400}
-                            height={300}
-                            style={{ width: "100%", height: "auto" }}
-                          />
+  src={item.imagePath || "/placeholder.svg"}
+  alt={item.title}
+  width={250}
+  height={250}
+  style={{
+    width: "250px",
+    height: "250px",
+    objectFit: "cover",
+  }}
+/>
                         </div>
                         <div className="storage-one__content">
                           <h3 className="storage-one__title">
