@@ -1,4 +1,5 @@
 "use client"
+
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -10,14 +11,27 @@ const swiperOptions = {
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
+  loopAdditionalSlides: 10,
+  speed: 4000,
+
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  },
+
+  allowTouchMove: true,
+
   navigation: {
     nextEl: ".srn",
     prevEl: ".srp",
   },
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+
   breakpoints: {
     320: { slidesPerView: 1 },
     575: { slidesPerView: 1 },
@@ -29,7 +43,12 @@ const swiperOptions = {
 }
 
 export default function Storage() {
-  const [storageContent, setStorageContent] = useState({ title: "", tagline: "", items: [], bottomText: "" })
+  const [storageContent, setStorageContent] = useState({
+    title: "",
+    tagline: "",
+    items: [],
+    bottomText: "",
+  })
 
   useEffect(() => {
     fetch("/api/getContent")
@@ -46,12 +65,19 @@ export default function Storage() {
         <div className="container">
           <div className="section-title text-left">
             <div className="section-title__tagline-box">
-              <span className="section-title__tagline">{storageContent.tagline}</span>
+              <span className="section-title__tagline">
+                {storageContent.tagline}
+              </span>
             </div>
+
             <h2 className="section-title__title">{storageContent.title}</h2>
           </div>
+
           <div className="storage-one__bottom">
-            <Swiper {...swiperOptions} className="storage-one__carousel owl-carousel owl-theme thm-owl__carousel">
+            <Swiper
+              {...swiperOptions}
+              className="storage-one__carousel owl-carousel owl-theme thm-owl__carousel"
+            >
               {storageContent.items.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="item">
@@ -86,13 +112,21 @@ export default function Storage() {
     }}
   />
 </div>
+
                         <div className="storage-one__content">
                           <h3 className="storage-one__title">
                             <Link href={item.link}>{item.title}</Link>
                           </h3>
-                          <p className="storage-one__text">{item.description}</p>
+
+                          <p className="storage-one__text">
+                            {item.description}
+                          </p>
+
                           <div className="storage-one__arrow">
-                            <Link href={item.link} className="icon-long-arrow-right"></Link>
+                            <Link
+                              href={item.link}
+                              className="icon-long-arrow-right"
+                            ></Link>
                           </div>
                         </div>
                       </div>
@@ -102,9 +136,39 @@ export default function Storage() {
               ))}
             </Swiper>
           </div>
-          <p className="storage-one__bottom-text">{storageContent.bottomText}</p>
+
+          <p className="storage-one__bottom-text">
+            {storageContent.bottomText}
+          </p>
         </div>
       </section>
+
+      <style jsx global>{`
+        .storage-one__carousel .swiper-wrapper {
+          transition-timing-function: linear !important;
+        }
+
+        .custom-storage-img {
+          width: 250px !important;
+          height: 250px !important;
+          margin: 0 auto !important;
+          overflow: hidden !important;
+          border-radius: 10px !important;
+          position: relative !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          background: #ffffff !important;
+          padding: 20px !important;
+        }
+
+        .custom-storage-image {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: contain !important;
+          display: block !important;
+        }
+      `}</style>
     </>
   )
 }
