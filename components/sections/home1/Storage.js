@@ -57,19 +57,35 @@ export default function Storage() {
                   <div className="item">
                     <div className="storage-one__single">
                       <div className="storage-one__img-box">
-                        <div className="storage-one__img">
-                          <Image
-  src={item.imagePath || "/placeholder.svg"}
-  alt={item.title}
-  width={250}
-  height={250}
+                      <div
+  className="storage-one__img"
   style={{
-    width: "250px",
-    height: "250px",
-    objectFit: "cover",
+    width: "250px !important",
+    height: "250px !important",
+    margin: "0 auto",
+    overflow: "hidden",
+    borderRadius: "10px",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "#fff",
+    padding: "20px",
   }}
-/>
-                        </div>
+>
+  <Image
+    src={item.imagePath || "/placeholder.svg"}
+    alt={item.title}
+    width={250}
+    height={250}
+    style={{
+      width: "100% !important",
+      height: "100% !important",
+      objectFit: "contain",
+      display: "block",
+    }}
+  />
+</div>
                         <div className="storage-one__content">
                           <h3 className="storage-one__title">
                             <Link href={item.link}>{item.title}</Link>
