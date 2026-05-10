@@ -81,36 +81,7 @@ export default function Footer1() {
                   </ul>
                 </div>
               </div>
-              <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                <div className="footer-widget__column footer-widget__company">
-                  <div className="footer-widget__title-box">
-                    <h3 className="footer-widget__title">Company</h3>
-                  </div>
-                  <ul className="footer-widget__services-list list-unstyled">
-                    <li>
-                      <Link href="about">
-                        <span className="icon-angle-left"></span>About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="contact">
-                        <span className="icon-angle-left"></span>Contact
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="gallery">
-                        <span className="icon-angle-left"></span>Gallery
-                      </Link>
-                    </li>
-                   
-                    <li>
-                      <Link href="about">
-                        <span className="icon-angle-left"></span> Privacy Policy
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              
               <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                 <div className="footer-widget__column footer-widget__news">
                   <div className="footer-widget__title-box">
@@ -140,6 +111,36 @@ export default function Footer1() {
                     <li>
                       <Link href="/partners/aruba">
                         <span className="icon-angle-left"></span>Aruba
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                <div className="footer-widget__column footer-widget__company">
+                  <div className="footer-widget__title-box">
+                    <h3 className="footer-widget__title">Company</h3>
+                  </div>
+                  <ul className="footer-widget__services-list list-unstyled">
+                    <li>
+                      <Link href="about">
+                        <span className="icon-angle-left"></span>About
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="contact">
+                        <span className="icon-angle-left"></span>Contact
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="gallery">
+                        <span className="icon-angle-left"></span>Gallery
+                      </Link>
+                    </li>
+                   
+                    <li>
+                      <Link href="about">
+                        <span className="icon-angle-left"></span> Privacy Policy
                       </Link>
                     </li>
                   </ul>
