@@ -11,16 +11,18 @@ const swiperOptions = {
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
-  loopAdditionalSlides: 10,
+  loopAdditionalSlides: 20,
   speed: 5000,
 
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
+    reverseDirection: false,
   },
 
-  allowTouchMove: false,
+  allowTouchMove: true,
+  grabCursor: true,
 
   navigation: {
     nextEl: ".srn",
@@ -81,6 +83,10 @@ export default function Storage() {
     }
   }
 
+  const handleSwiperInit = (swiper) => {
+    swiper.autoplay.start()
+  }
+
   return (
     <>
       <section className="storage-one">
@@ -102,6 +108,7 @@ export default function Storage() {
           >
             <Swiper
               ref={swiperRef}
+              onInit={handleSwiperInit}
               {...swiperOptions}
               className="storage-one__carousel owl-carousel owl-theme thm-owl__carousel"
             >
@@ -177,6 +184,19 @@ export default function Storage() {
 
         .storage-one__bottom {
           position: relative;
+          cursor: grab;
+        }
+
+        .storage-one__bottom.swiper-container-active {
+          cursor: grabbing;
+        }
+
+        .storage-one__carousel {
+          cursor: grab;
+        }
+
+        .storage-one__carousel.swiper-grabbing {
+          cursor: grabbing;
         }
 
         .custom-storage-img {
