@@ -556,61 +556,61 @@
     "items": [
       {
         "title": "Dahua Technology",
-        "imagePath": "/assets/images/resources/ASG Distribution Brands Logo-01.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/dahua",
         "description": "Enabling a Smarter Society and Better Living."
       },
       {
         "title": "Ruijie Reyee",
-        "imagePath": "/assets/images/storage/5.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/ruijiereyee",
         "description": "Committed to fully integrating technologies with applications to creatively solve customers' problems and promote social progress."
       },
       {
         "title": "Aruba",
-        "imagePath": "/assets/aruuba.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/aruba",
         "description": "Drive innovation from the edge to the cloud with security-first and AI-powered networking."
       },
       {
         "title": "ITC",
-        "imagePath": "/assets/itcc.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/itc",
         "description": "Industry-leading audio visual and stage lighting manufacturer."
       },
       {
         "title": "Skidata",
-        "imagePath": "/assets/images/storage/1010.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/skidata",
         "description": "Smart access and Parking Management that move people smoothly. Designed for airports, cities, and destinations where efficiency and experience matter."
       },
       {
         "title": "Kstar",
-        "imagePath": "/assets/images/storage/4.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/kstar",
         "description": "Well designed UPS solutions for critical power applications."
       },
       {
         "title": "FAAC Technologies",
-        "imagePath": "/assets/images/storage/7.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/faac",
         "description": "Specialised in access automation, parking and access control business in both the residential and industrial sectors."
       },
       {
         "title": "Magnetic",
-        "imagePath": "/assets/images/storage/8.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/magnetic",
         "description": "Access systems that take you further."
       },
       {
         "title": "Unitech",
-        "imagePath": "/assets/images/storage/6.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/unitech",
         "description": "reliable power backup solution designed to keep you running without interruptions."
       },
       {
         "title": "Centurion",
-        "imagePath": "/assets/images/storage/2.png",
+        "imagePath": "/assets/images/storage/as.png",
         "link": "partners/centurion",
         "description": "Dedicated to enhancing lives with our cutting-edge gate motors and access control products."
       }
