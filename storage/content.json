@@ -591,18 +591,6 @@
         "description": "Well designed UPS solutions for critical power applications."
       },
       {
-        "title": "Unitech",
-        "imagePath": "/assets/images/storage/6.png",
-        "link": "partners/unitech",
-        "description": "reliable power backup solution designed to keep you running without interruptions."
-      },
-      {
-        "title": "Centurion",
-        "imagePath": "/assets/images/storage/2.png",
-        "link": "partners/centurion",
-        "description": "Dedicated to enhancing lives with our cutting-edge gate motors and access control products."
-      },
-      {
         "title": "FAAC Technologies",
         "imagePath": "/assets/images/storage/7.png",
         "link": "partners/faac",
@@ -613,6 +601,18 @@
         "imagePath": "/assets/images/storage/8.png",
         "link": "partners/magnetic",
         "description": "Access systems that take you further."
+      },
+      {
+        "title": "Unitech",
+        "imagePath": "/assets/images/storage/6.png",
+        "link": "partners/unitech",
+        "description": "reliable power backup solution designed to keep you running without interruptions."
+      },
+      {
+        "title": "Centurion",
+        "imagePath": "/assets/images/storage/2.png",
+        "link": "partners/centurion",
+        "description": "Dedicated to enhancing lives with our cutting-edge gate motors and access control products."
       }
     ]
   },
