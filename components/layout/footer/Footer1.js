@@ -102,11 +102,7 @@ export default function Footer1() {
                         <span className="icon-angle-left"></span>Gallery
                       </Link>
                     </li>
-                    <li>
-                      <Link href="blog">
-                        <span className="icon-angle-left"></span>Blog
-                      </Link>
-                    </li>
+                   
                     <li>
                       <Link href="about">
                         <span className="icon-angle-left"></span> Privacy Policy
