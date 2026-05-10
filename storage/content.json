@@ -575,6 +575,20 @@
         "link": "partners/aruba",
         "description": "Drive innovation from the edge to the cloud with security-first and AI-powered networking."
       },
+            {
+        "title": "FAAC Technologies",
+        "imagePath": "/assets/images/storage/7.png",
+
+        "link": "partners/faac",
+        "description": "Specialised in access automation, parking and access control business in both the residential and industrial sectors."
+      },
+      {
+        "title": "Magnetic",
+        "imagePath": "/assets/images/storage/8.png",
+
+        "link": "partners/magnetic",
+        "description": "Access systems that take you further."
+      },
       {
         "title": "ITC",
         "imagePath": "/assets/itcc.png",
@@ -596,20 +610,7 @@
         "link": "partners/kstar",
         "description": "Well designed UPS solutions for critical power applications."
       },
-      {
-        "title": "FAAC Technologies",
-        "imagePath": "/assets/images/storage/7.png",
 
-        "link": "partners/faac",
-        "description": "Specialised in access automation, parking and access control business in both the residential and industrial sectors."
-      },
-      {
-        "title": "Magnetic",
-        "imagePath": "/assets/images/storage/8.png",
-
-        "link": "partners/magnetic",
-        "description": "Access systems that take you further."
-      },
       {
         "title": "Unitech",
                 "imagePath": "/assets/images/storage/6.png",
