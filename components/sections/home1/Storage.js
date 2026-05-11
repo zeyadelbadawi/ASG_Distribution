@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
-import { Autoplay } from "swiper/modules"
+import { Autoplay, Navigation, Pagination } from "swiper/modules"
 
 export default function Storage() {
   const [storageContent, setStorageContent] = useState({
@@ -43,20 +43,32 @@ export default function Storage() {
   }, [])
 
   const swiperConfig = {
-    spaceBetween: isMobile ? 10 : 20,
-    speed: isMobile ? 1000 : 800,
-    autoplay: {
-      delay: isMobile ? 4000 : 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: !isMobile,
-    },
+    modules: [Autoplay, Navigation, Pagination],
+    slidesPerView: 3,
+    spaceBetween: 30,
     loop: true,
-    modules: [Autoplay],
+    speed: 5000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    allowTouchMove: true,
+    grabCursor: true,
+    navigation: {
+      nextEl: ".srn",
+      prevEl: ".srp",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
     breakpoints: {
       320: { slidesPerView: 1 },
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 2 },
+      575: { slidesPerView: 1 },
+      767: { slidesPerView: 2 },
+      991: { slidesPerView: 2 },
+      1199: { slidesPerView: 2 },
       1350: { slidesPerView: 3 },
     },
   }
@@ -76,43 +88,44 @@ export default function Storage() {
           </div>
 
           <div className="storage-one__bottom">
-            <Swiper {...swiperConfig}>
+            <Swiper {...swiperConfig} className="storage-one__carousel owl-carousel owl-theme thm-owl__carousel">
               {storageContent.items &&
                 storageContent.items.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <div className="storage-one__single">
-                      <div className="storage-one__img-box">
-                        <div className="storage-one__img">
-                          <Image
-                            src={item.imagePath || "/placeholder.svg"}
-                            alt={item.title}
-                            width={250}
-                            height={250}
-                            style={{
-                              width: "100%",
-                              maxWidth: "250px",
-                              height: "auto",
-                              maxHeight: "250px",
-                              objectFit: "contain",
-                            }}
-                            loading="lazy"
-                          />
-                        </div>
+                    <div className="item">
+                      <div className="storage-one__single">
+                        <div className="storage-one__img-box">
+                          <div className="storage-one__img">
+                            <Image
+                              src={item.imagePath || "/placeholder.svg"}
+                              alt={item.title}
+                              width={250}
+                              height={250}
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "contain",
+                                display: "block",
+                              }}
+                              loading="lazy"
+                            />
+                          </div>
 
-                        <div className="storage-one__content">
-                          <h3 className="storage-one__title">
-                            <Link href={item.link || "#"}>{item.title}</Link>
-                          </h3>
+                          <div className="storage-one__content">
+                            <h3 className="storage-one__title">
+                              <Link href={item.link || "#"}>{item.title}</Link>
+                            </h3>
 
-                          <p className="storage-one__text">
-                            {item.description}
-                          </p>
+                            <p className="storage-one__text">
+                              {item.description}
+                            </p>
 
-                          <div className="storage-one__arrow">
-                            <Link
-                              href={item.link || "#"}
-                              className="icon-long-arrow-right"
-                            ></Link>
+                            <div className="storage-one__arrow">
+                              <Link
+                                href={item.link || "#"}
+                                className="icon-long-arrow-right"
+                              ></Link>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -128,7 +141,28 @@ export default function Storage() {
         </div>
       </section>
 
-      <style jsx>{`
+      <style jsx global>{`
+        .storage-one__carousel .swiper-wrapper {
+          transition-timing-function: linear !important;
+        }
+
+        .storage-one__bottom {
+          position: relative;
+          cursor: grab;
+        }
+
+        .storage-one__bottom.swiper-container-active {
+          cursor: grabbing;
+        }
+
+        .storage-one__carousel {
+          cursor: grab;
+        }
+
+        .storage-one__carousel.swiper-grabbing {
+          cursor: grabbing;
+        }
+
         .storage-one__img {
           width: 250px !important;
           height: 250px !important;
@@ -141,6 +175,13 @@ export default function Storage() {
           align-items: center !important;
           background: #ffffff !important;
           padding: 20px !important;
+        }
+
+        .custom-storage-image {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: contain !important;
+          display: block !important;
         }
       `}</style>
     </>
