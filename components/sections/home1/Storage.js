@@ -3,9 +3,29 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { Autoplay } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
+
+const swiperConfig = {
+  spaceBetween: 30,
+  speed: 1000,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  loop: true,
+  modules: [Autoplay],
+  breakpoints: {
+    320: { slidesPerView: 1 },
+    575: { slidesPerView: 1 },
+    767: { slidesPerView: 2 },
+    991: { slidesPerView: 2 },
+    1199: { slidesPerView: 2 },
+    1350: { slidesPerView: 3 },
+  },
+}
 
 export default function Storage() {
   const [storageContent, setStorageContent] = useState({
@@ -14,64 +34,15 @@ export default function Storage() {
     items: [],
     bottomText: "",
   })
-  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768)
-    }
-
-    handleResize()
-    window.addEventListener("resize", handleResize)
-
-    const controller = new AbortController()
-    fetch("/api/getContent", { signal: controller.signal })
+    fetch("/api/getContent")
       .then((response) => response.json())
       .then((data) => {
         setStorageContent(data.storage)
       })
-      .catch((error) => {
-        if (error.name !== "AbortError") {
-          console.error("Error fetching storage content:", error)
-        }
-      })
-
-    return () => {
-      controller.abort()
-      window.removeEventListener("resize", handleResize)
-    }
+      .catch((error) => console.error("Error fetching storage content:", error))
   }, [])
-
-  const swiperConfig = {
-    modules: [Autoplay, Navigation, Pagination],
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    speed: 5000,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    allowTouchMove: true,
-    grabCursor: true,
-    navigation: {
-      nextEl: ".srn",
-      prevEl: ".srp",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      320: { slidesPerView: 1 },
-      575: { slidesPerView: 1 },
-      767: { slidesPerView: 2 },
-      991: { slidesPerView: 2 },
-      1199: { slidesPerView: 2 },
-      1350: { slidesPerView: 3 },
-    },
-  }
 
   return (
     <>
@@ -88,82 +59,85 @@ export default function Storage() {
           </div>
 
           <div className="storage-one__bottom">
-            <Swiper {...swiperConfig} className="storage-one__carousel owl-carousel owl-theme thm-owl__carousel">
-              {storageContent.items &&
-                storageContent.items.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="item">
-                      <div className="storage-one__single">
-                        <div className="storage-one__img-box">
-                          <div className="storage-one__img">
-                            <Image
-                              src={item.imagePath || "/placeholder.svg"}
-                              alt={item.title}
-                              width={250}
-                              height={250}
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "contain",
-                                display: "block",
-                              }}
-                              loading="lazy"
-                            />
-                          </div>
+            <Swiper
+              {...swiperConfig}
+              className="storage-one__carousel owl-carousel owl-theme thm-owl__carousel"
+            >
+              {storageContent.items.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="item">
+                    <div className="storage-one__single">
+                      <div className="storage-one__img-box">
+                      <div
+  className="storage-one__img"
+  style={{
+    width: "250px !important",
+    height: "250px !important",
+    margin: "0 auto",
+    overflow: "hidden",
+    borderRadius: "10px",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "#fff",
+    padding: "20px",
+  }}
+>
+  <Image
+    src={item.imagePath || "/placeholder.svg"}
+    alt={item.title}
+    width={250}
+    height={250}
+    style={{
+      width: "100% !important",
+      height: "100% !important",
+      objectFit: "contain",
+      display: "block",
+    }}
+  />
+</div>
 
-                          <div className="storage-one__content">
-                            <h3 className="storage-one__title">
-                              <Link href={item.link || "#"}>{item.title}</Link>
-                            </h3>
+                        <div className="storage-one__content">
+                          <h3 className="storage-one__title">
+                            <Link href={item.link}>{item.title}</Link>
+                          </h3>
 
-                            <p className="storage-one__text">
-                              {item.description}
-                            </p>
+                          <p className="storage-one__text">
+                            {item.description}
+                          </p>
 
-                            <div className="storage-one__arrow">
-                              <Link
-                                href={item.link || "#"}
-                                className="icon-long-arrow-right"
-                              ></Link>
-                            </div>
+                          <div className="storage-one__arrow">
+                            <Link
+                              href={item.link}
+                              className="icon-long-arrow-right"
+                            ></Link>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </SwiperSlide>
-                ))}
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
 
           <p className="storage-one__bottom-text">
-            {storageContent.bottomText}
+ style and look k ow, justof             {storageContent.bottomText}
           </p>
         </div>
       </section>
 
       <style jsx global>{`
         .storage-one__carousel .swiper-wrapper {
-          transition-timing-function: linear !important;
+          transition-timing-function: ease-in-out !important;
         }
 
         .storage-one__bottom {
           position: relative;
-          cursor: grab;
         }
 
-        .storage-one__bottom.swiper-container-active {
-          cursor: grabbing;
-        }
-
-        .storage-one__carousel {
-          cursor: grab;
-        }
-
-        .storage-one__carousel.swiper-grabbing {
-          cursor: grabbing;
-        }
-
-        .storage-one__img {
+        .custom-storage-img {
           width: 250px !important;
           height: 250px !important;
           margin: 0 auto !important;
