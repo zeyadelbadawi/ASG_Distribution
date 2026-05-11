@@ -124,7 +124,7 @@ export default function Storage() {
           </div>
 
           <p className="storage-one__bottom-text">
- style and look k ow, justof             {storageContent.bottomText}
+     {storageContent.bottomText}
           </p>
         </div>
       </section>
