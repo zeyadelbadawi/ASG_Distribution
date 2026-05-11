@@ -9,14 +9,15 @@ import "swiper/css"
 
 const swiperConfig = {
   spaceBetween: 30,
-  speed: 1000,
+  speed: 5000,
   autoplay: {
-    delay: 3000,
+    delay: 0,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
   loop: true,
   modules: [Autoplay],
+  freeMode: false,
   breakpoints: {
     320: { slidesPerView: 1 },
     575: { slidesPerView: 1 },
@@ -130,7 +131,7 @@ export default function Storage() {
 
       <style jsx global>{`
         .storage-one__carousel .swiper-wrapper {
-          transition-timing-function: ease-in-out !important;
+          transition-timing-function: linear !important;
         }
 
         .storage-one__bottom {
