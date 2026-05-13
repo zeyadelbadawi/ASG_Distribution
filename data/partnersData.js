@@ -79,7 +79,7 @@ const partnersData = [
       name: "Imou",
       headerImage: "/assets/images/brandsheader/centurion.png",
       description:
-        "Centurion Systems is Specialized in gate motors, access control systems, and security barriers, Centurion Systems offers reliable and <le and efficient solutions for residential, commercial, and industrial applications. With a focus on convenience, safety, and seamless integration, Centurion products are designed to enhance security measures while providing ease of use for customers. Whether its automated gate openers or advanced access",
+        "Imou provides AI-powered smart security products for safer, smarter, and connected living experiences.",
       embedCode: `<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
     <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
       src="https://www.canva.com/design/DAGQP8PiMmI/KMBNORba1XK6GMFVE-nA7A/view?embed" allowfullscreen>
