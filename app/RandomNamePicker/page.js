@@ -30,7 +30,7 @@ const RandomNamePicker = () => {
   const { width, height } = useWindowSize(); // Get window dimensions for confetti
   const [tempNames, setTempNames] = useState([]); // Temporary state for unsaved changes
 
-// Secure shuffle function using crypto.getRandomValues
+// Secure shuffle function using crypto.getRandomValuesSSS
 const secureShuffleArray = (array, times = 5) => {
   let shuffledArray = [...array]; // Create a copy to avoid mutating the original array
 
