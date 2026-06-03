@@ -597,6 +597,13 @@
         "description": "Industry-leading audio visual and stage lighting manufacturer."
       },
       {
+        "title": "Akuavox",
+        "imagePath": "/assets/Akuavox.png",
+
+        "link": "partners/Akuavox",
+        "description": "Well designed UPS solutions for critical power applications"
+      },
+      {
         "title": "Imou",
         "imagePath": "/assets/images/imouu.png",
         "link": "partners/imou",
