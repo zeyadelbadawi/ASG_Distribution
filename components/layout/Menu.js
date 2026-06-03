@@ -28,6 +28,7 @@ export default function Menu() {
                         <li><Link href="/partners/magnetic">Magnetic</Link></li>
                         <li><Link href="/partners/itc">ITC</Link></li>
                                 <li><Link href="/partners/imou">Imou</Link></li>
+                        <li><Link href="/partners/Akuvox">Akuvox</Link></li>
 
                         <li><Link href="/partners/skidata">Skidata</Link></li>
                         <li><Link href="/partners/kstar">Kstar</Link></li>
