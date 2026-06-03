@@ -40,12 +40,22 @@
     "slug": "itc"
 
   },
+
+  
   {
     "title": "Imou",
     "description": " Smart home security solutions delivering safety, convenience, and intelligent everyday monitoring. ",
     "imageUrl": "imointo.png",
     "link": "/partners/imou",
     "slug": "imou"
+
+  },
+    {
+    "title": "Akuvox",
+    "description": " Cutting-edge solutions for secure access control and automation systems.",
+    "imageUrl": "Akuvox.png",
+    "link": "/partners/Akuvox",
+    "slug": "Akuvox"
 
   },
   {
