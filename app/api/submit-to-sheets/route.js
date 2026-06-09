@@ -75,7 +75,7 @@ Q7shvPdald8b7asNmRZfow0q
     const sheets = google.sheets({ version: "v4", auth })
     const spreadsheetId = SPREADSHEET_ID
 
-    const rangeName = type === "newsletter" ? "Disty Newsletter" : "Quote"
+    const rangeName = type === "newsletter" ? "Disty Newsletter" : "Disty Form"
     const headerRange = `${rangeName}!A1:F1`
 
     // Check if the target sheet exists, if not create it
