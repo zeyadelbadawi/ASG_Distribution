@@ -32,7 +32,7 @@ const partnersData = [
     {
       id: "skidata",
       name: "Skidata",
-      headerImage: "/assets/images/brandsheader/skidata.png",
+      headerImage: "/assets/skiiData.png",
 
       description:
         "SKIDATA is a global leader in access control and parking management solutions, providing innovative systems for airports, commercial facilities, leisure venues, and smart cities. Their solutions combine hardware, software, and cloud-based platforms to ensure seamless entry, efficient parking operations, and enhanced user experiences. By integrating smart technologies such as ticketless access, mobile apps, and real-time monitoring, SKIDATA helps organizations improve security, optimize operations, and deliver convenience to millions of visitors every day.",
@@ -77,7 +77,7 @@ const partnersData = [
         {
       id: "imou",
       name: "Imou",
-      headerImage: "/assets/images/brandsheader/centurion.png",
+      headerImage: "/assets/imouu.png",
       description:
         "Imou provides AI-powered smart security solutions designed to create safer, smarter, and more connected living experiences. Its innovative product range includes intelligent cameras, smart home devices, and advanced monitoring technologies that enhance security, convenience, and peace of mind for homes and businesses.",
       embedCode: `<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
