@@ -89,7 +89,7 @@ const partnersData = [
             {
       id: "Akuvox",
       name: "Akuvox",
-      headerImage: "/assets/images/brandsheader/centurion.png",
+      headerImage: "/assets/Akuvoxxx.png",
       description:
         "Akuvox provides AI-powered smart security solutions designed to create safer, smarter, and more connected living experiences. Its innovative product range includes intelligent cameras, smart home devices, and advanced monitoring technologies that enhance security, convenience, and peace of mind for homes and businesses.",
       embedCode: `<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
