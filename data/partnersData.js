@@ -32,7 +32,7 @@ const partnersData = [
     {
       id: "skidata",
       name: "Skidata",
-      headerImage: "/assets/SkiiData.png",
+      headerImage: "/assets/SkiData-02.png",
 
       description:
         "SKIDATA is a global leader in access control and parking management solutions, providing innovative systems for airports, commercial facilities, leisure venues, and smart cities. Their solutions combine hardware, software, and cloud-based platforms to ensure seamless entry, efficient parking operations, and enhanced user experiences. By integrating smart technologies such as ticketless access, mobile apps, and real-time monitoring, SKIDATA helps organizations improve security, optimize operations, and deliver convenience to millions of visitors every day.",
